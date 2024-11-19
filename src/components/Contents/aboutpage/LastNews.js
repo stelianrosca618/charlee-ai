@@ -9,15 +9,15 @@ export const LastNews = () => {
     <Box className="w-full bg-[#F9F9F9] py-20">
       <Container maxWidth="lg">
         <Box className="w-full">
-          <Box className="w-full" display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
+          <Box className="w-full" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"space-between"} alignItems={{xs: "flex-start", sm: "flex-start", md: "center", lg: "center", xl: "center"}}>
             <h4 className="text-[42px] leading-[54.6px] font-medium" >Latest News</h4>
             <button className="text-[18px] font-medium leading-[24px] rounded-full border border-[#021744] hover:bg-[#021744] hover:text-white px-8 py-4">
               View all news
             </button>
           </Box>
           <Box className="w-full py-14">
-            <Grid2 container spacing={3}>
-              <Grid2 size={3}>
+            <Grid2 container spacing={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
+              <Grid2 size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
                 <div className="w-full aspect-video rounded-xl hover:scale-105" style={{backgroundImage: `url(${blogImg1})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 </div>
                 <h5 className="text-start text-[24px] leading-[32px] font-normal line-clamp-2 my-5">
@@ -28,7 +28,7 @@ export const LastNews = () => {
                   <span className="mx-4">Charlee.ai</span>
                 </div>
               </Grid2>
-              <Grid2 size={3}>
+              <Grid2 size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
                 <div className="w-full aspect-video rounded-xl hover:scale-105" style={{backgroundImage: `url(${blogImg2})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 </div>
                 <h5 className="text-start text-[24px] leading-[32px] font-normal line-clamp-2 my-5">
@@ -39,7 +39,7 @@ export const LastNews = () => {
                   <span className="mx-4">Charlee.ai</span>
                 </div>
               </Grid2>
-              <Grid2 size={3}>
+              <Grid2 size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
                 <div className="w-full aspect-video rounded-xl hover:scale-105" style={{backgroundImage: `url(${blogImg3})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 </div>
                 <h5 className="text-start text-[24px] leading-[32px] font-normal line-clamp-2 my-5">
@@ -50,7 +50,7 @@ export const LastNews = () => {
                   <span className="mx-4">Charlee.ai</span>
                 </div>
               </Grid2>
-              <Grid2 size={3}>
+              <Grid2 size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
                 <div className="w-full aspect-video rounded-xl hover:scale-105" style={{backgroundImage: `url(${blogImg4})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                 </div>
                 <h5 className="text-start text-[24px] leading-[32px] font-normal line-clamp-2 my-5">

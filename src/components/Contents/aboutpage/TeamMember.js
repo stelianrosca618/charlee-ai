@@ -47,14 +47,14 @@ export const TeamMember = () => {
           <h5 className="text-[29px] font-medium leading-[40px] ">
             Meet our team of experts
           </h5>
-          <h4 className="text-[42px] leading-[54.2px] font-medium mt-6">
+          <h4 className="text-[32px] md:text-[42px] leading-[41px] md:leading-[54.2px] font-medium mt-6">
             We are dedicated professionals committed to innovation and excellence
           </h4>
         </Box>
-        <Box className="w-full py-24">
+        <Box className="w-full px-4 py-24">
           <Grid2 container spacing={8}>
             {teamMebers.map((member, key) => (
-              <Grid2 key={key} size={4}>
+              <Grid2 key={key} size={{xs:12, sm:12, md:4, lg:4, xl: 4}}>
                 <Box className="w-full h-full">
                   <Box className=" w-full rounded-full p-4 " sx={{boxShadow: '0px 0px 38px -16px black'}}>
                     <div className="w-full h-full rounded-full " style={{backgroundImage: `url(${member.avata})`, backgroundSize: '110%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
