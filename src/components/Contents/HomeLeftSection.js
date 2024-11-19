@@ -31,7 +31,7 @@ export const HomeLeftSection = ({detailObject}) => {
             </Box>
           </Box>
           <Box flex={1} height={'100%'} position={"relative"} >
-            <img src={detailObject?.itemImage} style={{position: {xs: "relative", md: "absolute"}, top: '-130px', left: '-6vw', height: 'auto', width:{ xs: '150vw', md:'90vw'}, maxWidth: '150vw'}} alt="dashboard"/>
+            <img src={detailObject?.itemImage} style={{position: "absolute", top: '-130px', left: '-6vw', height: 'auto', width: '90vw', maxWidth: '150vw'}} alt="dashboard"/>
           </Box>
         </Box>
       </Container>

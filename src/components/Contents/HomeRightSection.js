@@ -7,7 +7,7 @@ export const HomeRightSection = ({detailObject}) => {
       <Container maxWidth="lg">
         <Box clasName="w-full " display={"flex"} flexDirection={{xs: "column-reverse", md: "row"}} justifyContent={"between"} position={"relative"} paddingY={'6rem'}>
           <Box flex={1} height={'100%'} position={"relative"}>
-            <img src={detailObject?.itemImage} style={{position: {xs: "relative", md: "absolute"}, top: '-130px', right: '-6vw',  height: 'auto', width: { xs: '150vw', md:'90vw'}, maxWidth: '150vw'}} alt="dashboard"/>
+            <img src={detailObject?.itemImage} style={{position: "absolute", top: '-130px', right: '-6vw',  height: 'auto', width: '90vw', maxWidth: '150vw'}} alt="dashboard"/>
           </Box>
           <Box flex={1} height={'100%'}>
             <Box display={"flex"} justifyContent={"start"} alignItems={"center"} paddingBottom={'24px'}>
