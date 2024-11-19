@@ -2,6 +2,7 @@ import { Box, Container, Typography } from "@mui/material"
 import headerIco from "../../assets/imgs/icons/head-logo.svg"
 import navIco from "../../assets/imgs/icons/NavIco.svg"
 import { useState } from "react"
+import { MobileMenu } from "./MobileMenu"
 export const HomeHeader = () => {
   const [anchorElUser, setAnchorElUser] = useState(null);
   return (
@@ -11,40 +12,47 @@ export const HomeHeader = () => {
           <Box className="w-full">
             <img src={headerIco} alt="header-icon" className="h-7"/>
           </Box>
-          <Box className="w-full">
+          <Box className="w-full hidden md:block">
             <Box className="w-full" display={"flex"} justifyContent={"space-between"} >
               <Box className="px-3">
-                <Typography color="white" fontWeight={500} fontSize={'18px'} lineHeight={'24px'} >
+                <button className="text-white group font-medium text-[18px] leading-[24px] relative">
                   Products
-                </Typography>
+                  <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"></span>
+                </button>
+                
               </Box>
               <Box className="px-3">
-                <Typography color="white" fontWeight={500} fontSize={'18px'} lineHeight={'24px'} >
+                <button className="text-white group font-medium text-[18px] leading-[24px] relative">
                   About
-                </Typography>
+                  <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"></span>
+                </button>
               </Box>
               <Box className="px-3">
-                <Typography color="white" fontWeight={500} fontSize={'18px'} lineHeight={'24px'} >
+                <button className="text-white group font-medium text-[18px] leading-[24px] relative">
                   Parteners
-                </Typography>
+                  <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"></span>
+                </button>
               </Box>
 
               <Box className="px-3">
-                <Typography color="white" fontWeight={500} fontSize={'18px'} lineHeight={'24px'} >
+                <button className="text-white group font-medium text-[18px] leading-[24px] relative">
                   Solutions
-                </Typography>
+                  <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"></span>
+                </button>
               </Box>
 
               <Box className="px-3">
-                <Typography color="white" fontWeight={500} fontSize={'18px'} lineHeight={'24px'} >
+                <button className="text-white group font-medium text-[18px] leading-[24px] relative">
                   Connect
-                </Typography>
+                  <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"></span>
+                </button>
               </Box>
               <Box className="pl-3">
                 <img src={navIco}  alt="nav-ico" className="h-5"/>
               </Box>
             </Box>
           </Box>
+          <MobileMenu />
         </Box>
       </Container>
     </Box>

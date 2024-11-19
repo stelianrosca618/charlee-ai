@@ -10,11 +10,11 @@ export const HomeHero = () => {
   return (
     <>
     <Box className="w-full overflow-y-auto">
-      <Box className="w-full" sx={{backgroundImage: `url(${banerImg})`, backgroundSize: 'cover'}}>
-        <Container className="h-screen text-white flex justify-center items-center" maxWidth="lg">
-          <Grid2 marginTop={'-6rem'} className="w-full" alignItems={"center"} container spacing={1}>
-            <Grid2 size={8}>
-              <Box className="w-full text-left">
+      <Box className="w-full" sx={{backgroundImage: `url(${banerImg})`, backgroundSize: 'cover'}} >
+        <Container className="md:h-screen text-white flex justify-center items-center" maxWidth="lg">
+          <Grid2 marginTop={{xs: '6rem', md: '-6rem'}} paddingBottom={{xs: '10rem', md: '0rem'}} className="w-full" alignItems={"center"} container spacing={1}>
+            <Grid2 size={{ xs: 12, md: 8}}>
+              <Box className="w-full text-left hidden md:block">
                 <Typography sx={{fontSize: '75px !important', lineHeight: '82.5px'}} marginBottom={2} variant="h2" fontWeight={500} fontSize={'75px'} textAlign={"left"}>
                   Meet the AI <br />Intelligence platform <br />for claims
                 </Typography>
@@ -22,13 +22,23 @@ export const HomeHero = () => {
                   Our platform knows your exposures, reduces severity, litigation and fraud, optimizes reserves, while simplifying claims—effortlessly.
                 </Typography>
                 
-                <button class="bg-transparent rounded-full text-white border border-white py-5 px-9 text-[18px] leading-4 font-medium  hover:bg-blue-500 hover:text-white hover:border-transparent ">
+                <button class="bg-transparent rounded-full text-white border border-white py-5 px-9 text-[18px] leading-4 font-medium transition-all hover:bg-[#091d48] hover:text-white hover:border-white ">
                   See Our Products
                 </button>
-                
+              </Box>
+              <Box className="w-full text-center block md:hidden">
+                <Typography sx={{fontSize: '48px !important', lineHeight: '52.8px'}} marginBottom={2} variant="h2" fontWeight={500} fontSize={'75px'} textAlign={"center"}>
+                  AI for claims, severity, and litigation
+                </Typography>
+                <Typography marginBottom={6} sx={{fontSize: '20px !important', lineHeight: '30px !important'}} variant="body1" fontWeight={400} textAlign={'center'}>
+                  Our platform knows your exposures, reduces severity, litigation and fraud, optimizes reserves, while simplifying claims—effortlessly.
+                </Typography>
+                <button class="bg-transparent rounded-full text-white border border-white py-5 px-9 text-[18px] leading-4 font-medium transition-all hover:bg-[#091d48] hover:text-white hover:border-white ">
+                  See Our Products
+                </button>
               </Box>
             </Grid2>
-            <Grid2 size={4}>
+            <Grid2 size={{ xs: 12, md: 4}}>
               <Box display={"flex"} justifyContent={"center"} alignItems={"flex-start"}>
                 <img src={heroLogo} alt="hero-icon"/>
               </Box>
@@ -37,15 +47,15 @@ export const HomeHero = () => {
         </Container>
       </Box>
       <Box className="w-full bg-[#EDF3F8]">
-        <Container maxWidth="lg" sx={{transform: 'translateY(-210px)'}}>
+        <Container maxWidth="lg" sx={{transform: {xs:'translateY(-150px)', md:'translateY(-210px)'}}}>
           <Box paddingBottom={'35px'}>
-            <h3 className="text-white text-[42px] leading-[54.6px] font-medium text-left">
+            <h3 className="text-white text-[29px] leading-[40px] md:text-[42px] md:leading-[54.6px] font-medium text-center md:text-left">
               Our AI Platform Products
             </h3>
           </Box>
-          <Box className="w-full">
+          <Box className="w-full px-2 md:px-0 ">
             <Grid2 className="w-full" alignItems={"flex-start"} container spacing={2}>
-              <Grid2 size={3}>
+              <Grid2 size={{xs:12, md:3}}>
                 <Box className="rounded-lg h-full">
                   <Box className="px-5 py-8 rounded-t-lg bg-[#021744]" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <Box className="p-3 rounded-lg bg-[#ffffff3b]">
@@ -65,14 +75,14 @@ export const HomeHero = () => {
                       </p>
                     </Box>
                     <Box className="w-full" marginTop={6}>
-                      <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744]">
+                      <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                         Dive deeper
                       </button>
                     </Box>
                   </Box>
                 </Box>
               </Grid2>
-              <Grid2 size={3}>
+              <Grid2 size={{xs:12, md:3}}>
                 <Box className="rounded-lg h-full">
                   <Box className="px-5 py-8 rounded-t-lg bg-[#004E77]" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <Box className="p-3 rounded-lg bg-[#ffffff3b]">
@@ -92,14 +102,14 @@ export const HomeHero = () => {
                       </p>
                     </Box>
                     <Box className="w-full" marginTop={6}>
-                      <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744]">
+                      <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                         Dive deeper
                       </button>
                     </Box>
                   </Box>
                 </Box>
               </Grid2>
-              <Grid2 size={3}>
+              <Grid2 size={{xs:12, md:3}}>
                 <Box className="rounded-lg h-full">
                   <Box className="px-5 py-8 rounded-t-lg bg-[#0099B0]" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <Box className="p-3 rounded-lg bg-[#ffffff3b]">
@@ -119,14 +129,14 @@ export const HomeHero = () => {
                       </p>
                     </Box>
                     <Box className="w-full" marginTop={6}>
-                      <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744]">
+                      <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                         Dive deeper
                       </button>
                     </Box>
                   </Box>
                 </Box>
               </Grid2>
-              <Grid2 size={3}>
+              <Grid2 size={{xs:12, md:3}}>
                 <Box className="rounded-lg h-full">
                   <Box className="px-5 py-8 rounded-t-lg bg-[#42DDD1]" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <Box className="p-3 rounded-lg bg-[#ffffff3b]">
@@ -146,7 +156,7 @@ export const HomeHero = () => {
                       </p>
                     </Box>
                     <Box className="w-full" marginTop={6}>
-                      <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744]">
+                      <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                         Dive deeper
                       </button>
                     </Box>
@@ -157,22 +167,22 @@ export const HomeHero = () => {
           </Box>
         </Container>
         <Container maxWidth="lg">
-          <Box width={'100%'} display={"flex"} justifyContent={"center"} alignItems={"flex-start"} paddingBottom={'117px'}>
-            <Box maxWidth={'250px'} marginX={3}>
+          <Box width={'100%'} display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}} paddingBottom={'117px'}>
+            <Box maxWidth={'250px'} marginX={3} marginY={3}>
               <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">55M+</h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
               <Box width={'100%'} padding={'19px'}>
               Total claims analyzed <br /> by Charlee.ai
               </Box>
             </Box>
-            <Box maxWidth={'250px'} marginX={3}>
+            <Box maxWidth={'250px'} marginX={3} marginY={3}>
               <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">50K+</h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
               <Box width={'100%'}  padding={'19px'}>
                 Pre-built and pre-trained insights in a predictive analytics solution
               </Box>
             </Box>
-            <Box maxWidth={'250px'} marginX={3}>
+            <Box maxWidth={'250px'} marginX={3} marginY={3}>
               <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">24/7</h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
               <Box width={'100%'}  padding={'19px'}>

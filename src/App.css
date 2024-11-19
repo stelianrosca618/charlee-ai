@@ -28,6 +28,55 @@
   color: #61dafb;
 }
 
+.footer-privacy {
+  color: #42DDD1;
+}
+
+.gradient-background {
+  background: linear-gradient(143deg, #4CFFE9, #185B74, #021744);
+
+}
+
+.gradient-border {
+  background: linear-gradient(143deg, #4CFFE9, #185B74, #021744);
+  padding: 1px;
+}
+
+.swiper-button-prev:hover {
+  background-color: #0217445e;
+}
+
+.swiper-button-prev {
+  background: url('./assets/imgs/icons/left-arrow.svg');
+  border-radius: 50%;
+  border: 2px solid #021744;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  right: calc(50% + 10px);
+  z-index: 100;
+}
+
+.swiper-button-next:hover {
+  background-color: #0217445e;
+}
+
+.swiper-button-next {
+  background: url('./assets/imgs/icons/right-arrow.svg');
+  border-radius: 50%;
+  border: 2px solid #021744;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% + 10px);
+  z-index: 100;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
