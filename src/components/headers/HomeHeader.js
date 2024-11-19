@@ -4,10 +4,10 @@ import navIco from "../../assets/imgs/icons/NavIco.svg"
 import { useState } from "react"
 import { MobileMenu } from "./MobileMenu"
 import { Link } from "react-router-dom"
-export const HomeHeader = () => {
+export const HomeHeader = ({headerColor}) => {
   const [anchorElUser, setAnchorElUser] = useState(null);
   return (
-    <Box className="header w-screen bg-[#091d48] py-8 fixed top-0 z-20">
+    <Box className={`header w-screen bg-[${headerColor}] py-8 fixed top-0 z-20`}>
       <Container maxWidth={'lg'}>
         <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={3}>
           <Box className="w-full">
@@ -25,10 +25,12 @@ export const HomeHeader = () => {
                 
               </Box>
               <Box className="px-3">
-                <button className="text-white group font-medium text-[18px] leading-[24px] relative">
-                  About
-                  <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"></span>
-                </button>
+                <Link to={'/about'}>
+                  <button className="text-white group font-medium text-[18px] leading-[24px] relative">
+                    About
+                    <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"></span>
+                  </button>
+                </Link>
               </Box>
               <Box className="px-3">
                 <button className="text-white group font-medium text-[18px] leading-[24px] relative">

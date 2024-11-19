@@ -88,7 +88,7 @@ const sections = [
 export const Home = () => {
     return (
       <div className="w-full overflow-x-hidden">
-        <HomeHeader />
+        <HomeHeader headerColor={'#021744'}/>
         <div className="home-page ">
           <HomeHero />
           {sections.map((sectionItem, key) => (
