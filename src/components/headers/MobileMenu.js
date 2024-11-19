@@ -36,9 +36,11 @@ export const MobileMenu = () =>{
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Profile</MenuItem>
-        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>My account</MenuItem>
-        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Logout</MenuItem>
+        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Products</MenuItem>
+        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>About</MenuItem>
+        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Parteners</MenuItem>
+        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Solutions</MenuItem>
+        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Connect</MenuItem>
       </Menu>
     </Box>
   )

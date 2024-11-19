@@ -3,6 +3,7 @@ import headerIco from "../../assets/imgs/icons/head-logo.svg"
 import navIco from "../../assets/imgs/icons/NavIco.svg"
 import { useState } from "react"
 import { MobileMenu } from "./MobileMenu"
+import { Link } from "react-router-dom"
 export const HomeHeader = () => {
   const [anchorElUser, setAnchorElUser] = useState(null);
   return (
@@ -10,7 +11,9 @@ export const HomeHeader = () => {
       <Container maxWidth={'lg'}>
         <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={3}>
           <Box className="w-full">
-            <img src={headerIco} alt="header-icon" className="h-7"/>
+            <Link  to={'/'}>
+              <img src={headerIco} alt="header-icon" className="h-7"/>
+            </Link>
           </Box>
           <Box className="w-full hidden md:block">
             <Box className="w-full" display={"flex"} justifyContent={"space-between"} >
