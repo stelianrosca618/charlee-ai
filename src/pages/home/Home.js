@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material"
 import { HomeHeader } from "../../components/headers/HomeHeader"
 import { HomeHero } from "../../components/heros/HomeHero"
-import { HomeLeftSection } from "../../components/Contents/HomeLeftSection"
-import { HomeRightSection } from "../../components/Contents/HomeRightSection"
+import { HomeLeftSection } from "../../components/Contents/homepage/HomeLeftSection"
+import { HomeRightSection } from "../../components/Contents/homepage/HomeRightSection"
 import seeCharleeDashboard from "../../assets/imgs/Dashboards/seeCharleeDashboard.png";
 import inteligenceDashboard from "../../assets/imgs/Dashboards/inteligenceDashboard.png"
 import inshitesDashboard from "../../assets/imgs/Dashboards/inshitesDashboard.png";
@@ -12,9 +12,9 @@ import securityCoverIco from "../../assets/imgs/icons/security-cover.png"
 import folderCoverIco from "../../assets/imgs/icons/folder-cover.png";
 import searchCoverIco from "../../assets/imgs/icons/search-cover.png";
 import unionCoverIco from "../../assets/imgs/icons/union-cover.png"
-import { Features } from "../../components/Contents/Features"
-import { Parteners } from "../../components/Contents/Parteners"
-import { Testimonials } from "../../components/Contents/Testimonials"
+import { Features } from "../../components/Contents/homepage/Features"
+import { Parteners } from "../../components/Contents/homepage/Parteners"
+import { Testimonials } from "../../components/Contents/homepage/Testimonials"
 import { FooterBanner } from "../../components/footers/FooterBanner"
 import { Footer } from "../../components/footers/Footer"
 

@@ -1,8 +1,10 @@
 import { Box, Menu, MenuItem } from "@mui/material"
 import { useState } from "react"
 import navIco from "../../assets/imgs/icons/NavIco.svg"
+import { useNavigate } from "react-router-dom"
 
-export const MobileMenu = () =>{
+export const MobileMenu = ({bgColor}) =>{
+  const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -11,6 +13,9 @@ export const MobileMenu = () =>{
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const handleNavManu = (path) => {
+    navigate(path);
+  }
   return(
     <Box className="pl-3 block md:hidden">
       <img src={navIco}  alt="nav-ico" 
@@ -27,8 +32,8 @@ export const MobileMenu = () =>{
         sx={{
           width: '100vw',
           top: '30px',
-          '& MuiPaper-root': {
-            background: '#091d48',
+          '& .MuiPaper-root': {
+            background: bgColor,
             color: "white"
           }
         }}
@@ -36,11 +41,11 @@ export const MobileMenu = () =>{
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Products</MenuItem>
-        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>About</MenuItem>
-        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Parteners</MenuItem>
-        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Solutions</MenuItem>
-        <MenuItem className="w-screen bg-[#091d48] text-white" onClick={handleClose}>Connect</MenuItem>
+        <MenuItem className="w-screen text-white" sx={{borderBottom: '1px solid #ffffff6e'}} onClick={() => handleNavManu('/product')}>Products</MenuItem>
+        <MenuItem className="w-screen text-white" sx={{borderBottom: '1px solid #ffffff6e'}} onClick={() => handleNavManu('/about')}>About</MenuItem>
+        <MenuItem className="w-screen text-white" sx={{borderBottom: '1px solid #ffffff6e'}} onClick={()=>handleNavManu('/parteners')}>Parteners</MenuItem>
+        <MenuItem className="w-screen text-white" sx={{borderBottom: '1px solid #ffffff6e'}} onClick={() => handleNavManu('/solutions')}>Solutions</MenuItem>
+        <MenuItem className="w-screen text-white" sx={{borderBottom: '1px solid #ffffff6e'}} onClick={() => handleNavManu('/connect')}>Connect</MenuItem>
       </Menu>
     </Box>
   )

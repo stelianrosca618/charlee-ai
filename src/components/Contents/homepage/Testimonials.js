@@ -1,11 +1,11 @@
 import { Box, Container } from "@mui/material"
-import avataOne from "../../assets/imgs/avatars/avata1.jpg"
+import avataOne from "../../../assets/imgs/avatars/avata1.jpg"
 import { RxSlash } from "react-icons/rx";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation  } from 'swiper/modules';
-import patterns from "../../assets/imgs/pattens/pattens.png"
+import patterns from "../../../assets/imgs/pattens/pattens.png"
 export const Testimonials = () => {
   
   return (

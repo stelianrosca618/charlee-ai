@@ -1,7 +1,7 @@
 import { Box, Container } from "@mui/material"
-import securityCoverIco from "../../assets/imgs/icons/security-cover.png"
-import checkBoxIco from "../../assets/imgs/icons/Checkbox_base.png"
-import seeCharleeDashboard from "../../assets/imgs/Dashboards/seeCharleeDashboard.png";
+import securityCoverIco from "../../../assets/imgs/icons/security-cover.png"
+import checkBoxIco from "../../../assets/imgs/icons/Checkbox_base.png"
+import seeCharleeDashboard from "../../../assets/imgs/Dashboards/seeCharleeDashboard.png";
 
 export const HomeLeftSection = ({detailObject}) => {
   return (

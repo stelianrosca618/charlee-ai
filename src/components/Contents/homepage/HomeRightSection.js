@@ -1,5 +1,5 @@
 import { Box, Container } from "@mui/material"
-import pattens from "../../assets/imgs/pattens/pattens.png"
+import pattens from "../../../assets/imgs/pattens/pattens.png"
 
 export const HomeRightSection = ({detailObject}) => {
   return (

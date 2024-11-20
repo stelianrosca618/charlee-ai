@@ -1,12 +1,12 @@
 import { Box, Container, Grid2 } from "@mui/material"
-import guidewire from "../../assets/imgs/brands/guidewire.png";
-import majesco from "../../assets/imgs/brands/majesco.png";
-import awsmarket from "../../assets/imgs/brands/awsmarketplace.png";
-import oneshield from "../../assets/imgs/brands/oneshield.png";
-import snapSheet from "../../assets/imgs/brands/snapsheet.png";
-import quicksilver from "../../assets/imgs/brands/quicksilver.png";
-import duckgreeck from "../../assets/imgs/brands/duckcreek.png";
-import inspire from "../../assets/imgs/brands/Inspire.png"
+import guidewire from "../../../assets/imgs/brands/guidewire.png";
+import majesco from "../../../assets/imgs/brands/majesco.png";
+import awsmarket from "../../../assets/imgs/brands/awsmarketplace.png";
+import oneshield from "../../../assets/imgs/brands/oneshield.png";
+import snapSheet from "../../../assets/imgs/brands/snapsheet.png";
+import quicksilver from "../../../assets/imgs/brands/quicksilver.png";
+import duckgreeck from "../../../assets/imgs/brands/duckcreek.png";
+import inspire from "../../../assets/imgs/brands/Inspire.png"
 export const Parteners = () => {
   return(
     <Box className="w-full bg-[#EDF3F8] pt-28">
