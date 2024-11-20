@@ -49,7 +49,6 @@ const coreItems = [
   }
   
 ]
-
 const marketItems = [
   {
     logoImg: awsmarket,

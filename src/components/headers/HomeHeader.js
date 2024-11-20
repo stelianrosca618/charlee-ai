@@ -5,6 +5,8 @@ import { useState } from "react"
 import { MobileMenu } from "./MobileMenu"
 import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
+import { HeadLogo } from "../Icons/HeadLogo"
+import { NavIcon } from "../Icons/NavIcon"
 
 const paths = [
   {
@@ -20,10 +22,10 @@ const paths = [
     pathName: "/about",
   },
   {
-    name: 'Parteners',
+    name: 'Partners',
     childs: [],
     isParent: true,
-    pathName: "/parteners",
+    pathName: "/partners",
   },
   {
     name: 'Solutions',
@@ -39,7 +41,7 @@ const paths = [
   },
 ]
 
-export const HomeHeader = ({headerColor}) => {
+export const HomeHeader = ({headerColor,  textColor}) => {
   const [anchorElUser, setAnchorElUser] = useState(null);
   const location = useLocation();
   console.log("check location change", location);
@@ -49,7 +51,8 @@ export const HomeHeader = ({headerColor}) => {
         <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={3}>
           <Box className="w-full">
             <Link  to={'/'}>
-              <img src={headerIco} alt="header-icon" className="h-7"/>
+              <HeadLogo logoColor={textColor} />
+              {/* <img src={headerIco} alt="header-icon" className="h-7"/> */}
             </Link>
           </Box>
           <Box className="w-full hidden md:block">
@@ -57,20 +60,21 @@ export const HomeHeader = ({headerColor}) => {
               {paths.map((pathItem, key) => (
                 <Box className="px-3">
                   <Link to={pathItem.pathName}>
-                    <button className="text-white group font-medium text-[18px] leading-[24px] relative">
+                    <button className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}>
                       {pathItem.name}
-                      <span class={location.pathname == pathItem.pathName? "absolute -bottom-1 left-0 transition-all h-0.5 bg-white w-full":"absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-white group-hover:w-full"}></span>
+                      <span style={{background: textColor}} class={location.pathname == pathItem.pathName? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
                     </button>
                   </Link>
                 </Box>
               ))}
               
               <Box className="pl-3">
-                <img src={navIco}  alt="nav-ico" className="h-5"/>
+                {/* <img src={navIco}  alt="nav-ico" className="h-5"/> */}
+                <NavIcon iconColor={textColor} />
               </Box>
             </Box>
           </Box>
-          <MobileMenu bgColor={headerColor}/>
+          <MobileMenu bgColor={headerColor} textColor={textColor}/>
         </Box>
       </Container>
     </Box>

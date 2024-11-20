@@ -2,8 +2,9 @@ import { Box, Menu, MenuItem } from "@mui/material"
 import { useState } from "react"
 import navIco from "../../assets/imgs/icons/NavIco.svg"
 import { useNavigate } from "react-router-dom"
+import { NavIcon } from "../Icons/NavIcon"
 
-export const MobileMenu = ({bgColor}) =>{
+export const MobileMenu = ({bgColor, textColor}) =>{
   const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -18,12 +19,15 @@ export const MobileMenu = ({bgColor}) =>{
   }
   return(
     <Box className="pl-3 block md:hidden">
-      <img src={navIco}  alt="nav-ico" 
+      <div className="w-fit h-fit"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        className="h-5"/>
+      > 
+        <NavIcon iconColor={textColor} />
+      </div>
+      
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}

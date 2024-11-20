@@ -8,7 +8,7 @@ import { AboutHero } from "../../components/heros/AboutHero"
 export const About = () => {
     return (
       <div className="w-full overflow-x-hidden">
-        <HomeHeader headerColor={'#0D131E'}/>
+        <HomeHeader headerColor={'#0D131E'} textColor={'#ffffff'}/>
         <div className="about-page ">
           <AboutHero />
           <TeamMember />

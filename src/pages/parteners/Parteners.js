@@ -6,7 +6,7 @@ import { PartenerHero } from "../../components/heros/PartenerHero"
 export const Parteners = () => {
   return (
     <div className="w-full overflow-x-hidden">
-      <HomeHeader headerColor={'#0D131E'}/>
+      <HomeHeader headerColor={'#0D131E'} textColor={'#ffffff'}/>
       <div className="parteners-page ">
         <PartenerHero />
         <PartenerList />
