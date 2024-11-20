@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@mui/material"
 import headerIco from "../../assets/imgs/icons/head-logo.svg"
 import navIco from "../../assets/imgs/icons/NavIco.svg"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MobileMenu } from "./MobileMenu"
 import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
@@ -44,7 +44,11 @@ const paths = [
 export const HomeHeader = ({headerColor,  textColor}) => {
   const [anchorElUser, setAnchorElUser] = useState(null);
   const location = useLocation();
-  console.log("check location change", location);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    console.log("check location change", location);
+  }, [location])
+  
   return (
     <Box className={`header w-screen bg-[${headerColor}] py-8 fixed top-0 z-20`}>
       <Container maxWidth={'lg'}>
