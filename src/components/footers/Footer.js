@@ -84,10 +84,10 @@ export const Footer = () => {
             <p className="text-[12px] text-white">© 2024 Charlee.ai. All rights reserved.</p>
           </Box>
           <Box className=" py-2" display={"flex"} justifyContent={"flex-end"} justifyItems={"center"}>
-            <FaFacebook className="mx-1 cursor-pointer" color="white" size={'24px'}/>
+            <FaFacebook  onClick={() => {window.open('https://www.facebook.com/charleeai/')}} className="mx-1 cursor-pointer" color="white" size={'24px'}/>
             <CiInstagram className="mx-1 cursor-pointer" color="white" size={'24px'}/>
-            <FaTwitter className="mx-1 cursor-pointer" color="white" size={'24px'}/>
-            <FaGithub className="mx-1 cursor-pointer" color="white" size={'24px'}/>
+            <FaTwitter onClick={() => {window.open('https://twitter.com/charleeai')}} className="mx-1 cursor-pointer" color="white" size={'24px'}/>
+            <FaGithub onClick={() => {window.open('https://github.com/infinilytics')}} className="mx-1 cursor-pointer" color="white" size={'24px'}/>
             <CiBasketball className="mx-1 cursor-pointer" color="white" size={'24px'}/>
           </Box>
         </Box>

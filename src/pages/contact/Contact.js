@@ -26,20 +26,20 @@ export const Contact = () => {
                     <img src={charleeface} alt="charlee-face" className="h-28" />
                     <h2 className="text-[36px] md:text-[65px] leading-[39.6px] md:leading-[71.5px] font-medium">Get in touch!</h2>
                     <Box className="text-[16px] leading-[31px] font-normal" marginTop={'32px'} paddingX={1}>
-                      <p>742 Evergreen Terrace</p>
-                      <p>Springfield, OR 12345</p>
+                      <p>4900 Hopyard Road</p>
+                      <p>Plesanaton, CA 94588</p>
                     </Box>
                     <Box className="text-[16px] leading-[31px] font-normal" marginTop={'32px'} paddingX={1}>
-                      <p className="flex justify-start items-center " ><FiPhone size={'20px'} className="mr-2" /> +1 (555) 123-4567</p>
-                      <p className="flex justify-start items-center pt-2" ><MdMailOutline size={'20px'} className="mr-2" /> support@example.com</p>
+                      <p className="flex justify-start items-center " ><FiPhone size={'20px'} className="mr-2" /> +1 (855) 242-7533</p>
+                      <p className="flex justify-start items-center pt-2" ><MdMailOutline size={'20px'} className="mr-2" /> info@Charlee.ai</p>
                     </Box>
                     <Box className="text-[16px] leading-[31px] font-normal" marginY={'32px'} paddingX={1}>
                       <p>Follow Us:</p>
                       <Box display={"flex"} justifyContent={"flex-start"} alignItems={"center"} marginTop={2}>
-                        <FaFacebook className="mx-1 cursor-pointer" color="#9CA3AF" size={'24px'}/>
+                        <FaFacebook onClick={() => {window.open('https://www.facebook.com/charleeai/')}} className="mx-1 cursor-pointer" color="#9CA3AF" size={'24px'}/>
                         <CiInstagram className="mx-3 cursor-pointer" color="#9CA3AF" size={'24px'}/>
-                        <FaTwitter className="mx-3 cursor-pointer" color="#9CA3AF" size={'24px'}/>
-                        <FaGithub className="mx-3 cursor-pointer" color="#9CA3AF" size={'24px'}/>
+                        <FaTwitter onClick={() => {window.open('https://twitter.com/charleeai')}} className="mx-3 cursor-pointer" color="#9CA3AF" size={'24px'}/>
+                        <FaGithub onClick={() => {window.open('https://github.com/infinilytics')}} className="mx-3 cursor-pointer" color="#9CA3AF" size={'24px'}/>
                         <CiBasketball className="mx-3 cursor-pointer" color="#9CA3AF" size={'24px'}/>
                       </Box>
                     </Box>
