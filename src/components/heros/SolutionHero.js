@@ -11,7 +11,7 @@ export const SolutionHero = () => {
             Charlee® – Your Intelligent<br /> Insurance Partner
           </h2>
         </Box>
-        <Box paddingY={4} width={'100%'} display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}} paddingBottom={'117px'}>
+        <Box paddingY={4} width={'100%'} display={"flex"} flexDirection={{xs: "column",  md: "row", lg: "row", xl: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}} paddingBottom={{md: '117px', lg: '117px', xl: '117px'}}>
           <Box maxWidth={'250px'} marginX={3} marginY={3}>
             <h1 className="font-bold text-[#0099B0] text-[84px] leading-[95.76px]">55M</h1>
             <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
@@ -34,7 +34,7 @@ export const SolutionHero = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="w-full" display={"flex"} justifyContent={"center"} alignItems={"center"} gap={6}>
+        <Box className="w-full" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"center"} alignItems={"center"} gap={6}>
           <Box className="w-full h-full rounded-xl shadow-xl bg-white">
             <Box className="w-full h-full p-9 " display={"flex"} flexDirection={"column"} justifyContent={"space-between"}>
               <Box className="w-full mb-7">
