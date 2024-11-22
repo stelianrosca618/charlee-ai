@@ -10,32 +10,38 @@ const teamMebers = [
   {
     avata: ceoAvata,
     name: 'Sri Ramaswamy',
-    position: 'Founder & CEO'
+    position: 'Founder & CEO',
+    link: 'https://www.linkedin.com/in/sriramaswamy1/'
   },
   {
     avata: cioAvata,
     name: 'Josh Standish',
-    position: 'Co-Founder & CIO'
+    position: 'Co-Founder & CIO',
+    link: 'https://www.linkedin.com/in/john-standish-a1b5489/'
   },
   {
     avata: cofoundAvata,
     name: 'Balaji Varadharaj',
-    position: 'Co-Founder & Director (India)'
+    position: 'Co-Founder & Director (India)',
+    link: 'https://www.linkedin.com/in/balajivaradharaj/'
   },
   {
     avata: ctoAvata,
     name: 'Ramaswamy Venkat',
-    position: 'Co-Founder & CTO'
+    position: 'Co-Founder & CTO',
+    link: 'https://www.linkedin.com/in/rama1073/'
   },
   {
     avata: croAvata,
     name: 'Michael Vaccarello',
-    position: 'CRO'
+    position: 'CRO',
+    link: 'https://www.linkedin.com/in/michael-vaccarello/'
   },
   {
     avata: croAvata1,
-    name: 'Michael Vaccarello',
-    position: 'CRO'
+    name: 'Monique Hesseling',
+    position: 'BoardMember',
+    link: 'https://www.linkedin.com/in/monique-hesseling-6123002/'
   },
 ]
 
@@ -56,21 +62,21 @@ export const TeamMember = () => {
             {teamMebers.map((member, key) => (
               <Grid2 key={key} size={{xs:12, sm:12, md:4, lg:4, xl: 4}}>
                 <Box className="w-full h-full">
-                  <Box className=" w-full rounded-full p-4 " sx={{boxShadow: '0px 0px 38px -16px black'}}>
+                  <Box onClick={() => {window.open(member.link)}} className="cursor-pointer w-full rounded-full p-4 " sx={{boxShadow: '0px 0px 38px -16px black'}}>
                     <div className="w-full h-full rounded-full " style={{backgroundImage: `url(${member.avata})`, backgroundSize: '110%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
                       <div className="w-full h-full backdrop-grayscale hover:backdrop-grayscale-0 rounded-full ">
                         <img src={member.avata} alt="ceo" className="w-full h-full rounded-full opacity-0" />
                       </div>
                     </div>
                   </Box>
-                  <h5 className="text-[22px] leading-[34px] font-normal mt-10">
+                  <h5 onClick={() => {window.open(member.link)}} className="text-[22px] cursor-pointer leading-[34px] font-normal mt-10">
                     {member.name}
                   </h5>
-                  <h6 className="text-[#0099B0] text-[15.47px] leading-[28.73px] font-light">
+                  <h6 onClick={() => {window.open(member.link)}} className="text-[#0099B0] cursor-pointer text-[15.47px] leading-[28.73px] font-light">
                     {member.position}
                   </h6>
                   <Box className="w-full text-center mt-5" display={"flex"} justifyContent={"center"} alignItems={"center"}>
-                    <FaLinkedin color="#4B5563" size={'19px'}/>
+                    <FaLinkedin className="cursor-pointer" onClick={() => {window.open(member.link)}} color="#4B5563" size={'19px'}/>
                   </Box>
                 </Box>
               </Grid2>

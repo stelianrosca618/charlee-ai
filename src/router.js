@@ -3,6 +3,7 @@ import { Home } from './pages/home/Home';
 import { About } from './pages/about/About';
 import { Parteners } from './pages/parteners/Parteners';
 import { Contact } from './pages/contact/Contact';
+import { Solutions } from './pages/solutions/Solutions';
 
  export const Router = () => {
   return (
@@ -12,6 +13,7 @@ import { Contact } from './pages/contact/Contact';
         <Route path='/about' element={<About />} />
         <Route path='/partners' element={<Parteners />} />
         <Route path='/connect' element={<Contact />} />
+        <Route path='/solutions' element={<Solutions />}/>
       </Routes>
     </BrowserRouter>
   )
