@@ -15,9 +15,9 @@ export const HomeHero = () => {
           <Grid2 marginTop={{xs: '6rem', md: '-6rem'}} paddingBottom={{xs: '10rem', md: '0rem'}} className="w-full" alignItems={"center"} container spacing={1}>
             <Grid2 size={{ xs: 12, md: 8}}>
               <Box className="w-full text-left hidden md:block">
-                <Typography sx={{fontSize: '75px !important', lineHeight: '82.5px'}} marginBottom={2} variant="h2" fontWeight={500} fontSize={'75px'} textAlign={"left"}>
+                <h2 className="text-start text-[75px] leading-[82.5px] font-Inter font-medium">
                   Meet the AI <br />Intelligence platform <br />for claims
-                </Typography>
+                </h2>
                 <Typography marginBottom={6} sx={{fontSize: '20px !important', lineHeight: '31px !important'}} variant="body1" fontWeight={400} textAlign={'left'}>
                   Our platform knows your exposures, reduces severity, litigation and fraud, optimizes reserves, while simplifying claims—effortlessly.
                 </Typography>

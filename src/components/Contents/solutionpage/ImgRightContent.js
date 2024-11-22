@@ -16,7 +16,7 @@ export const ImgRightContent = ({preTitle, cases, title, detail, bgImg, btnBg, i
                 </button>
               ))}
             </Box>
-            <h2 className="text-[29px] md:text-[65px] leading-[40px] md:leading-[71.5px] font-medium mb-7">
+            <h2 className="text-[29px] md:text-[63px] leading-[40px] md:leading-[71.5px] font-medium mb-7">
               {title}
             </h2>
             <p>{detail}</p>
