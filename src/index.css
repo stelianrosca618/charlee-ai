@@ -12,6 +12,9 @@ h2{
   font-size: 65px;
   line-height: 71.5px;
 }
+p{
+  line-height: 31px;
+}
 body {
   color: #021744;
   margin: 0;
