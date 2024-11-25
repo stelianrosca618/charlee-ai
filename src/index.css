@@ -1,6 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1{
+  font-size: 75px;
+  line-height: 82.5px;
+  font-weight: 500;
+  letter-spacing: -4px;
+}
+h2{
+  font-size: 65px;
+  line-height: 71.5px;
+}
 body {
   color: #021744;
   margin: 0;

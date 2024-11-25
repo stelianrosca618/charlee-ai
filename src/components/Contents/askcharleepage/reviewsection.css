@@ -1,0 +1,11 @@
+.swiper.swiper-horizontal{
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 4.5rem;
+}
+.swiper-wrapper{
+    padding-bottom: 4.5rem;
+}
+.swiper-slide{
+    height: auto !important;
+}

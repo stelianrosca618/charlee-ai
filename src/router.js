@@ -4,6 +4,8 @@ import { About } from './pages/about/About';
 import { Parteners } from './pages/parteners/Parteners';
 import { Contact } from './pages/contact/Contact';
 import { Solutions } from './pages/solutions/Solutions';
+import { AskCharlee } from './pages/products/askcharlee/AskCharlee';
+import { SeeCharlee } from './pages/products/seecharlee/SeeCharlee';
 
  export const Router = () => {
   return (
@@ -14,6 +16,8 @@ import { Solutions } from './pages/solutions/Solutions';
         <Route path='/partners' element={<Parteners />} />
         <Route path='/connect' element={<Contact />} />
         <Route path='/solutions' element={<Solutions />}/>
+        <Route path='/product/askcharlee' element={<AskCharlee />} />
+        <Route path='/product/seecharlee' element={<SeeCharlee />} />
       </Routes>
     </BrowserRouter>
   )

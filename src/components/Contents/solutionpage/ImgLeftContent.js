@@ -15,7 +15,7 @@ export const ImgLeftContent = ({preTitle, cases, title, detail, bgImg, btnBg, im
             <Box className="w-full" marginY={'30px'}>
             {cases.map((caseItem, key) => (
               <button className="rounded-lg gradient-border p-1 mt-3 mr-3">
-                <div className={`rounded-lg bg-[${btnBg}] py-2 px-3`}>
+                <div className={`rounded-lg bg-[${btnBg}] hover:bg-transparent py-2 px-3`}>
                 {caseItem}
                 </div>
               </button>
