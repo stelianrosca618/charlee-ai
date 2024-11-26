@@ -34,7 +34,6 @@ export const AboutHero = () => {
               <Grid2 size={{xs:12, sm: 12, md:5, lg:5, xl: 5}} className="relative">
                 <Box className="w-full relative">
                   <img src={handPhone} alt="handPhone" className="relative w-full h-full block md:hidden -right-4"/>
-                 
                 </Box>
               </Grid2>
             </Grid2>

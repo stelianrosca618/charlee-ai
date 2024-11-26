@@ -6,6 +6,7 @@ import { Contact } from './pages/contact/Contact';
 import { Solutions } from './pages/solutions/Solutions';
 import { AskCharlee } from './pages/products/askcharlee/AskCharlee';
 import { SeeCharlee } from './pages/products/seecharlee/SeeCharlee';
+import { DocuCharlee } from './pages/products/docucharlee/DocuCharlee';
 
  export const Router = () => {
   return (
@@ -18,6 +19,7 @@ import { SeeCharlee } from './pages/products/seecharlee/SeeCharlee';
         <Route path='/solutions' element={<Solutions />}/>
         <Route path='/product/askcharlee' element={<AskCharlee />} />
         <Route path='/product/seecharlee' element={<SeeCharlee />} />
+        <Route path='/product/docucharlee' element={<DocuCharlee />} />
       </Routes>
     </BrowserRouter>
   )
