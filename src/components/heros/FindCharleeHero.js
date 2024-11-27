@@ -49,8 +49,11 @@ export const FindCharleeHero = () => {
               </Box>
             </Grid2>
             <Grid2 size={{xs: 12, sm: 12, md: 6, lg: 6, xl: 6}} className="relative">
-              <div className="p-4 gradient-background rounded-xl h-full absolute left-20">
+              <div className="hidden md:block p-4 gradient-background rounded-xl h-full absolute left-20">
                 <img src={findCharleeDashboard} alt="findCharlee-dashboard" className="h-full " style={{maxWidth: '200vw'}} />
+              </div>
+              <div className="block md:hidden p-4 gradient-background rounded-xl w-[150vw] ">
+                <img src={findCharleeDashboard} alt="findCharlee-dashboard" className="w-full" style={{maxWidth: '200vw'}} />
               </div>
               <img src={findCharleeRobot} alt="robot" className="absolute bottom-0 left-20 z-10" style={{transform: 'translate(-40%, 50%)'}}/>
             </Grid2>
@@ -64,13 +67,13 @@ export const FindCharleeHero = () => {
       ></div>
       <Container maxWidth="lg">
         <Box className="w-full relative text-start z-10">
-          <h4 className="text-[42px] leading-[54.6px] font-medium py-10">
+          <h4 className="text-[29px] md:text-[42px] leading-[40px] md:leading-[54.6px] font-medium py-10">
             4SeeCharlee Features
           </h4>
           <Box className="w-full">
             <Grid2 container spacing={3}>
               {features.map((featureItem, key) => (
-                <Grid2 className="rounded-xl bg-white shadow-xl p-10" size={{xs: 12, sm: 12, md: 4, lg: 4, xl: 4}}>
+                <Grid2 key={key} className="rounded-xl bg-white shadow-xl p-10" size={{xs: 12, sm: 12, md: 4, lg: 4, xl: 4}}>
                   <img src={featureItem.icon} alt="feature-icon"/>
                   <h5 className="text-[29px] leading-[40px] font-medium py-6">{featureItem.title}</h5>
                   <p >{featureItem.detail}</p>

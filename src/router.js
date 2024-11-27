@@ -8,6 +8,8 @@ import { AskCharlee } from './pages/products/askcharlee/AskCharlee';
 import { SeeCharlee } from './pages/products/seecharlee/SeeCharlee';
 import { DocuCharlee } from './pages/products/docucharlee/DocuCharlee';
 import { FindCharlee } from './pages/products/findcharlee/FindCharlee';
+import { Blogs } from './pages/blogs/Blogs';
+import { BlogContent } from './pages/blogs/BlogContent';
 
  export const Router = () => {
   return (
@@ -18,6 +20,8 @@ import { FindCharlee } from './pages/products/findcharlee/FindCharlee';
         <Route path='/partners' element={<Parteners />} />
         <Route path='/connect' element={<Contact />} />
         <Route path='/solutions' element={<Solutions />}/>
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog/:blogid" element={<BlogContent />} />
         <Route path='/product/askcharlee' element={<AskCharlee />} />
         <Route path='/product/seecharlee' element={<SeeCharlee />} />
         <Route path='/product/docucharlee' element={<DocuCharlee />} />

@@ -7,13 +7,13 @@ export const FindCharleeBenefits = () => {
     <>
     <Box className="w-full">
       <Container maxWidth="lg" sx={{paddingX: 0}}>
-        <Box className="w-full" display={"flex"} justifyContent={"start"} alignItems={"center"}>
-          <img src={charleeFlag} alt="flag-bot" className="mr-5" />
+        <Box className="w-full px-8 md:px-0" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"center"}>
+          <img src={charleeFlag} alt="flag-bot" className="mr-0 md:mr-5" />
           <Box className="w-full text-start">
             <h5 className="text-[29px] leading-[40px] font-medium">
               FindCharlee Benefits
             </h5>
-            <h4 className="text-[42px] leading-[54px] font-medium">
+            <h4 className="text-[32px] md:text-[42px] leading-[41px] md:leading-[54px] font-medium mt-4">
             I make it easy for insurers to spot suspicious claims automatically, saving time and money while focusing investigations where they’re needed most.
             </h4>
           </Box>

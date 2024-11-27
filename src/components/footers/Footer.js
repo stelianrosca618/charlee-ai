@@ -4,6 +4,7 @@ import { CiInstagram } from "react-icons/ci";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { CiBasketball } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -20,9 +21,21 @@ export const Footer = () => {
                         company
                       </h6>
                       <ul className="text-[16px] leading-[31px] mt-4">
-                        <li className="py-2">About</li>
-                        <li className="py-2">Partners</li>
-                        <li className="py-2">Solutions</li>
+                        <li className="py-2">
+                          <Link to={'/about'}>
+                            About
+                          </Link>
+                        </li>
+                        <li className="py-2">
+                          <Link to={'/partners'}>
+                          Partners
+                          </Link>
+                        </li>
+                        <li className="py-2">
+                          <Link to={'/solutions'}>
+                          Solutions
+                          </Link>
+                        </li>
                       </ul>
                     </Box>
                   </Grid2>
@@ -32,10 +45,26 @@ export const Footer = () => {
                         Products
                       </h6>
                       <ul className="text-[16px] leading-[31px] mt-4">
-                        <li className="py-2">4SeeCharlee</li>
-                        <li className="py-2">DocuCharlee</li>
-                        <li className="py-2">AskCharlee</li>
-                        <li className="py-2">FindCharlee</li>
+                        <li className="py-2">
+                          <Link to={'/product/seecharlee'}>
+                            4SeeCharlee
+                          </Link>
+                        </li>
+                        <li className="py-2">
+                          <Link to={'/product/docucharlee'}>
+                            DocuCharlee
+                          </Link>
+                        </li>
+                        <li className="py-2">
+                          <Link to={'/product/askcharlee'}>
+                            AskCharlee
+                          </Link>
+                        </li>
+                        <li className="py-2">
+                          <Link to={'/product/findcharlee'}>
+                            FindCharlee
+                          </Link>
+                        </li>
                       </ul>
                     </Box>
                   </Grid2>
@@ -45,8 +74,16 @@ export const Footer = () => {
                       Connect
                       </h6>
                       <ul className="text-[16px] leading-[31px] mt-4">
-                        <li className="py-2">News</li>
-                        <li className="py-2">Events</li>
+                        <li className="py-2">
+                          <Link to={'/blogs'}>
+                            News
+                          </Link>
+                        </li>
+                        <li className="py-2">
+                          <Link to={'/blogs'}>
+                            Events
+                          </Link>
+                        </li>
                       </ul>
                     </Box>
                   </Grid2>

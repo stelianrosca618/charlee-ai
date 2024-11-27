@@ -16,7 +16,7 @@ export const Testimonials = () => {
             <h5 className="uppercase font-semibold tracking-wide text-[#0099B0] text-[14px] leading-[15.96px]">Testimonials</h5>
           </Box>
           <Box className="w-full">
-            <Swiper  navigation={true} loop={true} modules={[Navigation]}>
+            <Swiper  navigation={false} loop={true} modules={[Navigation]}>
               <SwiperSlide>
                 <Box className="w-2/3 mx-auto pb-14">
                   <h4 className="text-[24px] leading-[36px] md:text-[42px] md:leading-[54.6px] font-medium py-10">
