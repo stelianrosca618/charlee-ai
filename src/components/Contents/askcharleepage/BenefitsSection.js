@@ -39,7 +39,7 @@ export const BenefitsSection = () => {
             </p>
           </Box>
           <Box className="w-full text-start px-5 md:px-0" flex={2} >
-            <ul className="list-image-[url(./assets/imgs/icons/Check_symbol.svg)] list-outside grid  grid-cols-1 md:grid-cols-2 gap-7">
+            <ul className="list-image-[url(./assets/imgs/icons/Check_symbol.svg)] list-outside pl-10 grid grid-cols-1 md:grid-cols-2 gap-7">
               {benefitsList.map((benefitItem, key) => (
                 <li key={key} >
                   <h6 className="text-[20px] leading-[31px] font-normal">{benefitItem.subject}</h6>

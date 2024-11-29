@@ -1,5 +1,6 @@
 import { Box, Container } from "@mui/material"
 import pattens from "../../../assets/imgs/pattens/pattens.png"
+import { Link } from "react-router-dom"
 
 export const HomeRightSection = ({detailObject}) => {
   return (
@@ -28,7 +29,10 @@ export const HomeRightSection = ({detailObject}) => {
               </Box>
             </Box>
             <Box textAlign={'left'}>
-              <button className="text-[18px] leading-[24px] font-medium py-5 px-12 bg-[#0D131E] text-white border hover:border-[#021744] hover:bg-[#EDF3F8] hover:text-[#021744] rounded-full mt-12">Dive deeper</button>
+              <Link to={detailObject?.link}>
+                <button className="text-[18px] leading-[24px] font-medium py-5 px-12 bg-[#0D131E] text-white border hover:border-[#021744] hover:bg-[#EDF3F8] hover:text-[#021744] rounded-full mt-12">Dive deeper</button>
+              </Link>
+              
             </Box>
           </Box>
           {detailObject?.bottomAct && <Box position={"absolute"} bottom={'-70px'} left={'-80%'} width={'100%'} height={'300px'} sx={{background: `url(${pattens})`}}>

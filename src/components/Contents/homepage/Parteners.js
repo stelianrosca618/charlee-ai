@@ -7,6 +7,7 @@ import snapSheet from "../../../assets/imgs/brands/snapsheet.png";
 import quicksilver from "../../../assets/imgs/brands/quicksilver.png";
 import duckgreeck from "../../../assets/imgs/brands/duckcreek.png";
 import inspire from "../../../assets/imgs/brands/Inspire.png"
+import { Link } from "react-router-dom";
 export const Parteners = () => {
   return(
     <Box className="w-full bg-[#EDF3F8] pt-28">
@@ -76,9 +77,11 @@ export const Parteners = () => {
           </Grid2>
         </Box>
         <Box className="w-full">
+          <Link to={'/partners'}>
           <button className="font-medium text-[18px] rounded-full py-3 px-12 border border-[#021744] hover:bg-[#021744] hover:text-white">
             See all parteners
           </button>
+          </Link>
         </Box>
       </Container>
     </Box>   

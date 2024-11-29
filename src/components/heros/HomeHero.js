@@ -5,6 +5,7 @@ import securityIco from "../../assets/imgs/icons/security-time.svg"
 import folderIco from "../../assets/imgs/icons/folder-2.svg"
 import searchIco from "../../assets/imgs/icons/search-status.svg"
 import unionIco from "../../assets/imgs/icons/Union.svg"
+import { Link } from "react-router-dom"
 
 export const HomeHero = () => {
   return (
@@ -75,9 +76,11 @@ export const HomeHero = () => {
                       </p>
                     </Box>
                     <Box className="w-full" marginTop={6}>
+                      <Link to={'/product/seecharlee'}>
                       <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                         Dive deeper
                       </button>
+                      </Link>
                     </Box>
                   </Box>
                 </Box>
@@ -102,9 +105,11 @@ export const HomeHero = () => {
                       </p>
                     </Box>
                     <Box className="w-full" marginTop={6}>
+                      <Link to={'/product/docucharlee'}>
                       <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                         Dive deeper
                       </button>
+                      </Link>
                     </Box>
                   </Box>
                 </Box>
@@ -129,9 +134,11 @@ export const HomeHero = () => {
                       </p>
                     </Box>
                     <Box className="w-full" marginTop={6}>
+                      <Link to={'/product/askcharlee'}>
                       <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                         Dive deeper
                       </button>
+                      </Link>
                     </Box>
                   </Box>
                 </Box>
@@ -156,9 +163,11 @@ export const HomeHero = () => {
                       </p>
                     </Box>
                     <Box className="w-full" marginTop={6}>
+                      <Link to={'/product/findcharlee'}>
                       <button className="w-full rounded-full text-[18px] leading-[24px] bg-transparent border py-4 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                         Dive deeper
                       </button>
+                      </Link>
                     </Box>
                   </Box>
                 </Box>

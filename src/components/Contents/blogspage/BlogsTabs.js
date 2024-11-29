@@ -23,7 +23,7 @@ export const BlogsTabs = () => {
       <Container maxWidth="lg">
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <TabList sx={{paddingTop: "1rem"}} onChange={handleChange} aria-label="lab API tabs example">
+            <TabList sx={{paddingTop: "1rem", overflowX: 'auto'}} onChange={handleChange} aria-label="lab API tabs example">
               <Tab label="All" value="1" sx={tabMenuStyle} />
               <Tab label="Events" value="2" sx={tabMenuStyle} />
               <Tab label="Thought Leadership" value="3" sx={tabMenuStyle} />

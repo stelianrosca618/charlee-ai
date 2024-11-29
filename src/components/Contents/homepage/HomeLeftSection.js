@@ -2,6 +2,7 @@ import { Box, Container } from "@mui/material"
 import securityCoverIco from "../../../assets/imgs/icons/security-cover.png"
 import checkBoxIco from "../../../assets/imgs/icons/Checkbox_base.png"
 import seeCharleeDashboard from "../../../assets/imgs/Dashboards/seeCharleeDashboard.png";
+import { Link } from "react-router-dom";
 
 export const HomeLeftSection = ({detailObject}) => {
   return (
@@ -27,7 +28,9 @@ export const HomeLeftSection = ({detailObject}) => {
               </Box>
             </Box>
             <Box textAlign={'left'}>
-              <button className="text-[18px] leading-[24px] font-medium py-5 px-12 bg-[#0D131E] text-white border hover:border-[#021744] hover:bg-[#EDF3F8] hover:text-[#021744] rounded-full mt-12">Dive deeper</button>
+              <Link to={detailObject?.link}>
+                <button className="text-[18px] leading-[24px] font-medium py-5 px-12 bg-[#0D131E] text-white border hover:border-[#021744] hover:bg-[#EDF3F8] hover:text-[#021744] rounded-full mt-12">Dive deeper</button>
+              </Link>
             </Box>
           </Box>
           <Box flex={1} height={'100%'} position={"relative"} >
