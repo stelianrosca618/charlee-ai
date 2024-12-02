@@ -1,4 +1,4 @@
-import { Box, Container } from "@mui/material"
+import { Box, Container, Grid2 } from "@mui/material"
 import { IoHeartSharp } from "react-icons/io5";
 import patternSvg from "../../assets/imgs/pattens/patterns.svg"
 export const SolutionHero = () => {
@@ -35,8 +35,10 @@ export const SolutionHero = () => {
           </Box>
         </Box>
         <Box className="w-full" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"center"} alignItems={"center"} gap={6}>
-          <Box className="w-full h-full rounded-xl shadow-xl bg-white">
-            <Box className="w-full h-full p-9 " display={"flex"} flexDirection={"column"} justifyContent={"space-between"}>
+          <Grid2 container spacing={4}>
+            <Grid2 size={{xs: 12, md: 6, lg: 6, xl: 6}} className="rounded-xl shadow-xl bg-white p-9"
+              display={"flex"} flexDirection={"column"} justifyContent={"space-between"}
+            >
               <Box className="w-full mb-7">
                 <Box display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                   <div className="p-1 w-fit h-fit rounded-full bg-[#4CFFE9]">
@@ -56,10 +58,9 @@ export const SolutionHero = () => {
                   Learn more
                 </button>
               </Box>
-            </Box>
-          </Box>
-          <Box className="w-full h-full rounded-xl shadow-xl bg-white">
-            <Box className="w-full h-full p-9 " display={"flex"} flexDirection={"column"} justifyContent={"space-between"}>
+            </Grid2>
+            <Grid2 size={{xs: 12, md: 6, lg: 6, xl: 6}} className="rounded-xl shadow-xl bg-white p-9"
+              display={"flex"} flexDirection={"column"} justifyContent={"space-between"}>
               <Box className="w-full mb-7">
                 <Box display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                   <div className="p-1 w-fit h-fit rounded-full bg-[#4CFFE9]">
@@ -79,8 +80,8 @@ export const SolutionHero = () => {
                   Learn more
                 </button>
               </Box>
-            </Box>
-          </Box>
+            </Grid2>
+          </Grid2>
         </Box>
       </Container>
       <Box className="w-full absolute bottom-0 h-[300px]"
