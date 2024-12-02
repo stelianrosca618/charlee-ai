@@ -7,6 +7,15 @@ import { CiBasketball } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
+  const openPolicy = () => {
+    window.open('https://app.termly.io/policy-viewer/policy.html?policyUUID=b5b033f7-4a2f-4c82-a576-1ecd7648f913')
+  }
+  const openCookie = () => {
+    window.open('https://app.termly.io/policy-viewer/policy.html?policyUUID=b0953643-e8fd-41c7-8d52-c583850491e6')
+  }
+  const openTerms = () => {
+    window.open('https://app.termly.io/policy-viewer/policy.html?policyUUID=703e5aa4-5804-4558-bc15-6af2ad1307c5')
+  }
   return (
     <Box className="w-full bg-[#021744] text-white py-16">
       <Container>
@@ -93,9 +102,9 @@ export const Footer = () => {
                       Legal
                       </h6>
                       <ul className="text-[16px] leading-[31px] mt-4">
-                        <li className="py-2">Cookies</li>
-                        <li className="py-2">Privacy</li>
-                        <li className="py-2">Terms</li>
+                        <li className="py-2 cursor-pointer" onClick={() => openCookie()}>Cookies</li>
+                        <li className="py-2 cursor-pointer" onClick={() => openPolicy()}>Privacy</li>
+                        <li className="py-2 cursor-pointer" onClick={() => openTerms()}>Terms</li>
                       </ul>
                     </Box>
                   </Grid2>

@@ -1,6 +1,19 @@
 import { Box, Container } from "@mui/material"
 import folderCover from "../../assets/imgs/icons/folder-cover.png"
+import { BookPopup } from "../modals/BookPopup";
+import { useState } from "react";
 export const DocuCharleeHero = () => {
+
+  const [isOpenBook, setIsOpenBook] = useState(false);
+
+  const handleCloseBook = () => {
+    setIsOpenBook(false)
+  }
+
+  const handleOpenBook = () => {
+    setIsOpenBook(true)
+  }
+
   return (
     <Box className="w-full pt-24">
       <Container maxWidth="lg">
@@ -19,11 +32,12 @@ export const DocuCharleeHero = () => {
             DocuCharlee uses AI and natural language processing to create clear, concise claim summaries, pulling<br /> 
             out key details to help insurers save time and make better decisions faster.
           </p>
-          <button className="mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
+          <button onClick={() => handleOpenBook()} className="mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
             Book a demo
           </button>
         </Box>
       </Container>
+      <BookPopup open={isOpenBook} handleClose={handleCloseBook} />
     </Box>
   )
 }

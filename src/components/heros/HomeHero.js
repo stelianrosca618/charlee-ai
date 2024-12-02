@@ -176,22 +176,22 @@ export const HomeHero = () => {
           </Box>
         </Container>
         <Container maxWidth="lg">
-          <Box width={'100%'} display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}} paddingBottom={'117px'}>
-            <Box maxWidth={'250px'} marginX={3} marginY={3}>
+          <Box width={'100%'} display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}}>
+            <Box maxWidth={'250px'} marginX={3} marginY={2}>
               <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">55M+</h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
               <Box width={'100%'} padding={'19px'}>
               Total claims analyzed <br /> by Charlee.ai
               </Box>
             </Box>
-            <Box maxWidth={'250px'} marginX={3} marginY={3}>
+            <Box maxWidth={'250px'} marginX={3} marginY={2}>
               <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">50K+</h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
               <Box width={'100%'}  padding={'19px'}>
                 Pre-built and pre-trained insights in a predictive analytics solution
               </Box>
             </Box>
-            <Box maxWidth={'250px'} marginX={3} marginY={3}>
+            <Box maxWidth={'250px'} marginX={3} marginY={2}>
               <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">24/7</h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
               <Box width={'100%'}  padding={'19px'}>

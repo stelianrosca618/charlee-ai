@@ -11,10 +11,10 @@ export const AboutHero = () => {
             <div>
               <h6 className="uppercase text-[#4CFFE9] text-[14px] leading-[15.96px] font-bold">what we do</h6>
               <h2 className="hidden md:block text-white text-[65px] leading-[71.5px] font-medium mt-6">
-                We are transforming Insurance<br /> Analytics Through AI Innovation
+                We are transforming Insurance<br /> Through AI Innovation
               </h2>
               <h2 className="block md:hidden text-white text-[36px] leading-[39.6px] font-medium mt-6">
-                We are transforming Insurance Analytics Through AI Innovation
+                We are transforming Insurance Through AI Innovation
               </h2>
             </div>
           </Box>

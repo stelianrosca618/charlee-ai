@@ -6,6 +6,8 @@ import patterns from "../../assets/imgs/pattens/Path.png"
 import lightIco from "../../assets/imgs/icons/Lightbulb.png"
 import useDoneIco from "../../assets/imgs/icons/User_done.png"
 import bellIco from "../../assets/imgs/icons/Bell_ring.png";
+import { useState } from "react"
+import { BookPopup } from "../modals/BookPopup"
 
 const features = [
   {
@@ -25,6 +27,18 @@ const features = [
   }
 ]
 export const FindCharleeHero = () => {
+
+  const [isOpenBook, setIsOpenBook] = useState(false);
+
+  const handleCloseBook = () => {
+    setIsOpenBook(false)
+  }
+
+  const handleOpenBook = () => {
+    setIsOpenBook(true)
+  }
+
+
   return (
     <>
     <Box className="w-full pt-24 pb-10">
@@ -43,7 +57,7 @@ export const FindCharleeHero = () => {
                 <p className="mt-8">
                   FindCharlee is your trusted fraud detection tool, using powerful AI and machine learning to spot suspicious insurance claims. By analyzing patterns in claimant behavior, claim history, and other data, FindCharleen quickly flags high-risk claims for further review, helping you stay ahead of fraud with ease.
                 </p>
-                <button className="mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
+                <button onClick={() => {handleOpenBook()}} className="mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                   Book a demo
                 </button>
               </Box>
@@ -68,7 +82,7 @@ export const FindCharleeHero = () => {
       <Container maxWidth="lg">
         <Box className="w-full relative text-start z-10">
           <h4 className="text-[29px] md:text-[42px] leading-[40px] md:leading-[54.6px] font-medium py-10">
-            4SeeCharlee Features
+            FindCharlee Features
           </h4>
           <Box className="w-full">
             <Grid2 container spacing={3}>
@@ -84,6 +98,7 @@ export const FindCharleeHero = () => {
         </Box>
       </Container>
     </Box>
+    <BookPopup open={isOpenBook} handleClose={handleCloseBook} />
     </>
     
   )

@@ -12,6 +12,8 @@ import speakerSymbol from "../../assets/imgs/icons/speaker.svg";
 import watchSymbol from "../../assets/imgs/icons/watch.svg";
 
 import patterns from "../../assets/imgs/pattens/Path.png"
+import { useState } from "react";
+import { BookPopup } from "../modals/BookPopup";
 
 const features = [
   {
@@ -32,6 +34,17 @@ const features = [
 ]
 
 export const SeeCharleeHero = () => {
+
+  const [isOpenBook, setIsOpenBook] = useState(false);
+
+  const handleCloseBook = () => {
+    setIsOpenBook(false)
+  }
+
+  const handleOpenBook = () => {
+    setIsOpenBook(true)
+  }
+
   return (
     <>
       <Box className="w-full pt-24 pb-10" >
@@ -50,7 +63,7 @@ export const SeeCharleeHero = () => {
                   <p className="mt-8">
                     4SeeCharlee aids claims handlers by providing advanced insights through its severity management, litigation prediction, and **attorney involvement tracking, streamlining decision-making and improving outcomes.
                   </p>
-                  <button className="mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
+                  <button onClick={() => handleOpenBook()} className="mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                     Book a demo
                   </button>
                 </Box>
@@ -106,6 +119,7 @@ export const SeeCharleeHero = () => {
           </Box>
         </Container>
       </Box>
+      <BookPopup open={isOpenBook} handleClose={handleCloseBook} />
     </>
     
   )

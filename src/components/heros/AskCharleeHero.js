@@ -2,12 +2,25 @@ import { Box, Container } from "@mui/material"
 import askCharleehand from "../../assets/imgs/banners/askCharleehand.png"
 import searchCover from "../../assets/imgs/icons/search-cover.png"
 import patterns from "../../assets/imgs/pattens/Path.png"
+import { useState } from "react"
+import { BookPopup } from "../modals/BookPopup"
+
 export const AskCharleeHero = () => {
+  const [isOpenBook, setIsOpenBook] = useState(false);
+
+  const handleCloseBook = () => {
+    setIsOpenBook(false)
+  }
+
+  const handleOpenBook = () => {
+    setIsOpenBook(true)
+  }
+
   return (
     <>
       <Box className="w-full  pt-36" >
         <Container maxWidth="lg">
-          <Box className="w-full py-16">
+          <Box className="w-full pt-16 pb-8">
             <Box className="w-full" display={"flex"} justifyContent={"center"} alignItems={"center"}>
               <img src={searchCover} alt="askcharlee-logo"/>
               <h6 className="text-[29px] leading-[40px] mx-4">AskCharlee</h6>
@@ -15,19 +28,19 @@ export const AskCharleeHero = () => {
             <h2 className="mt-10 text-[36px] md:text-[65px] leading-[39.6px] md:leading-[71.5px] font-medium">Gather Instant Insights</h2>
             <p className="hidden md:block mt-5 text-[16px] leading-[30px]">
               Introducing the AI-powered AskCharlee, designed to instantly deliver answers and insights from <br />
-              complex insurance data and claim notes. This conversational assistant helps insurance professionals <br />
+              complex insurance documents, data and claim notes. This conversational assistant helps insurance professionals <br />
               access key information, streamline decisions, and enhance the efficiency of claims management.
             </p>
             <p className="block md:hidden mt-5 text-[16px] leading-[30px]">
               Introducing the AI-powered AskCharlee, designed to instantly deliver answers and insights from complex insurance data and claim notes. This conversational assistant helps insurance professionals access key information, streamline decisions, and enhance the efficiency of claims management.
             </p>
-            <button className="mt-10 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
+            <button onClick={() => {handleOpenBook()}} className="mt-10 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
               Book a demo
             </button>
           </Box>
         </Container>
       </Box>
-      <Box className="w-full relative pt-3 md:pt-36">
+      <Box className="w-full relative pt-3 md:pt-24">
         <Container maxWidth="lg">
           <Box className="w-full" padding={{xs: 3, sm: 3, md: 0, lg: 0, xl: 0}} display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"space-between"} alignItems={"flex-end"}>
             <Box className="w-full text-left pb-0 md:pb-28" flex={1} order={{xs: 2, sm: 2, md: 1, lg:1, xl:1}}>
@@ -79,6 +92,7 @@ export const AskCharleeHero = () => {
           style={{background: `url(${patterns})`, backgroundRepeat: "repeat no-repeat"}}
         ></div>
       </Box>
+      <BookPopup open={isOpenBook} handleClose={handleCloseBook} />
     </>
     
   )

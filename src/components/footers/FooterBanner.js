@@ -1,6 +1,11 @@
 import { Box, Container, Grid2 } from "@mui/material"
 import footerBanerLogo from "../../assets/imgs/banners/footer-banner.png"
 export const FooterBanner = () => {
+
+  const openPolicy = () => {
+    window.open('https://app.termly.io/policy-viewer/policy.html?policyUUID=b5b033f7-4a2f-4c82-a576-1ecd7648f913')
+  }
+
   return (
     <Box className="w-full gradient-background">
       <Container maxWidth="lg">
@@ -13,12 +18,22 @@ export const FooterBanner = () => {
                 <p className="font-normal text-white text-[20px] leading-[31px] py-11">
                 Sign up for a personalized demo today and see how Charlee can help you stay ahead of potential fraud, mitigate losses, and optimize efficiency.
                 </p>
-                <Box className="w-full" display={'flex'} justifyContent={"flex-start"} alignItems={"center"}>
-                  <input type="text" placeholder="Enter your email" className="w-full rounded-lg py-3 px-4 bg-white"/>
-                  <button className="rounded-lg font-medium text-[18px] leading-[24px] px-8 py-3 border border-[#42DDD1] bg-[#42DDD1] hover:bg-transparent hover:text-white mx-2">Subscribe</button>
+                <Box className="w-full" display={'flex'} justifyContent={"flex-start"} alignItems={"flex-end"} gap={2}>
+                  <Box>
+                    <Box display={"flex"} alignItems={"center"} gap={2} marginBottom={1}>
+                      <input type="text" placeholder="Enter your first name" className="w-full rounded-lg py-3 px-4 bg-white"/>
+                      <input type="text" placeholder="Enter your last name" className="w-full rounded-lg py-3 px-4 bg-white"/>
+                    </Box>
+                    <input type="text" placeholder="Enter your email" className="w-full rounded-lg py-3 px-4 bg-white"/>
+                  </Box>
+                  <Box>
+                    <button className="rounded-lg font-medium text-[18px] leading-[24px] px-8 py-3 border border-[#42DDD1] bg-[#42DDD1] hover:bg-transparent hover:text-white mx-2">
+                      Submit
+                    </button>
+                  </Box>
                 </Box>
                 <p className="text-white pt-3">
-                  We care about the protection of your data. read our <a className="footer-privacy cursor-pointer">Privacy policy</a>
+                  We care about the protection of your data. read our <a onClick={() => {openPolicy()}} className="footer-privacy cursor-pointer">Privacy policy</a>
                 </p>
               </Box>
             </Grid2>
