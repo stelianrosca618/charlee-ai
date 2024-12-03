@@ -11,7 +11,7 @@ export const Testimonials = () => {
   return (
     <Box className="w-full bg-[#EDF3F8] relative">
       <Container maxWidth="lg">
-        <Box className="w-full py-28">
+        <Box data-aos-duration="1000" data-aos="fade" className="w-full py-28">
           <Box className="w-full text-center">
             <h5 className="uppercase font-semibold tracking-wide text-[#0099B0] text-[14px] leading-[15.96px]">Testimonials</h5>
           </Box>

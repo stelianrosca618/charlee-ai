@@ -61,7 +61,7 @@ export const Features = () => {
   return (
   <Box className="w-full bg-[#EDF3F8]">
     <Container  maxWidth="lg">
-      <Box className="w-full rounded-xl gradient-border" >
+      <Box data-aos="flip-left" className="w-full rounded-xl gradient-border" >
         <Box className="w-full p-14 rounded-xl bg-[#EDF3F8]">
           <Box paddingBottom={5}>
             <h3 className="text-[32px] leading-[41px] md:text-[56px] md:leading-[65px] font-medium text-left">

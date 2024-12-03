@@ -19,56 +19,56 @@ export const Parteners = () => {
         <Box className="w-full py-28">
           <Grid2 container spacing={2}>
             <Grid2 size={{xs:12, md:3}}>
-              <Box className="w-full rounded-xl gradient-border">
+              <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
                   <img src={guidewire} alt="guidewire"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
-              <Box className="w-full rounded-xl gradient-border">
+              <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
                   <img src={majesco} alt="majesco"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
-              <Box className="w-full rounded-xl gradient-border">
+              <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
                   <img src={awsmarket} alt="awsmarket"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
-              <Box className="w-full rounded-xl gradient-border">
+              <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
                   <img src={oneshield} alt="oneshield"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
-              <Box className="w-full rounded-xl gradient-border">
+              <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
                   <img src={snapSheet} alt="snapSheet"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
-              <Box className="w-full rounded-xl gradient-border">
+              <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
                   <img src={quicksilver} alt="quicksilver"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
-              <Box className="w-full rounded-xl gradient-border">
+              <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
                   <img src={duckgreeck} alt="duckgreeck"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
-              <Box className="w-full rounded-xl gradient-border">
+              <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
                   <img src={inspire} alt="inspire"/>
                 </Box>
@@ -78,7 +78,7 @@ export const Parteners = () => {
         </Box>
         <Box className="w-full">
           <Link to={'/partners'}>
-          <button className="font-medium text-[18px] rounded-full py-3 px-12 border border-[#021744] hover:bg-[#021744] hover:text-white">
+          <button data-aos-duration="1000" data-aos="flip-up" className="font-medium text-[18px] rounded-full py-3 px-12 border border-[#021744] hover:bg-[#021744] hover:text-white">
             See all partners
           </button>
           </Link>

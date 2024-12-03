@@ -9,7 +9,7 @@ export const HomeLeftSection = ({detailObject}) => {
    <Box className={detailObject?.bottomAct? "w-full bg-white" : "w-full bg-[#EDF3F8]"}>
       <Container maxWidth="lg">
         <Box className="w-full " display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"between"} position={"relative"} paddingY={'3rem'}>
-          <Box flex={1} height={'100%'}>
+          <Box data-aos-duration="1500" data-aos="fade-right" flex={1} height={'100%'}>
             <Box display={"flex"} justifyContent={"start"} alignItems={"center"} paddingBottom={'24px'}>
               <img src={detailObject?.prodIco} alt="secutify-img"/>
               <h5 className="text-[29px] font-medium leading-10 ml-3">{detailObject?.prodItem}</h5>
@@ -33,7 +33,7 @@ export const HomeLeftSection = ({detailObject}) => {
               </Link>
             </Box>
           </Box>
-          <Box flex={1} height={'100%'} position={"relative"} >
+          <Box data-aos-duration="1500" data-aos="fade-left" flex={1} height={'100%'} position={"relative"} >
             <img src={detailObject?.itemImage} style={{position: "absolute", top: '-130px', left: '-6vw', height: 'auto', width: '90vw', maxWidth: '150vw'}} alt="dashboard"/>
           </Box>
         </Box>

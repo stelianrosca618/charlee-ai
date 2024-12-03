@@ -16,11 +16,11 @@ export const HomeHero = () => {
         <Container className="pt-20 pb-40 text-white flex justify-center items-center" maxWidth="lg">
           <Grid2  className="w-full" alignItems={"center"} container spacing={1}>
             <Grid2 size={{ xs: 12, md: 8}}>
-              <Box className="w-full text-left hidden md:block">
-                <h2 className="text-start text-[75px] leading-[82.5px] font-Inter font-medium">
+              <Box className="w-full text-left hidden md:block overflow-hidden">
+                <h2 className="homeHero-title text-start text-[75px] leading-[82.5px] font-Inter font-medium">
                   Meet the AI <br />Intelligence platform <br />for claims
                 </h2>
-                <Typography marginBottom={6} sx={{fontSize: '20px !important', lineHeight: '31px !important'}} variant="body1" fontWeight={400} textAlign={'left'}>
+                <Typography className="homeHero-detail" marginBottom={6} sx={{fontSize: '20px !important', lineHeight: '31px !important'}} variant="body1" fontWeight={400} textAlign={'left'}>
                   Our platform knows your exposures, reduces severity, litigation and fraud, optimizes reserves, while simplifying claims—effortlessly.
                 </Typography>
                 
@@ -42,8 +42,8 @@ export const HomeHero = () => {
             </Grid2>
             <Grid2 size={{ xs: 12, md: 4}}>
               <Box display={"flex"} justifyContent={"center"} alignItems={"flex-start"}>
-                {/* <img src={heroLogo} alt="hero-icon"/> */}
-                <CharleeBot />
+                <img src={heroLogo} alt="hero-icon" className="charleeBot"/>
+                {/* <CharleeBot /> */}
               </Box>
             </Grid2>
           </Grid2>
@@ -52,14 +52,14 @@ export const HomeHero = () => {
       <Box className="w-full bg-[#EDF3F8]">
         <Container maxWidth="lg" sx={{transform: {xs:'translateY(-150px)', md:'translateY(-210px)'}}}>
           <Box paddingBottom={'35px'}>
-            <h3 className="text-white text-[29px] leading-[40px] md:text-[42px] md:leading-[54.6px] font-medium text-center md:text-left">
+            <h3 className="home-productTitle text-white text-[29px] leading-[40px] md:text-[42px] md:leading-[54.6px] font-medium text-center md:text-left">
               Our AI Platform Products
             </h3>
           </Box>
           <Box className="w-full px-2 md:px-0 ">
             <Grid2 className="w-full" alignItems={"flex-start"} container spacing={2}>
               <Grid2 size={{xs:12, md:3}}>
-                <Box className="rounded-lg h-full">
+                <Box className="homeProd-card rounded-lg h-full">
                   <Box className="px-5 py-8 rounded-t-lg bg-[#021744]" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <Box className="p-3 rounded-lg bg-[#ffffff3b]">
                       <img src={securityIco} alt="sec-icon" className="w-8 h-8"/>
@@ -88,7 +88,7 @@ export const HomeHero = () => {
                 </Box>
               </Grid2>
               <Grid2 size={{xs:12, md:3}}>
-                <Box className="rounded-lg h-full">
+                <Box className="homeProd-card rounded-lg h-full">
                   <Box className="px-5 py-8 rounded-t-lg bg-[#004E77]" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <Box className="p-3 rounded-lg bg-[#ffffff3b]">
                       <img src={folderIco} alt="folder-icon" className="w-8 h-8"/>
@@ -117,7 +117,7 @@ export const HomeHero = () => {
                 </Box>
               </Grid2>
               <Grid2 size={{xs:12, md:3}}>
-                <Box className="rounded-lg h-full">
+                <Box className="homeProd-card rounded-lg h-full">
                   <Box className="px-5 py-8 rounded-t-lg bg-[#0099B0]" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <Box className="p-3 rounded-lg bg-[#ffffff3b]">
                       <img src={searchIco} alt="folder-icon" className="w-8 h-8"/>
@@ -146,7 +146,7 @@ export const HomeHero = () => {
                 </Box>
               </Grid2>
               <Grid2 size={{xs:12, md:3}}>
-                <Box className="rounded-lg h-full">
+                <Box className="homeProd-card rounded-lg h-full">
                   <Box className="px-5 py-8 rounded-t-lg bg-[#42DDD1]" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <Box className="p-3 rounded-lg bg-[#ffffff3b]">
                       <img src={unionIco} alt="folder-icon" className="w-8 h-8"/>
@@ -177,26 +177,35 @@ export const HomeHero = () => {
             </Grid2>
           </Box>
         </Container>
-        <Container maxWidth="lg" className="mt-[-140px]">
-          <Box width={'100%'} display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}}>
+        <Container maxWidth="lg" className=" mt-[-140px]">
+          <Box className="numberCounter" width={'100%'} display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}}>
             <Box maxWidth={'250px'} marginX={3} marginY={2}>
-              <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">55M+</h1>
+              <h1 className=" font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">
+                <span className="numbCount">55</span>
+                M+
+              </h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
-              <Box width={'100%'} padding={'19px'}>
+              <Box className="countDetail" width={'100%'} padding={'19px'}>
               Total claims analyzed <br /> by Charlee.ai
               </Box>
             </Box>
             <Box maxWidth={'250px'} marginX={3} marginY={2}>
-              <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">50K+</h1>
+              <h1 className=" font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">
+              <span className="numbCount">50</span>
+              K+
+              </h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
-              <Box width={'100%'}  padding={'19px'}>
+              <Box className="countDetail" width={'100%'}  padding={'19px'}>
                 Pre-built and pre-trained insights in a predictive analytics solution
               </Box>
             </Box>
             <Box maxWidth={'250px'} marginX={3} marginY={2}>
-              <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">24/7</h1>
+              <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">
+                <span className="numbCount">24</span>/
+                <span className="numbCount">7</span>
+              </h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
-              <Box width={'100%'}  padding={'19px'}>
+              <Box className="countDetail" width={'100%'}  padding={'19px'}>
               Our virtual claims assistant is available around the clock
               </Box>
             </Box>

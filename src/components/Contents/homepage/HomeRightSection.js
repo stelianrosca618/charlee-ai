@@ -7,10 +7,10 @@ export const HomeRightSection = ({detailObject}) => {
    <Box className={detailObject?.bottomAct? "w-full bg-white" : "w-full bg-[#EDF3F8]"}>
       <Container maxWidth="lg">
         <Box className="w-full " display={"flex"} flexDirection={{xs: "column-reverse", md: "row"}} justifyContent={"between"} position={"relative"} paddingY={'6rem'}>
-          <Box flex={1} height={'100%'} position={"relative"}>
+          <Box data-aos-duration="1500" data-aos="fade-down-right" flex={1} height={'100%'} position={"relative"}>
             <img src={detailObject?.itemImage} style={{position: "absolute", top: '-130px', right: '-6vw',  height: 'auto', width: '90vw', maxWidth: '150vw'}} alt="dashboard"/>
           </Box>
-          <Box flex={1} height={'100%'}>
+          <Box data-aos-duration="1500" data-aos="fade-down-left" flex={1} height={'100%'}>
             <Box display={"flex"} justifyContent={"start"} alignItems={"center"} paddingBottom={'24px'}>
               <img src={detailObject?.prodIco} alt="secutify-img"/>
               <h5 className="text-[29px] font-medium leading-10 ml-3">{detailObject?.prodItem}</h5>

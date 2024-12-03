@@ -18,7 +18,10 @@ import { Testimonials } from "../../components/Contents/homepage/Testimonials"
 import { FooterBanner } from "../../components/footers/FooterBanner"
 import { Footer } from "../../components/footers/Footer"
 // import anime from "animejs";
-import anime from 'animejs/lib/anime.es.js';
+import gsap, {} from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
+
 import { useEffect, useRef } from "react";
 
 const sections = [
@@ -91,24 +94,66 @@ const sections = [
     itemImage: flagDashboard
   },
 ]
-
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 export const Home = () => {
 
-  const animation = useRef();
-
-  useEffect(() => {
-    animation.current = anime.timeline({
-      easing: 'easeOutExpo',
-      duration: 750
-    }).add({
-      targets: '.charleeBot',
-      translateX: "+=100",
-      rotate: anime.stagger([-360, 360]),
-      loop: true,
+  useGSAP(() => {
+    const charleeBotObj = gsap.utils.toArray(".charleeBot")
+    const headerTitle = gsap.utils.toArray(".homeHero-title")
+    const headerDetail = gsap.utils.toArray(".homeHero-detail")
+    const homeProductTitle =gsap.utils.toArray(".home-productTitle")
+    const homeProdCards = gsap.utils.toArray('.homeProd-card');
+    const tlProcess = gsap.timeline();
+    console.log(charleeBotObj)
+    tlProcess.fromTo(charleeBotObj[0], {translateX: 5000}, {translateX: 0}, "+=0.1");
+    tlProcess.fromTo(headerTitle[0], {translateY: -1000}, {translateY: 0}, "+=0.1");
+    tlProcess.fromTo(headerDetail[0], {translateY: 1000}, {translateY: 0}, "+=0.1");
+    tlProcess.fromTo(homeProductTitle[0], {clipPath: `inset(0% 100% 0% 0%)`}, {clipPath: `inset(0% 0% 0% 0%)`}, "+=0.1");
+    homeProdCards.map(cardItem => {
+      tlProcess.fromTo(cardItem, {clipPath: `inset(0% 0% 100% 0%)`}, {clipPath: `inset(0% 0% 0% 0%)`}, "+=0");
     })
-    console.log('checking animdata', animation);
-    animation.current.play();
-  }, [])
+
+    // const items = gsap.utils.toArray(".numbCount");
+    // const numberAnim = gsap.timeline();
+    // numberAnim.from(items[0], {textContent: 1, duration: 2, snap: { textContent: 1 },
+    //   stagger: {
+    //     each: 1.0,
+    //     onUpdate: function() {
+    //       this.targets()[0].innerHTML = this.targets()[0].textContent;
+    //     },
+    //   }}, "+0");
+
+      ScrollTrigger.create({
+        trigger: `.numberCounter`,
+        start: "+100px bottom",
+        end: "bottom center",
+        markers: true,
+        scrub: 1,
+        onEnter: () => {
+          
+          const items = gsap.utils.toArray(".numbCount");
+          const detailItems = gsap.utils.toArray(".countDetail")
+          console.log('Checking Trigger Enter', items)
+          
+          items.map(item => {
+            console.log(item.innerText);
+            const itemText = item.innerText;
+
+            gsap.fromTo(item, { innerText: 0, 
+              snap: {
+                innerText:1
+              } 
+              }, { innerText: itemText, duration: 1.5, 
+                snap: {
+                  innerText:1
+                }
+              });
+          })
+          gsap.fromTo(detailItems, {clipPath: `inset(0% 0% 100% 0%)`}, {clipPath: `inset(0% 0% 0% 0%)`, duration: 1.5});
+        }
+      })
+  }, )
+
 
     return (
       <div className="w-full overflow-x-hidden">
