@@ -8,7 +8,7 @@ export const HomeLeftSection = ({detailObject}) => {
   return (
    <Box className={detailObject?.bottomAct? "w-full bg-white" : "w-full bg-[#EDF3F8]"}>
       <Container maxWidth="lg">
-        <Box clasName="w-full " display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"between"} position={"relative"} paddingY={'6rem'}>
+        <Box className="w-full " display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"between"} position={"relative"} paddingY={'3rem'}>
           <Box flex={1} height={'100%'}>
             <Box display={"flex"} justifyContent={"start"} alignItems={"center"} paddingBottom={'24px'}>
               <img src={detailObject?.prodIco} alt="secutify-img"/>

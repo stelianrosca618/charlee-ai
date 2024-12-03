@@ -25,7 +25,7 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 						className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}
 					>
 						{navInfo.name}
-						<span style={{background: textColor}} class={open? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
+						<span style={{background: textColor}} className={open? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
 					</button>
 					<Menu
 					id="basic-menu"
@@ -58,7 +58,7 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 									className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}
 								>
 									{chileNav.name}
-									<span style={{background: textColor}} class={`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
+									<span style={{background: textColor}} className={`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
 								</button>
 							</MenuItem>
 						)))
@@ -68,7 +68,7 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 				<Link to={navInfo.pathName}>
 					<button style={{color: textColor}} className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}>
 						{navInfo.name}
-						<span style={{background: textColor}} class={isActive? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
+						<span style={{background: textColor}} className={isActive? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
 					</button>
 				</Link>
 			}

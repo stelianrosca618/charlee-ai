@@ -6,7 +6,7 @@ export const HomeRightSection = ({detailObject}) => {
   return (
    <Box className={detailObject?.bottomAct? "w-full bg-white" : "w-full bg-[#EDF3F8]"}>
       <Container maxWidth="lg">
-        <Box clasName="w-full " display={"flex"} flexDirection={{xs: "column-reverse", md: "row"}} justifyContent={"between"} position={"relative"} paddingY={'6rem'}>
+        <Box className="w-full " display={"flex"} flexDirection={{xs: "column-reverse", md: "row"}} justifyContent={"between"} position={"relative"} paddingY={'6rem'}>
           <Box flex={1} height={'100%'} position={"relative"}>
             <img src={detailObject?.itemImage} style={{position: "absolute", top: '-130px', right: '-6vw',  height: 'auto', width: '90vw', maxWidth: '150vw'}} alt="dashboard"/>
           </Box>

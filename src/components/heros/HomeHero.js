@@ -6,14 +6,15 @@ import folderIco from "../../assets/imgs/icons/folder-2.svg"
 import searchIco from "../../assets/imgs/icons/search-status.svg"
 import unionIco from "../../assets/imgs/icons/Union.svg"
 import { Link } from "react-router-dom"
+import { CharleeBot } from "../../Icons/CharleeBot"
 
 export const HomeHero = () => {
   return (
     <>
     <Box className="w-full overflow-y-auto">
       <Box className="w-full" sx={{backgroundImage: `url(${banerImg})`, backgroundSize: 'cover'}} >
-        <Container className="md:h-screen text-white flex justify-center items-center" maxWidth="lg">
-          <Grid2 marginTop={{xs: '6rem', md: '-6rem'}} paddingBottom={{xs: '10rem', md: '0rem'}} className="w-full" alignItems={"center"} container spacing={1}>
+        <Container className="pt-20 pb-40 text-white flex justify-center items-center" maxWidth="lg">
+          <Grid2  className="w-full" alignItems={"center"} container spacing={1}>
             <Grid2 size={{ xs: 12, md: 8}}>
               <Box className="w-full text-left hidden md:block">
                 <h2 className="text-start text-[75px] leading-[82.5px] font-Inter font-medium">
@@ -23,9 +24,9 @@ export const HomeHero = () => {
                   Our platform knows your exposures, reduces severity, litigation and fraud, optimizes reserves, while simplifying claims—effortlessly.
                 </Typography>
                 
-                <button class="bg-transparent rounded-full text-white border border-white py-5 px-9 text-[18px] leading-4 font-medium transition-all hover:bg-[#091d48] hover:text-white hover:border-white ">
+                {/* <button className="bg-transparent rounded-full text-white border border-white py-5 px-9 text-[18px] leading-4 font-medium transition-all hover:bg-[#091d48] hover:text-white hover:border-white ">
                   See Our Products
-                </button>
+                </button> */}
               </Box>
               <Box className="w-full text-center block md:hidden">
                 <Typography sx={{fontSize: '48px !important', lineHeight: '52.8px'}} marginBottom={2} variant="h2" fontWeight={500} fontSize={'75px'} textAlign={"center"}>
@@ -34,14 +35,15 @@ export const HomeHero = () => {
                 <Typography marginBottom={6} sx={{fontSize: '20px !important', lineHeight: '30px !important'}} variant="body1" fontWeight={400} textAlign={'center'}>
                   Our platform knows your exposures, reduces severity, litigation and fraud, optimizes reserves, while simplifying claims—effortlessly.
                 </Typography>
-                <button class="bg-transparent rounded-full text-white border border-white py-5 px-9 text-[18px] leading-4 font-medium transition-all hover:bg-[#091d48] hover:text-white hover:border-white ">
+                {/* <button className="bg-transparent rounded-full text-white border border-white py-5 px-9 text-[18px] leading-4 font-medium transition-all hover:bg-[#091d48] hover:text-white hover:border-white ">
                   See Our Products
-                </button>
+                </button> */}
               </Box>
             </Grid2>
             <Grid2 size={{ xs: 12, md: 4}}>
               <Box display={"flex"} justifyContent={"center"} alignItems={"flex-start"}>
-                <img src={heroLogo} alt="hero-icon"/>
+                {/* <img src={heroLogo} alt="hero-icon"/> */}
+                <CharleeBot />
               </Box>
             </Grid2>
           </Grid2>
@@ -175,7 +177,7 @@ export const HomeHero = () => {
             </Grid2>
           </Box>
         </Container>
-        <Container maxWidth="lg">
+        <Container maxWidth="lg" className="mt-[-140px]">
           <Box width={'100%'} display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}}>
             <Box maxWidth={'250px'} marginX={3} marginY={2}>
               <h1 className="font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">55M+</h1>

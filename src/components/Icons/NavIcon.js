@@ -4,18 +4,18 @@ export const NavIcon = ({iconColor}) => {
       <path 
         d="M33.8716 2.17969H2.20017" 
         stroke={iconColor} 
-        stroke-width="4.31111" 
-        stroke-linecap="round"/>
+        strokeWidth="4.31111" 
+        strokeLinecap="round"/>
       <path 
         d="M33.8716 12.7363H18.0359" 
         stroke={iconColor}  
-        stroke-width="4.31111" 
-        stroke-linecap="round"/>
+        strokeWidth="4.31111" 
+        strokeLinecap="round"/>
       <path 
         d="M33.8716 23.2939H8.53445" 
         stroke={iconColor} 
-        stroke-width="4.31111" 
-        stroke-linecap="round"/>
+        strokeWidth="4.31111" 
+        strokeLinecap="round"/>
     </svg>
   )
 }

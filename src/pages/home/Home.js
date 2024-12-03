@@ -17,6 +17,9 @@ import { Parteners } from "../../components/Contents/homepage/Parteners"
 import { Testimonials } from "../../components/Contents/homepage/Testimonials"
 import { FooterBanner } from "../../components/footers/FooterBanner"
 import { Footer } from "../../components/footers/Footer"
+// import anime from "animejs";
+import anime from 'animejs/lib/anime.es.js';
+import { useEffect, useRef } from "react";
 
 const sections = [
   {
@@ -90,6 +93,23 @@ const sections = [
 ]
 
 export const Home = () => {
+
+  const animation = useRef();
+
+  useEffect(() => {
+    animation.current = anime.timeline({
+      easing: 'easeOutExpo',
+      duration: 750
+    }).add({
+      targets: '.charleeBot',
+      translateX: "+=100",
+      rotate: anime.stagger([-360, 360]),
+      loop: true,
+    })
+    console.log('checking animdata', animation);
+    animation.current.play();
+  }, [])
+
     return (
       <div className="w-full overflow-x-hidden">
         <HomeHeader headerColor={'#021744'} textColor={'#ffffff'}/>

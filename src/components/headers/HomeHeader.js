@@ -90,7 +90,7 @@ export const HomeHeader = ({headerColor,  textColor}) => {
                 //   <Link to={pathItem.pathName}>
                 //     <button style={{color: textColor}} className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}>
                 //       {pathItem.name}
-                //       <span style={{background: textColor}} class={location.pathname == pathItem.pathName? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
+                //       <span style={{background: textColor}} className={location.pathname == pathItem.pathName? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
                 //     </button>
                 //   </Link>
                 // </Box>

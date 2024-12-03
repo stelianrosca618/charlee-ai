@@ -87,7 +87,7 @@ export const Features = () => {
                       <button className="font-semibold flex justify-start items-center group relative">
                         Learn more
                         <FaArrowRightLong className="mx-3"/>
-                        <span class="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#1f1f20] group-hover:w-full"></span>
+                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#1f1f20] group-hover:w-full"></span>
                       </button>
                     </Box>
                   </Box>
