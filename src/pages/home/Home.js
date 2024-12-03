@@ -127,7 +127,7 @@ export const Home = () => {
         trigger: `.numberCounter`,
         start: "+100px bottom",
         end: "bottom center",
-        markers: true,
+        markers: false,
         scrub: 1,
         onEnter: () => {
           
