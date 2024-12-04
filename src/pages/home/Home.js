@@ -113,16 +113,7 @@ export const Home = () => {
       tlProcess.fromTo(cardItem, {clipPath: `inset(0% 0% 100% 0%)`}, {clipPath: `inset(0% 0% 0% 0%)`}, "+=0");
     })
 
-    // const items = gsap.utils.toArray(".numbCount");
-    // const numberAnim = gsap.timeline();
-    // numberAnim.from(items[0], {textContent: 1, duration: 2, snap: { textContent: 1 },
-    //   stagger: {
-    //     each: 1.0,
-    //     onUpdate: function() {
-    //       this.targets()[0].innerHTML = this.targets()[0].textContent;
-    //     },
-    //   }}, "+0");
-
+    
       ScrollTrigger.create({
         trigger: `.numberCounter`,
         start: "+100px bottom",
