@@ -2,9 +2,9 @@ import { Box, Container } from "@mui/material"
 
 export const Withus = () => {
   return (
-   <Box className="w-full bg-[#F9F9F9] pb-20">
+   <Box className="about-withUs w-full bg-[#F9F9F9] pb-20">
     <Container maxWidth="lg">
-      <Box className="w-full gradient-background rounded-2xl py-[80px] px-6 md:px-[190px] text-white">
+      <Box className="about-withUsCard w-full gradient-background rounded-2xl py-[80px] px-6 md:px-[190px] text-white">
         <h4 className="text-center text-[42px] leading-[54.6px]">Partner with us</h4>
         <p className="text-[20px] leading-[31px] font-normal mt-5 mb-11">
           We’re always looking for partnerships that align with our mission. Whether you’re in technology, insurance, or claims management, let’s explore how we can work together to create smarter claims solutions.
