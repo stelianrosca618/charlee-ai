@@ -132,11 +132,11 @@ export const PartenerList = () => {
     <Box className="w-full py-28">
       <Container maxWidth="lg">
         <Box className="w-full">
-          <h5 className="text-[29px] leading-[40px] font-medium">Trusted by 18 partners and counting</h5>
-          <h4 className="text-[32px] md:text-[42px] leading-[41px] md:leading-[54.6px] font-medium py-5">You may contact us directly or visit our partners</h4>
+          <h5 className="partners-subTitle text-[29px] leading-[40px] font-medium">Trusted by 18 partners and counting</h5>
+          <h4 className="partners-title overflow-hidden text-[32px] md:text-[42px] leading-[41px] md:leading-[54.6px] font-medium py-5">You may contact us directly or visit our partners</h4>
         </Box>
        
-        <Box className="w-full gradient-border rounded-xl mt-14">
+        <Box data-aos="fade-up" className="w-full gradient-border rounded-xl mt-14">
           <Box className="w-full rounded-xl p-5 md:p-12 bg-white">
             <Box className="w-full" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl:"row"}} justifyContent={"space-between"} 
               alignItems={{xs: "flex-start", sm: "flex-start", md: "center", lg:"center", xl:"center"}} >
@@ -169,7 +169,7 @@ export const PartenerList = () => {
           </Box>
 
         </Box>
-        <Box className="w-full gradient-border rounded-xl mt-14">
+        <Box data-aos="fade-up" className="w-full gradient-border rounded-xl mt-14">
           <Box className="w-full rounded-xl p-5 md:p-12 bg-white">
             <Box className="w-full" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl:"row"}} justifyContent={"space-between"} 
               alignItems={{xs: "flex-start", sm: "flex-start", md: "center", lg:"center", xl:"center"}} >
@@ -201,7 +201,7 @@ export const PartenerList = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="w-full gradient-border rounded-xl mt-14">
+        <Box data-aos="fade-up" className="w-full gradient-border rounded-xl mt-14">
           <Box className="w-full rounded-xl p-5 md:p-12 bg-white">
             <Box className="w-full" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl:"row"}} justifyContent={"space-between"} 
               alignItems={{xs: "flex-start", sm: "flex-start", md: "center", lg:"center", xl:"center"}} >
