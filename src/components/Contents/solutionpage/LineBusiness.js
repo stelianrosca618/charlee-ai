@@ -9,8 +9,8 @@ export const LineBusiness = () => {
     <Box className="w-full bg-[#F9F9F9] py-20">
       <Container maxWidth="lg">
         <Box className="w-full">
-          <h4 className="text-[42px] leading-[54.6px] font-medium mb-6">Line of Business</h4>
-          <h6 className="text-[24px] leading-[32px] font-normal">
+          <h4 data-aos="fade-up" className="text-[42px] leading-[54.6px] font-medium mb-6">Line of Business</h4>
+          <h6 data-aos="fade-up" className="text-[24px] leading-[32px] font-normal">
             Charlee® ’ insights are applicable for Claims, Underwriting, and insurer’s <br />IT/internal analytics/data science teams. They are available for all<br /> personal, commercial, work comp and specialty/excess lines of business.
           </h6>
         </Box>

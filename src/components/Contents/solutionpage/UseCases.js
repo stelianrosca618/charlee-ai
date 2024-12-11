@@ -8,8 +8,8 @@ export const UseCases = () => {
     <Box className="w-full bg-[#021744] text-white py-20">
       <Container maxWidth="lg">
         <Box className="w-full text-center ">
-          <h4 className="text-[42px] leading-[54.6px] font-medium">Use Cases</h4>
-          <h6 className="text-[24px] leading-[32px] font-normal py-5" >
+          <h4 data-aos="fade-up" className="text-[42px] leading-[54.6px] font-medium">Use Cases</h4>
+          <h6 data-aos="fade-up" className="text-[24px] leading-[32px] font-normal py-5" >
             Charlee® Insights are applicable for Claims, Underwriting and IT<br /> (Analytics/Data Science) teams.
           </h6>
         </Box>
