@@ -7,7 +7,7 @@ export const QueriesSection = () => {
     <Box className="w-full py-24">
       <Container maxWidth="lg">
         <Grid2 container spacing={1}>
-          <Grid2 size={{xs: 12, sm:12, md: 6, lg: 6, xl: 6}}>
+          <Grid2  data-aos="fade-right" size={{xs: 12, sm:12, md: 6, lg: 6, xl: 6}}>
             <Box className="w-full text-left py-14">
               <h3 className="text-[32px] md:text-[56px] leading-[41px] md:leading-[65px] font-medium">Natural Language Queries</h3>
               <p className="py-8">
@@ -15,7 +15,7 @@ export const QueriesSection = () => {
               </p>
             </Box>
           </Grid2>
-          <Grid2 size={{xs: 12, sm:12, md: 6, lg: 6, xl: 6}} className="relative min-h-72">
+          <Grid2 data-aos="zoom-in-up" size={{xs: 12, sm:12, md: 6, lg: 6, xl: 6}} className="relative min-h-72">
             <div className="p-3 absolute top-0 left-0 z-20 bg-white rounded-full w-fit h-fit shadow-lg ">
               <img src={queryAvata} alt="query-avata" className="w-20 md:w-44 h-20 md:h-44 rounded-full"/>
             </div>

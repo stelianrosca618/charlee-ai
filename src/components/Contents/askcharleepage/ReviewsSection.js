@@ -51,7 +51,7 @@ export const ReviewsSection = () => {
   return (
     <Box className="w-full pb-10">
       <Container maxWidth="lg">
-        <Box className="w-full" display={"flex"} flexDirection={{xs: 'column', sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"center"}>
+        <Box data-aos="fade-up" className="w-full" display={"flex"} flexDirection={{xs: 'column', sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"center"}>
           <img src={heroLogo} alt="hero logo" className="h-[320px]" />
           <Box className="w-full text-start pl-9">
             <h4 className="hidden md:block text-[34px] leading-[50px] font-bold my-4">AskCharlee</h4>
@@ -59,7 +59,7 @@ export const ReviewsSection = () => {
             <p className="text-[20px] leading-[31px] mt-6">Here’s everything I excel at!</p>
           </Box>
         </Box>
-        <Box className="w-screen">
+        <Box data-aos="fade-left" className="w-screen">
           <Swiper
             modules={[Navigation, Scrollbar, A11y]}
             spaceBetween={100}

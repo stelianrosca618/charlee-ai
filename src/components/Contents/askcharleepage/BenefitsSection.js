@@ -30,8 +30,8 @@ export const BenefitsSection = () => {
     <>
     <Box className="w-full bg-white">
       <Container maxWidth="lg">
-        <Box className="w-full py-24" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"flex-start"} >
-          <Box className="w-full text-start" flex={1}>
+        <Box className="askCharlee-benefits w-full py-24" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"flex-start"} >
+          <Box className="benefits-left w-full text-start" flex={1}>
             <h6 className="uppercase text-[#4CFFE9] text-[14px] leading-[15.96px] font-bold">Everything you need</h6>
             <h4 className="mt-4 text-[42px] leading-[54.6px] font-medium">AskCharlee Benefits</h4>
             <p className="my-6 text-[24px] leading-[32px] font-normal">
@@ -41,7 +41,7 @@ export const BenefitsSection = () => {
           <Box className="w-full text-start px-5 md:px-0" flex={2} >
             <ul className="list-image-[url(./assets/imgs/icons/Check_symbol.svg)] list-outside pl-12 grid grid-cols-1 md:grid-cols-2 gap-7">
               {benefitsList.map((benefitItem, key) => (
-                <li key={key} >
+                <li className="benefits-rightItem" key={key} >
                   <h6 className="text-[20px] leading-[31px] font-normal">{benefitItem.subject}</h6>
                   <p className="mt-3">
                     {benefitItem.detail}

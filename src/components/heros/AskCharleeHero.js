@@ -22,11 +22,11 @@ export const AskCharleeHero = () => {
         <Container maxWidth="lg">
           <Box className="w-full pt-16 pb-8">
             <Box className="w-full" display={"flex"} justifyContent={"center"} alignItems={"center"}>
-              <img src={searchCover} alt="askcharlee-logo"/>
-              <h6 className="text-[29px] leading-[40px] mx-4">AskCharlee</h6>
+              <img src={searchCover} alt="askcharlee-logo" className="askcharlee-logo"/>
+              <h6 className="askcharlee-logoText text-[29px] leading-[40px] mx-4">AskCharlee</h6>
             </Box>
-            <h2 className="mt-10 text-[36px] md:text-[65px] leading-[39.6px] md:leading-[71.5px] font-medium">Gather Instant Insights</h2>
-            <p className="hidden md:block mt-5 text-[16px] leading-[30px]">
+            <h2 className="askCharlee-head overflow-y-hidden mt-10 text-[36px] md:text-[65px] leading-[39.6px] md:leading-[71.5px] font-medium">Gather Instant Insights</h2>
+            <p className="askCharlee-text hidden md:block mt-5 text-[16px] leading-[30px]">
               Introducing the AI-powered AskCharlee, designed to instantly deliver answers and insights from <br />
               complex insurance documents, data and claim notes. This conversational assistant helps insurance professionals <br />
               access key information, streamline decisions, and enhance the efficiency of claims management.
@@ -34,7 +34,7 @@ export const AskCharleeHero = () => {
             <p className="block md:hidden mt-5 text-[16px] leading-[30px]">
               Introducing the AI-powered AskCharlee, designed to instantly deliver answers and insights from complex insurance data and claim notes. This conversational assistant helps insurance professionals access key information, streamline decisions, and enhance the efficiency of claims management.
             </p>
-            <button onClick={() => {handleOpenBook()}} className="mt-10 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
+            <button onClick={() => {handleOpenBook()}} className="askCharleeBook-btn mt-10 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
               Book a demo
             </button>
           </Box>
@@ -42,7 +42,7 @@ export const AskCharleeHero = () => {
       </Box>
       <Box className="w-full relative pt-3 md:pt-24">
         <Container maxWidth="lg">
-          <Box className="w-full" padding={{xs: 3, sm: 3, md: 0, lg: 0, xl: 0}} display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"space-between"} alignItems={"flex-end"}>
+          <Box className="askCharlee-features w-full" padding={{xs: 3, sm: 3, md: 0, lg: 0, xl: 0}} display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"space-between"} alignItems={"flex-end"}>
             <Box className="w-full text-left pb-0 md:pb-28" flex={1} order={{xs: 2, sm: 2, md: 1, lg:1, xl:1}}>
               <ul className="list-image-[url(./assets/imgs/icons/Check_symbol.svg)] list-outside ">
                 <li className="py-4">
