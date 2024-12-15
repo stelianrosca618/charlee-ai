@@ -28,7 +28,7 @@ export const DocuAllPlatforms = () => {
 		<>
 		<Box className="w-full bg-white">
       <Container maxWidth="lg">
-        <Box className="w-full py-24" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"flex-start"} >
+        <Box data-aos="fade-up" className="w-full py-24" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"flex-start"} >
           <Box className="w-full text-start" flex={1}>
             <h6 className="uppercase text-[#4CFFE9] text-[14px] leading-[15.96px] font-bold">Everything you need</h6>
             <h4 className="mt-4 text-[42px] leading-[54.6px] font-medium">All-in-one-platform</h4>
@@ -37,7 +37,7 @@ export const DocuAllPlatforms = () => {
             </p>
           </Box>
           <Box className="w-full text-start px-5 md:px-0" flex={2} >
-            <ul className="list-image-[url(./assets/imgs/icons/Check_symbol.svg)] list-outside grid  grid-cols-1 md:grid-cols-2 gap-7">
+            <ul className="pl-6 list-image-[url(./assets/imgs/icons/Check_symbol.svg)] list-outside grid  grid-cols-1 md:grid-cols-2 gap-7">
               {platformList.map((itemData, key) => (
                 <li key={key} >
                   <h6 className="text-[20px] leading-[31px] font-normal">{itemData.subject}</h6>
