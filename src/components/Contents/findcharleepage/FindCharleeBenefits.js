@@ -7,7 +7,7 @@ export const FindCharleeBenefits = () => {
     <>
     <Box className="w-full">
       <Container maxWidth="lg" sx={{paddingX: 0}}>
-        <Box className="w-full px-8 md:px-0" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"center"}>
+        <Box data-aos="fade-left" className="w-full px-8 md:px-0" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"center"}>
           <img src={charleeFlag} alt="flag-bot" className="mr-0 md:mr-5" />
           <Box className="w-full text-start">
             <h5 className="text-[29px] leading-[40px] font-medium">
@@ -18,7 +18,7 @@ export const FindCharleeBenefits = () => {
             </h4>
           </Box>
         </Box>
-        <Box paddingY={4} width={'100%'} display={"flex"} flexDirection={{xs: "column",  md: "row", lg: "row", xl: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}} paddingBottom={{md: '117px', lg: '117px', xl: '117px'}}>
+        <Box data-aos="fade-up" paddingY={4} width={'100%'} display={"flex"} flexDirection={{xs: "column",  md: "row", lg: "row", xl: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}} paddingBottom={{md: '117px', lg: '117px', xl: '117px'}}>
           <Box maxWidth={'250px'} marginX={3} marginY={3}>
             <h1 className="font-bold text-[#0099B0] text-[84px] leading-[95.76px]">55M</h1>
             <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
