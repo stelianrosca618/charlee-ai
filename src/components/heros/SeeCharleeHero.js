@@ -53,32 +53,32 @@ export const SeeCharleeHero = () => {
             <Grid2 container spacing={1}>
               <Grid2 size={{xs: 12, sm: 12, md: 6, lg: 6, xl: 6}}>
                 <Box paddingY={2} display={"flex"} justifyContent={{xs: "center", sm: "center", md: "flex-start", lg: "flex-start", xl:"flex-start"}} alignItems={"center"}>
-                  <img src={securityCover} alt="seecharlee-ico"/>
-                  <h5 className="text-[29px] leading-[40px] font-medium mx-2">4SeeCharlee</h5>
+                  <img src={securityCover} alt="seecharlee-ico" className="seecharlee-logo"/>
+                  <h5 className="askcharlee-logoText text-[29px] leading-[40px] font-medium mx-2">4SeeCharlee</h5>
                 </Box>
                 <Box className="w-full text-center md:text-start">
-                  <h2 className="text-[36px] md:text-[65px] leading-[39.5px] md:leading-[71.5px] font-medium">
+                  <h2 className="askCharlee-head overflow-y-hidden text-[36px] md:text-[65px] leading-[39.5px] md:leading-[71.5px] font-medium">
                     Stay ahead with predictive insights
                   </h2>
-                  <p className="mt-8">
+                  <p className="askCharlee-text mt-8">
                     4SeeCharlee aids claims handlers by providing advanced insights through its severity management, litigation prediction, and **attorney involvement tracking, streamlining decision-making and improving outcomes.
                   </p>
-                  <button onClick={() => handleOpenBook()} className="mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
+                  <button onClick={() => handleOpenBook()} className="askCharlee-book mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                     Book a demo
                   </button>
                 </Box>
                 <Box className="w-full text-start mt-8">
-                  <p className="py-6">
+                  <p className="askCharlee-reveiwTxt py-6">
                   “Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.”
                   </p>
-                  <Box display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
+                  <Box className="askCharlee-reviewer" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
                     <img src={avataOne} alt="avata" className="h-6 w-6 rounded-full"/>
                     <span className="mx-2 ">Marcia Hill, Digital Marketing Manager </span>
                   </Box>
                 </Box>
               </Grid2>
               <Grid2 size={{xs: 12, sm: 12, md: 6, lg: 6, xl: 6}} className="relative">
-              <img src={seeCharleeMagicDashboard} alt="dashboard" className="relative md:absolute top-0 md:top-[-130px] left-[-6vw] w-[200vw] md:w-[90vw] max-w-screen-2xl"/>
+              <img src={seeCharleeMagicDashboard} alt="dashboard" className="seeCharlee-bashboardImg relative md:absolute top-0 md:top-[-130px] left-[-6vw] w-[200vw] md:w-[90vw] max-w-screen-2xl"/>
                 {/* <img src={seeCharleeDashboard} alt="dashboard" className="absolute top-[-130px] left-[-6vw] w-[90vw] max-w-screen-2xl"/>
                 <img src={seeCharleeRobot} alt="seecharlee-robot" className="absolute bottom-0 left-0 h-[379px]" style={{transform: 'translate(-10%, 50%)'}} />
                 <Box className="p-4 rounded-xl shadow-lg bg-white absolute bottom-0 right-0"
@@ -102,13 +102,13 @@ export const SeeCharleeHero = () => {
         ></div>
         <Container maxWidth="lg">
           <Box className="w-full relative text-start z-10">
-            <h4 className="text-[42px] leading-[54.6px] font-medium py-10">
+            <h4 data-aos="fade-right" className="text-[42px] leading-[54.6px] font-medium py-10">
               4SeeCharlee Features
             </h4>
             <Box className="w-full">
               <Grid2 container spacing={3}>
                 {features.map((featureItem, key) => (
-                  <Grid2 className="rounded-xl bg-white shadow-xl p-10" size={{xs: 12, sm: 12, md: 4, lg: 4, xl: 4}}>
+                  <Grid2 data-aos="fade-up" className="rounded-xl bg-white shadow-xl p-10" size={{xs: 12, sm: 12, md: 4, lg: 4, xl: 4}}>
                     <img src={featureItem.icon} alt="feature-icon"/>
                     <h5 className="text-[29px] leading-[40px] font-medium py-6">{featureItem.title}</h5>
                     <p >{featureItem.detail}</p>

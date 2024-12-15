@@ -22,7 +22,7 @@ export const AllPlatform = () => {
     <>
     <Box className="w-full py-40">
       <Container maxWidth="lg">
-        <Box className="w-full">
+        <Box data-aos="fade-up" className="w-full">
           <h4 className="text-center text-[42px] leading-[54.6px] font-medium">All-in-one platform</h4>
           <p className="text-center">
             4SeeCharlee enables insurers to enhance decision-making, improve operational <br /> efficiency, and reduce losses.
@@ -30,7 +30,7 @@ export const AllPlatform = () => {
           <Box className="w-full text-start py-20 px-10 md:px-0">
             <ul className="list-image-[url(./assets/imgs/icons/Check_symbol.svg)] list-outside grid  grid-cols-1 md:grid-cols-3 gap-10">
               {platformItems.map((benefitItem, key) => (
-                <li key={key} >
+                <li data-aos="flip-right" key={key} >
                   <h6 className="text-[20px] leading-[31px] font-normal">{benefitItem.title}</h6>
                   <p className="mt-3">
                     {benefitItem.detail}
