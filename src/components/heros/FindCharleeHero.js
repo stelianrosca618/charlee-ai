@@ -55,7 +55,7 @@ export const FindCharleeHero = () => {
                   Spot Suspicious Claims Fast with FindCharlee
                 </h2>
                 <p className="findCharlee-text mt-8">
-                  FindCharlee is your trusted fraud detection tool, using powerful AI and machine learning to spot suspicious insurance claims. By analyzing patterns in claimant behavior, claim history, and other data, FindCharleen quickly flags high-risk claims for further review, helping you stay ahead of fraud with ease.
+                  FindCharlee is your trusted fraud detection tool, using powerful AI and machine learning to spot suspicious insurance claims. By analyzing patterns in claimant behavior, claim history, and other data, FindCharlee quickly flags high-risk claims for further review, helping you stay ahead of fraud with ease.
                 </p>
                 <button onClick={() => {handleOpenBook()}} className="findCharlee-book mt-6 w-full md:w-auto rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                   Book a demo

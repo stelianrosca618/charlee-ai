@@ -24,7 +24,7 @@ const features = [
   {
     icon: eyeSymbol,
     title: 'Litigation Prediction',
-    detail: '4SeeCharlee predicts the likelihood of claims leading to litigation. This early detection helps claims handlers to Frau intervene proactively, assess the situation, and develop strategies to mitigate the risk of litigation. The platform also detects hidden patterns by analyzing historical claims data, helping claims handlers avoid surprises and manage reserves efficiently.'
+    detail: '4SeeCharlee predicts the likelihood of claims leading to litigation. This early detection helps claims handlers to intervene proactively, assess the situation, and develop strategies to mitigate the risk of litigation. The platform also detects hidden patterns by analyzing historical claims data, helping claims handlers avoid surprises and manage reserves efficiently.'
   },
   {
     icon: watchSymbol,

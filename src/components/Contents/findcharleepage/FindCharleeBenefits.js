@@ -14,7 +14,7 @@ export const FindCharleeBenefits = () => {
               FindCharlee Benefits
             </h5>
             <h4 className="text-[32px] md:text-[42px] leading-[41px] md:leading-[54px] font-medium mt-4">
-            I make it easy for insurers to spot suspicious claims automatically, saving time and money while focusing investigations where they’re needed most.
+              I make it easy for insurers to spot suspicious claims automatically, saving time and money while focusing investigations where they’re needed most.
             </h4>
           </Box>
         </Box>

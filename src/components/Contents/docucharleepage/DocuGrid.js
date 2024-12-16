@@ -27,7 +27,7 @@ const gridItems = [
   {
     icon: starFile,
     title: 'Customizable Summaries',
-    detail: `I let you customize summaries to focus on what matters most—like financial impact, litigation risk, or severity—ensuring you get the insights you need.`
+    detail: `DocuCharlee lets you customize summaries to focus on what matters most—like financial impact, litigation risk, or severity—ensuring you get the insights you need.`
   },
   {
     icon: brainFile,
@@ -37,7 +37,7 @@ const gridItems = [
   {
     icon: keyFile,
     title: 'Actionable Insights',
-    detail: `I not only summarize documents but I also offers actionable insights, like spotting potential litigation risks or recommending further investigation based on claim patterns.`
+    detail: `DocuCharlee summarize documents but I also offers actionable insights, like spotting potential litigation risks or recommending further investigation based on claim patterns.`
   },
   {
     icon: chatFile,
@@ -47,7 +47,7 @@ const gridItems = [
   {
     icon: doneFile,
     title: 'Seamless Integration',
-    detail: `Charlee seamlessly integrates with your existing claims management systems, allowing adjusters to access summaries right within their workflow—no platform switching or manual uploads needed!`
+    detail: `DocuCharlee seamlessly integrates with your existing claims management systems, allowing adjusters to access summaries right within their workflow—no platform switching or manual uploads needed!`
   }
 ]
 

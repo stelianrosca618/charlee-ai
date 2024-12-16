@@ -61,7 +61,7 @@ export const ReviewsSection = () => {
         </Box>
         <Box data-aos="fade-left" className="w-screen">
           <Swiper
-            modules={[Navigation, Scrollbar, A11y]}
+            modules={[Navigation, Pagination, A11y]}
             spaceBetween={100}
             slidesPerView={1.5}
             breakpoints={{
@@ -70,16 +70,21 @@ export const ReviewsSection = () => {
                 spaceBetween: 50,
               },
               768: {
-                slidesPerView: 3,
+                slidesPerView: 3.5,
                 spaceBetween: 100,
               },
               1024: {
-                slidesPerView: 3,
+                slidesPerView: 3.5,
                 spaceBetween: 100,
               },
             }}
             loop={true}
-            scrollbar={{ draggable: true }}
+            freeMode={true}
+            watchSlidesProgress={true}
+            pagination={{
+              dynamicBullets: true,
+              clickable: true,
+            }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             
