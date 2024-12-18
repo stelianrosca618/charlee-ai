@@ -45,7 +45,7 @@ export const About = () => {
       trigger: `.about-withUs`,
       start: "top bottom",
       end: "bottom bottom",
-      markers: true,
+      markers: false,
       scrub: 1,
       onEnter: () => {
         const withUsCard = gsap.utils.toArray(".about-withUsCard");
