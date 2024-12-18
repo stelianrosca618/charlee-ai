@@ -40,10 +40,10 @@ const paths = [
     pathName: "/solutions",
   },
   {
-    name: 'Partners',
+    name: 'Partner',
     childs: [],
     isParent: false,
-    pathName: "/partners",
+    pathName: "/partner",
   },
   {
     name: 'Connect',

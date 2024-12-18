@@ -17,7 +17,7 @@ import { BlogContent } from './pages/blogs/BlogContent';
       <Routes >
         <Route path="/" element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/partners' element={<Parteners />} />
+        <Route path='/partner' element={<Parteners />} />
         <Route path='/connect' element={<Contact />} />
         <Route path='/solutions' element={<Solutions />}/>
         <Route path="/blogs" element={<Blogs />} />
