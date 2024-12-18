@@ -63,9 +63,9 @@ export const TeamMember = () => {
               <Grid2 key={key} size={{xs:12, sm:12, md:4, lg:4, xl: 4}}>
                 <Box className="member-avata w-full h-full">
                   <Box onClick={() => {window.open(member.link)}} className="cursor-pointer w-full rounded-full p-4 " sx={{boxShadow: '0px 0px 38px -16px black'}}>
-                    <div className="w-full h-full rounded-full " style={{backgroundImage: `url(${member.avata})`, backgroundSize: '110%', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
+                    <div className="w-full h-full rounded-full " style={{backgroundImage: `url(${member.avata})`, backgroundSize: '110%', aspectRatio: '1:1', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
                       <div className="w-full h-full backdrop-grayscale hover:backdrop-grayscale-0 rounded-full ">
-                        <img src={member.avata} alt="ceo" className="w-full h-full rounded-full opacity-0" />
+                        <img src={member.avata} alt="ceo" className="w-full h-full rounded-full opacity-0 aspect-square" />
                       </div>
                     </div>
                   </Box>

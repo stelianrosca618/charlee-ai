@@ -2,9 +2,9 @@ import { Box, Container } from "@mui/material"
 
 export const BlogsHero = () => {
   return (
-    <Box className="w-full py-28 bg-[#4CFFE9]">
+    <Box className="w-full py-28 bg-[#0D131E]">
       <Container maxWidth="lg">
-        <Box className="w-full py-10">
+        <Box className="w-full py-10 text-white">
           <h5 className="text-[65px] leading-[71.5px] font-medium">
             Charlee Insights
           </h5>

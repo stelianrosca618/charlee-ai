@@ -34,10 +34,10 @@ const paths = [
     pathName: "",
   },
   {
-    name: 'About',
+    name: 'Solutions',
     childs: [],
     isParent: false,
-    pathName: "/about",
+    pathName: "/solutions",
   },
   {
     name: 'Partners',
@@ -46,16 +46,16 @@ const paths = [
     pathName: "/partners",
   },
   {
-    name: 'Solutions',
-    childs: [],
-    isParent: false,
-    pathName: "/solutions",
-  },
-  {
     name: 'Connect',
     childs: [],
     isParent: false,
     pathName: "/connect",
+  },
+  {
+    name: 'About',
+    childs: [],
+    isParent: false,
+    pathName: "/about",
   },
 ]
 

@@ -187,7 +187,7 @@ export const Blogs = () => {
   }
   return (
     <div className="w-full overflow-hidden bg-[#F3F4F4]">
-      <HomeHeader headerColor={'#4CFFE9'} textColor={'#021744'}/>
+      <HomeHeader headerColor={'#0D131E'} textColor={'#ffffff'}/>
       <div className="contact-page ">
         <BlogsHero />
         <BlogsTabs />
