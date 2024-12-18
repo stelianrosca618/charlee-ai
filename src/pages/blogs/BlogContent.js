@@ -7,7 +7,10 @@ import blog3 from "../../assets/imgs/news/blog3.png"
 import blog4 from "../../assets/imgs/news/blog4.png"
 import blog5 from "../../assets/imgs/news/blog5.png"
 import blog6 from "../../assets/imgs/news/blog6.png"
-import { Link } from "react-router-dom"
+import { Link, useSearchParams, useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import blogItems from "../../providers/datas/blogs.json";
+import { calculateCreatedAgo, sortArrList } from "../../components/commonFunc"
 const relativeBlogs = [
   {
     blogImg: blog3,
@@ -36,6 +39,22 @@ const relativeBlogs = [
 ]
 
 export const BlogContent = () => {
+  const searchParams = useParams();
+  const [blogData, setBlogData] = useState();
+  const [relatedBlogs, setRelatedBlogs] = useState([]);
+  useEffect(() => {
+    console.log(searchParams.blogid)
+    loadBlogData(searchParams.blogid);
+  }, [searchParams])
+  const loadBlogData = (blogId) => {
+    const blogObj = blogItems.find(item => item.postName == blogId);
+    setBlogData(blogObj);
+    const blogObjCategory = blogObj.category[0].nickName;
+    let tempBlogs = blogItems.filter(item => item.category.find(cItem => cItem.nickName == blogObjCategory));
+    console.log(tempBlogs);
+    tempBlogs = sortArrList(tempBlogs)
+    setRelatedBlogs(tempBlogs.splice(0, 4));
+  }
   return (
     <div className="w-full overflow-hidden bg-[#F3F4F4]">
       <HomeHeader headerColor={'#F9F9F9'} textColor={'#021744'}/>
@@ -44,7 +63,7 @@ export const BlogContent = () => {
           <Container maxWidth="md">
             <Box className='w-full pt-14'>
               <h2 className="text-[65px] leading-[71.5px] font-medium">
-                Charlee secures $200m in funding after launching new products
+                {blogData?.title}
               </h2>
               <p className="text-[#4B5563] text-[20px] font-normal leading-[31px] pt-10">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
@@ -108,16 +127,16 @@ export const BlogContent = () => {
               </Box>
               <Box className="w-full py-14">
                 <Grid2 container spacing={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
-                  {relativeBlogs.map((blogItem, key) => (
+                  {relatedBlogs.map((blogItem, key) => (
                     <Grid2 key={key} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
-                      <div className="w-full aspect-video rounded-xl hover:scale-105" style={{backgroundImage: `url(${blogItem.blogImg})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+                      <div className="w-full aspect-video rounded-xl hover:scale-105" style={{backgroundImage: `url(${blogItem.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                       </div>
                       <h5 className="text-start text-[24px] leading-[32px] font-normal line-clamp-2 my-5">
                         {blogItem.title}
                       </h5>
                       <div className="w-full text-start my-6">
-                        <span>{blogItem.postTime}</span>
-                        <span className="mx-4">{blogItem.poster}</span>
+                        <span>{calculateCreatedAgo(blogItem)}</span>
+                        <span className="mx-4">{blogItem.creator}</span>
                       </div>
                     </Grid2>
                   ))}

@@ -1,3 +1,7 @@
+.reviewSwiper{
+    width: calc(100vw - 400px);
+}
+
 .swiper.swiper-horizontal{
     padding-left: 1rem;
     padding-top: 1rem;
@@ -16,4 +20,12 @@
 .swiper-pagination-bullet{
     width: 16px !important;
     height: 16px !important;
+}
+
+@media (max-width: 600px){
+    .reviewSwiper{
+        width: 100vw;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }

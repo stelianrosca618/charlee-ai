@@ -54,12 +54,13 @@ export const ReviewsSection = () => {
         <Box data-aos="fade-up" className="w-full" display={"flex"} flexDirection={{xs: 'column', sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"start"} alignItems={"center"}>
           <img src={heroLogo} alt="hero logo" className="h-[320px]" />
           <Box className="w-full text-start pl-9">
-            <h4 className="hidden md:block text-[34px] leading-[50px] font-bold my-4">AskCharlee</h4>
+            <h4 className="hidden md:block text-[34p
+            x] leading-[50px] font-bold my-4">AskCharlee</h4>
             <h4 className="text-[29px] md:text-[42px] leading-[40px] md:leading-[54.6px] font-medium" >Hey there! How can I help you today?</h4>
             <p className="text-[20px] leading-[31px] mt-6">Here’s everything I excel at!</p>
           </Box>
         </Box>
-        <Box data-aos="fade-left" className="w-screen">
+        <Box data-aos="fade-left" className="reviewSwiper">
           <Swiper
             modules={[Navigation, Pagination, A11y]}
             spaceBetween={100}
@@ -70,11 +71,11 @@ export const ReviewsSection = () => {
                 spaceBetween: 50,
               },
               768: {
-                slidesPerView: 3.5,
+                slidesPerView: 2.5,
                 spaceBetween: 100,
               },
               1024: {
-                slidesPerView: 3.5,
+                slidesPerView: 2.5,
                 spaceBetween: 100,
               },
             }}
@@ -91,7 +92,7 @@ export const ReviewsSection = () => {
           >
             {reviewContexts.map((reviewItem, key) => (
               <SwiperSlide  key={key}>
-                <Box className="relative w-full h-[90%] bg-white rounded-2xl shadow-xl p-8">
+                <Box className="relative w-full h-[90%] bg-white rounded-2xl shadow-xl p-8" display={'flex'} justifyContent={"space-between"} flexDirection={"column"}>
                   <Box className="w-full text-start">
                     <h5 className="text-[20px] md:text-[29px] leading-[30px] md:leading-[40px] font-medium">{reviewItem.head}</h5>
                     <p className="mt-6" >
