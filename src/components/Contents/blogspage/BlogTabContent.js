@@ -113,6 +113,7 @@ export const BlogTabContent = ({title, tabKey}) => {
     
     
     const firstItem = tmpBlogs[0];
+    console.log(firstItem);
     setFirstBlog(firstItem);
     setBlogArr(tmpBlogs);
   }
@@ -180,7 +181,7 @@ export const BlogTabContent = ({title, tabKey}) => {
       <h4 className='text-[42px] leading-[54.6px] font-medium my-4'>{title}</h4>
       <Box className="w-full my-4">
         <Grid2 container spacing={2} >
-          <Grid2 size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 9}} className="text-start text-white p-6 rounded-2xl"
+          <Grid2 size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 9}} className="text-start text-white p-6 rounded-2xl min-h-[300px]"
             display={"flex"} flexDirection={"column"} justifyContent={"end"} alignItems={"flex-end"}
             sx={{background: `url(${firstBlog?.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
           >
@@ -195,7 +196,7 @@ export const BlogTabContent = ({title, tabKey}) => {
           <Grid2 size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
             {firstBlog.postType == 'post' && 
               <p className="line-clamp-[12]">
-                Claims Director Brad Metzger has worked in the P&C Industry for several years, performing diverse roles in Claims Operations, Claims Strategy, and Claims IT. Having seen the rise of technology in claims management, he has a unique perspective in analyzing the potential of AI to significantly transform claims workflow management while validating it against emerging trends and rddddddddddddddddddddddd
+                {firstBlog.content}
               </p>
             }
             {firstBlog.postType != 'post' && 
