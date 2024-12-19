@@ -28,7 +28,7 @@ export const Blogs = () => {
   
   useEffect(() => {
     // parsingEvents();
-    updateBlogMedia();
+    // updateBlogMedia();
   }, [])
   const updateBlogMedia = () => {
     let blogArr = [];
