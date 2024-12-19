@@ -22,11 +22,41 @@ import orgEvents from "../../providers/datas_old/orgEvents.json";
 import { useEffect } from "react";
 import medialist from "../../providers/datas/medias.json";
 import venueList from "../../providers/datas/venues.json"
+import eventlist from "../../providers/datas/events.json";
+import postArrlist from "../../providers/datas/blogs.json";
 export const Blogs = () => {
   
   useEffect(() => {
-    parsingEvents();
+    // parsingEvents();
+    updateBlogMedia();
   }, [])
+  const updateBlogMedia = () => {
+    let blogArr = [];
+    postArrlist.map(item => {
+      if(item.postMedia != '/blog-photos/detaultBlog.png'){
+        const splitedStr = item.postMedia.split('/');
+        const fileName = splitedStr[splitedStr.length-1];
+        const filePath = `/blog-photos/${fileName}`;
+        let blogObj = item;
+        blogObj.postMedia = filePath;
+        blogArr.push(blogObj);
+      }
+    })
+    console.log(blogArr);
+  }
+  const updateEventMedia = () => {
+    const eventItems = [];
+    eventlist.map(item => {
+      console.log(item.postMedia);
+      const splitedStr = item.postMedia.split('/');
+      const fileName = splitedStr[splitedStr.length-1];
+      const filePath = `/blog-photos/${fileName}`;
+      let eventObj = item;
+      eventObj.postMedia = filePath;
+      eventItems.push(eventObj);
+    })
+    console.log(eventItems);
+  }
 
   const parsingEvents = () => {
     let eventArr = [];

@@ -18,7 +18,7 @@
             "zip": ""
         },
         "thumbnailId": "21406",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/omni-orlando-resort-championsgate.jpg",
+        "postMedia": "/blog-photos/omni-orlando-resort-championsgate.jpg",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -50,7 +50,7 @@
             "venueId": ""
         },
         "thumbnailId": "21405",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/Green-Valley-Ranch-Resort.jpg",
+        "postMedia": "/blog-photos/Green-Valley-Ranch-Resort.jpg",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -82,7 +82,7 @@
             "venueId": ""
         },
         "thumbnailId": "21413",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/PLRB-Claims-Conf.-Insurance-Services-Expo-orlando.jpg",
+        "postMedia": "/blog-photos/PLRB-Claims-Conf.-Insurance-Services-Expo-orlando.jpg",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -114,7 +114,7 @@
             "venueId": ""
         },
         "thumbnailId": "21422",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/InsurTech-NY-Digital-for-Customer-1st-image.jpg",
+        "postMedia": "/blog-photos/InsurTech-NY-Digital-for-Customer-1st-image.jpg",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -146,7 +146,7 @@
             "venueId": ""
         },
         "thumbnailId": "21426",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/CLM-Annual-Conference-2023.jpg",
+        "postMedia": "/blog-photos/CLM-Annual-Conference-2023.jpg",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -167,7 +167,7 @@
         "postDate": "2023-02-07 19:43:29",
         "addressData": null,
         "thumbnailId": "21432",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/NAIC-quarterly-image.webp",
+        "postMedia": "/blog-photos/NAIC-quarterly-image.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -199,7 +199,7 @@
             "venueId": ""
         },
         "thumbnailId": "21563",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/WSIA_Conf_2023-1.webp",
+        "postMedia": "/blog-photos/WSIA_Conf_2023-1.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -231,7 +231,7 @@
             "venueId": ""
         },
         "thumbnailId": "21567",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/InsuranceAITech_Conf_2023.webp",
+        "postMedia": "/blog-photos/InsuranceAITech_Conf_2023.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -263,7 +263,7 @@
             "venueId": ""
         },
         "thumbnailId": "21568",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/InsuranceInnovators_conf_2023.webp",
+        "postMedia": "/blog-photos/InsuranceInnovators_conf_2023.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -295,7 +295,7 @@
             "venueId": ""
         },
         "thumbnailId": "21447",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/Mohegan-Sun-Hartford-CT.jpg",
+        "postMedia": "/blog-photos/Mohegan-Sun-Hartford-CT.jpg",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -327,7 +327,7 @@
             "venueId": ""
         },
         "thumbnailId": "21489",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/2023-Auto-Insurance-National-Conference-Ritz-Carlton-Laguna-Niguel-1.webp",
+        "postMedia": "/blog-photos/2023-Auto-Insurance-National-Conference-Ritz-Carlton-Laguna-Niguel-1.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -359,7 +359,7 @@
             "venueId": ""
         },
         "thumbnailId": "21571",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/InsuranceTechAndInnovation_Conf_2023.webp",
+        "postMedia": "/blog-photos/InsuranceTechAndInnovation_Conf_2023.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -391,7 +391,7 @@
             "venueId": ""
         },
         "thumbnailId": "21565",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/IASA_XChange_Conf_2023.webp",
+        "postMedia": "/blog-photos/IASA_XChange_Conf_2023.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -423,7 +423,7 @@
             "venueId": ""
         },
         "thumbnailId": "21572",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/DigIN_Conf_2023.webp",
+        "postMedia": "/blog-photos/DigIN_Conf_2023.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -455,7 +455,7 @@
             "venueId": ""
         },
         "thumbnailId": "21564",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/ChiefData_Conf_2023.webp",
+        "postMedia": "/blog-photos/ChiefData_Conf_2023.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -487,7 +487,7 @@
             "venueId": ""
         },
         "thumbnailId": "21508",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/Insurtech-Insights-USA-new-york.webp",
+        "postMedia": "/blog-photos/Insurtech-Insights-USA-new-york.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -519,7 +519,7 @@
             "venueId": ""
         },
         "thumbnailId": "21512",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/Farm-Bureau-Claims-Legal-Executives-Conference-beaver-creek-CO.webp",
+        "postMedia": "/blog-photos/Farm-Bureau-Claims-Legal-Executives-Conference-beaver-creek-CO.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -551,7 +551,7 @@
             "venueId": ""
         },
         "thumbnailId": "21438",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/Insurance-AI-Innovative-Tech-USA-Marriott-Marquis.webp",
+        "postMedia": "/blog-photos/Insurance-AI-Innovative-Tech-USA-Marriott-Marquis.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -583,7 +583,7 @@
             "venueId": ""
         },
         "thumbnailId": "21778",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/NAMIC-Booth-4.webp",
+        "postMedia": "/blog-photos/NAMIC-Booth-4.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -615,7 +615,7 @@
             "venueId": ""
         },
         "thumbnailId": "21848",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/ITC-Vegas-Booth-1916-IMG-1.jpg",
+        "postMedia": "/blog-photos/ITC-Vegas-Booth-1916-IMG-1.jpg",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -647,7 +647,7 @@
             "venueId": ""
         },
         "thumbnailId": "21779",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/connected-claims-Booth-3.webp",
+        "postMedia": "/blog-photos/connected-claims-Booth-3.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -679,7 +679,7 @@
             "venueId": ""
         },
         "thumbnailId": "21533",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/02/Guidewire-Connections-Gaylord-Opryland.webp",
+        "postMedia": "/blog-photos/Guidewire-Connections-Gaylord-Opryland.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -711,7 +711,7 @@
             "venueId": ""
         },
         "thumbnailId": "21655",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/05/rise-awards-2023.webp",
+        "postMedia": "/blog-photos/rise-awards-2023.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -743,7 +743,7 @@
             "venueId": ""
         },
         "thumbnailId": "21980",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/NAMIC-Claims-Conference-2024-Booth-25S.png",
+        "postMedia": "/blog-photos/NAMIC-Claims-Conference-2024-Booth-25S.png",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -775,7 +775,7 @@
             "venueId": ""
         },
         "thumbnailId": "21892",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/Complex-Claims-and-Litigation-Forum.webp",
+        "postMedia": "/blog-photos/Complex-Claims-and-Litigation-Forum.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -807,7 +807,7 @@
             "venueId": ""
         },
         "thumbnailId": "21983",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/PLRB-Claims-Conference-and-Insurance-Services-Expo-Booth-101.webp",
+        "postMedia": "/blog-photos/PLRB-Claims-Conference-and-Insurance-Services-Expo-Booth-101.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -839,7 +839,7 @@
             "venueId": ""
         },
         "thumbnailId": "21900",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/5th-annual-InsurTech-Conference.webp",
+        "postMedia": "/blog-photos/5th-annual-InsurTech-Conference.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -871,7 +871,7 @@
             "venueId": ""
         },
         "thumbnailId": "21905",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/2024-WSIA-Insurtech-Conference.webp",
+        "postMedia": "/blog-photos/2024-WSIA-Insurtech-Conference.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -903,7 +903,7 @@
             "venueId": ""
         },
         "thumbnailId": "21909",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/2024-Auto-Insurance-Report-National-Conference.webp",
+        "postMedia": "/blog-photos/2024-Auto-Insurance-Report-National-Conference.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -935,7 +935,7 @@
             "venueId": ""
         },
         "thumbnailId": "21915",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/InsurTech-Hartford-Symposium.webp",
+        "postMedia": "/blog-photos/InsurTech-Hartford-Symposium.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -967,7 +967,7 @@
             "venueId": ""
         },
         "thumbnailId": "22098",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/The-Future-of-Insurance-2024-1.webp",
+        "postMedia": "/blog-photos/The-Future-of-Insurance-2024-1.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -999,7 +999,7 @@
             "venueId": ""
         },
         "thumbnailId": "22052",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/IASA-National-Conference-Charlee-Ai-2024-at-booth-506.webp",
+        "postMedia": "/blog-photos/IASA-National-Conference-Charlee-Ai-2024-at-booth-506.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1031,7 +1031,7 @@
             "venueId": ""
         },
         "thumbnailId": "21925",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/11/CLM-Annual-Conference-Claims-Unleashed.webp",
+        "postMedia": "/blog-photos/CLM-Annual-Conference-Claims-Unleashed.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -1063,7 +1063,7 @@
             "venueId": ""
         },
         "thumbnailId": "21964",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2023/12/Digital-Insurance-Summit-2024.webp",
+        "postMedia": "/blog-photos/Digital-Insurance-Summit-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -1084,7 +1084,7 @@
         "postDate": "2024-03-01 20:01:04",
         "addressData": null,
         "thumbnailId": "22012",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/03/Farm-Bureau-Claims-and-Legal-Executives-Conference.webp",
+        "postMedia": "/blog-photos/Farm-Bureau-Claims-and-Legal-Executives-Conference.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1116,7 +1116,7 @@
             "venueId": ""
         },
         "thumbnailId": "22089",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/03/Rise-Awards-2024-1.webp",
+        "postMedia": "/blog-photos/Rise-Awards-2024-1.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1148,7 +1148,7 @@
             "venueId": ""
         },
         "thumbnailId": "22159",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/03/Insurtech-Insights-2024-Booth-1012.webp",
+        "postMedia": "/blog-photos/Insurtech-Insights-2024-Booth-1012.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD\t\t\t\t\t\t\tclass=",
@@ -1180,7 +1180,7 @@
             "venueId": ""
         },
         "thumbnailId": "22035",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/03/Insurance-Innovators-USA-2024.webp",
+        "postMedia": "/blog-photos/Insurance-Innovators-USA-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -1212,7 +1212,7 @@
             "venueId": ""
         },
         "thumbnailId": "22041",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/03/Insurance-Tech-and-Innovation-Conference-2024.webp",
+        "postMedia": "/blog-photos/Insurance-Tech-and-Innovation-Conference-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1233,7 +1233,7 @@
         "postDate": "2024-03-21 17:11:37",
         "addressData": null,
         "thumbnailId": "22046",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/03/CCEA-2024-Meeting.webp",
+        "postMedia": "/blog-photos/CCEA-2024-Meeting.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1265,7 +1265,7 @@
             "venueId": ""
         },
         "thumbnailId": "22049",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/03/Coalition-Against-Fraud-in-Insurance-2024.webp",
+        "postMedia": "/blog-photos/Coalition-Against-Fraud-in-Insurance-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -1297,7 +1297,7 @@
             "venueId": ""
         },
         "thumbnailId": "22062",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/04/PCEA-Spring-Meeting-2024.webp",
+        "postMedia": "/blog-photos/PCEA-Spring-Meeting-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1329,7 +1329,7 @@
             "venueId": ""
         },
         "thumbnailId": "22066",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/04/Atlantic-Claim-Executives-Association-Spring-Meeting-2024.webp",
+        "postMedia": "/blog-photos/Atlantic-Claim-Executives-Association-Spring-Meeting-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "",
@@ -1361,7 +1361,7 @@
             "venueId": ""
         },
         "thumbnailId": "22095",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/05/NAMIC-129th-Annual-Convention.webp",
+        "postMedia": "/blog-photos/NAMIC-129th-Annual-Convention.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1393,7 +1393,7 @@
             "venueId": ""
         },
         "thumbnailId": "22109",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/05/Joint-Claims-2024-Meeting.webp",
+        "postMedia": "/blog-photos/Joint-Claims-2024-Meeting.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1425,7 +1425,7 @@
             "venueId": ""
         },
         "thumbnailId": "22113",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/05/Connected-Claims-USA-2024.webp",
+        "postMedia": "/blog-photos/Connected-Claims-USA-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1457,7 +1457,7 @@
             "venueId": ""
         },
         "thumbnailId": "22117",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/05/Guidewire-Connections-2024.webp",
+        "postMedia": "/blog-photos/Guidewire-Connections-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1478,7 +1478,7 @@
         "postDate": "2024-05-02 19:08:34",
         "addressData": null,
         "thumbnailId": "22121",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/05/NAIC-Quarterly.webp",
+        "postMedia": "/blog-photos/NAIC-Quarterly.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1510,7 +1510,7 @@
             "venueId": ""
         },
         "thumbnailId": "22124",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/05/ITC-Vegas-2024.webp",
+        "postMedia": "/blog-photos/ITC-Vegas-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1542,7 +1542,7 @@
             "venueId": ""
         },
         "thumbnailId": "22226",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/06/Digital-Insurance-DIGIN-2024.webp",
+        "postMedia": "/blog-photos/Digital-Insurance-DIGIN-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1574,7 +1574,7 @@
             "venueId": ""
         },
         "thumbnailId": "22365",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/09/Generative-AI-Symposium-2024.webp",
+        "postMedia": "/blog-photos/Generative-AI-Symposium-2024.webp",
         "eventCost": "",
         "eventCurrencyCode": "USD",
         "eventCurrencyPostion": "prefix",
@@ -1605,7 +1605,7 @@
             "venueId": ""
         },
         "thumbnailId": "22369",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/09/gen-ai-in-Insurance-2024.webp",
+        "postMedia": "/blog-photos/gen-ai-in-Insurance-2024.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1637,7 +1637,7 @@
             "venueId": ""
         },
         "thumbnailId": "22457",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/12/NAMIC-2025.webp",
+        "postMedia": "/blog-photos/NAMIC-2025.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1669,7 +1669,7 @@
             "venueId": ""
         },
         "thumbnailId": "22461",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/12/ALM-2025.webp",
+        "postMedia": "/blog-photos/ALM-2025.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1701,7 +1701,7 @@
             "venueId": ""
         },
         "thumbnailId": "22464",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/12/Insurance-Innovators-USA-2025.webp",
+        "postMedia": "/blog-photos/Insurance-Innovators-USA-2025.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
@@ -1733,7 +1733,7 @@
             "venueId": ""
         },
         "thumbnailId": "22467",
-        "postMedia": "https://charlee.ai/wp-content/uploads/2024/12/The-Future-of-Insurance-2025.webp",
+        "postMedia": "/blog-photos/The-Future-of-Insurance-2025.webp",
         "eventAllDay": "yes",
         "eventCost": "",
         "eventCurrencyCode": "USD",
