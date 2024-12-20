@@ -18,6 +18,8 @@ import blogItems from "../../../providers/datas/blogs.json";
 import { useEffect, useState } from "react";
 import { calculateCreatedAgo, printEventDates, sortArrList } from "../../commonFunc";
 import eventlist from "../../../providers/datas/events.json";
+import { TabFirstElement } from "./TabFirstElement";
+import { TabNewsFirstElement } from "./TabNewsFirstElement";
 // const blogItems = [
 //   {
 //     blogImg: blog1,
@@ -180,18 +182,21 @@ export const BlogTabContent = ({title, tabKey}) => {
     <Box className="w-full text-start">
       <h4 className='text-[42px] leading-[54.6px] font-medium my-4'>{title}</h4>
       <Box className="w-full my-4">
-        <Grid2 container spacing={2} >
+        {firstBlog.postType == 'post' ? <TabFirstElement firstBlog={firstBlog}/>:<TabNewsFirstElement firstBlog={firstBlog}/>}
+        
+        
+        {/* <Grid2 container spacing={2} >
           <Grid2 size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 9}} className="text-start text-white p-6 rounded-2xl min-h-[300px]"
-            display={"flex"} flexDirection={"column"} justifyContent={"end"} alignItems={"flex-end"}
+            display={"flex"} flexDirection={"column"} justifyContent={"end"} alignItems={"flex-start"}
             sx={{background: `url(${firstBlog?.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
           >
             <h4 className="cursor-pointer text-[42px] leading-[54.6px] font-medium">
               {firstBlog?.title}
             </h4>
-            <Box className="cursor-pointer w-full py-3" display={'flex'} gap={6}>
+            {firstBlog.postType == 'post' &&  <Box className="cursor-pointer w-full py-3" display={'flex'} gap={6}>
               <span>{calculateCreatedAgo(firstBlog)}</span>
               <span>By {firstBlog?.creator}</span>
-            </Box>
+            </Box>}
           </Grid2>
           <Grid2 size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
             {firstBlog.postType == 'post' && 
@@ -200,12 +205,12 @@ export const BlogTabContent = ({title, tabKey}) => {
               </p>
             }
             {firstBlog.postType != 'post' && 
-              <p className="line-clamp-[12]">
-                Claims Director Brad Metzger has worked in the P&C Industry for several years, performing diverse roles in Claims Operations, Claims Strategy, and Claims IT. Having seen the rise of technology in claims management, he has a unique perspective in analyzing the potential of AI to significantly transform claims workflow management while validating it against emerging trends and rddddddddddddddddddddddd
-              </p>
+              <Box>
+
+              </Box>
             }
           </Grid2>
-        </Grid2>
+        </Grid2> */}
       </Box>
       <Box className="w-full py-4">
         <Grid2 container spacing={2}>

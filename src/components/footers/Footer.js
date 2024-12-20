@@ -84,12 +84,12 @@ export const Footer = () => {
                       </h6>
                       <ul className="text-[16px] leading-[31px] mt-4">
                         <li className="py-2">
-                          <Link to={'/blogs'}>
+                          <Link to={'/blogs/news'}>
                             News
                           </Link>
                         </li>
                         <li className="py-2">
-                          <Link to={'/blogs'}>
+                          <Link to={'/blogs/events'}>
                             Events
                           </Link>
                         </li>

@@ -20,7 +20,7 @@ import { BlogContent } from './pages/blogs/BlogContent';
         <Route path='/partner' element={<Parteners />} />
         <Route path='/connect' element={<Contact />} />
         <Route path='/solutions' element={<Solutions />}/>
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/*" element={<Blogs />} />
         <Route path="/blog/:blogid" element={<BlogContent />} />
         <Route path='/product/askcharlee' element={<AskCharlee />} />
         <Route path='/product/seecharlee' element={<SeeCharlee />} />

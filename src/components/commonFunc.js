@@ -35,7 +35,7 @@ export const printEventDates = (eventItem) => {
     }
   );
   const endDate = new Date(eventItem.eventEndDate)
-  const endDateStr = startDate.toLocaleDateString(undefined, 
+  const endDateStr = endDate.toLocaleDateString(undefined, 
     {
       month: 'long',
       day: 'numeric',
@@ -55,3 +55,38 @@ export const sortArrList = (arrList) => {
       });
     return tmpArr;
 }
+
+// export const getGoogleCalendarUrl = (info) => {
+// 	let utcMomentObject = moment(new Date(info.eventStartDate)).utc();
+// 	let googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=" + utcMomentObject.format("YYYYMMDDTHHmmss") + "Z%2F" + utcMomentObject.add(30, 'minutes').format("YYYYMMDDTHHmmss") + "Z&details=" + encodeURIComponent(info.description) + "&text=" + info.title;
+// 	return googleCalendarUrl;
+// }
+
+// export const getOutlookCalendarUrl = (info) => {
+// 	let utcMomentObject = moment(new Date(info.startTime)).utc();
+// 	let outlookCalendarUrl = "https://outlook.live.com/calendar/0/action/compose?allday=false&body=" + encodeURIComponent(info.description) + "&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=" + utcMomentObject.format("YYYY-MM-DDTHH") + "%3A" + utcMomentObject.format("mm") + "%3A" + utcMomentObject.format("ss") + "%2B00%3A00&subject=" + info.title;
+// 	return outlookCalendarUrl;
+// }
+
+// export const getIcsFileContent = (info) => {
+// 	const utcMomentObject = moment(new Date(info.startTime)).utc();
+// 	let sequence = 1;
+// 	if (info.icsFile && info.icsFile.includes("SEQUENCE:")) {
+// 		sequence = Number(info.icsFile.split("SEQUENCE:")[1].split("\n")[0]) + 1;
+// 	}
+// 	let organizerEmail = window._hudProfile.email;
+// 	let attendeeEmails = info.participants.filter(item => item !== organizerEmail);
+// 	let attendeeEmailString = "";
+// 	attendeeEmails.map(email => {
+// 		attendeeEmailString += "\nATTENDEE;CN=" + email + ":mailto:" + email;
+// 	})
+// 	let dtStamp = null;
+// 	if (info.icsFile && info.icsFile.includes("DTSTAMP:")) {
+// 		dtStamp = Number(info.icsFile.split("DTSTAMP:")[1].split("\n")[0]);
+// 	}
+// 	if (!dtStamp) {
+// 		dtStamp = moment().utc().format("YYYYMMDDTHHmmss") + "Z";
+// 	}
+// 	const icsFileContent = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:AXION-MEETINGS\nMETHOD:REQUEST\nBEGIN:VEVENT\nDTSTART:" + utcMomentObject.format("YYYYMMDDTHHmmss") + "Z\n" + "ORGANIZER;CN=Hive Calendar:mailto:" + organizerEmail + "\nUID:" + info.uuid + attendeeEmailString + "\nSEQUENCE:" + sequence + "\nDTSTAMP:" + dtStamp + "\nSUMMARY:" + info.title + "\nLOCATION:Hive Meeting System\nDESCRIPTION:" + info.description.replaceAll("\n", "\\n") + "\nSTATUS:CONFIRMED\nEND:VEVENT\nEND:VCALENDAR";
+// 	return icsFileContent;
+// }
