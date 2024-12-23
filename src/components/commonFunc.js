@@ -1,30 +1,32 @@
+import moment from "moment/moment";
+
 export const calculateCreatedAgo = (blogItem) => {
-    let timeAgoStr = '2 days ago';
-    const nowDate = new Date();
-    const createDate = new Date(blogItem.postDate);
-    
-    const timeDifferenceMS = nowDate - createDate;
-    const timeDifferenceHours = Math.floor(timeDifferenceMS / 3600000);
-    
-    if(timeDifferenceHours > 23){
-      const timeDifferenceDays = Math.floor(timeDifferenceMS / 86400000);
-      if(timeDifferenceDays > 30){
-        const timeDifferenceMonths = Math.floor(timeDifferenceDays / 30);
-        if(timeDifferenceMonths > 12){
-          const timeDifferenceYears = Math.floor(timeDifferenceMonths / 12);
-          timeAgoStr = `${timeDifferenceYears} years ago`;  
-        }else{
-          timeAgoStr = `${timeDifferenceMonths} months ago`;    
-        }
+  let timeAgoStr = '2 days ago';
+  const nowDate = new Date();
+  const createDate = new Date(blogItem.postDate);
+  
+  const timeDifferenceMS = nowDate - createDate;
+  const timeDifferenceHours = Math.floor(timeDifferenceMS / 3600000);
+  
+  if(timeDifferenceHours > 23){
+    const timeDifferenceDays = Math.floor(timeDifferenceMS / 86400000);
+    if(timeDifferenceDays > 30){
+      const timeDifferenceMonths = Math.floor(timeDifferenceDays / 30);
+      if(timeDifferenceMonths > 12){
+        const timeDifferenceYears = Math.floor(timeDifferenceMonths / 12);
+        timeAgoStr = `${timeDifferenceYears} years ago`;  
       }else{
-        timeAgoStr = `${timeDifferenceDays} days ago`;  
+        timeAgoStr = `${timeDifferenceMonths} months ago`;    
       }
     }else{
-      timeAgoStr = `${timeDifferenceHours} hours ago`;
+      timeAgoStr = `${timeDifferenceDays} days ago`;  
     }
-    
-    return timeAgoStr;
+  }else{
+    timeAgoStr = `${timeDifferenceHours} hours ago`;
   }
+  
+  return timeAgoStr;
+}
 
 export const printEventDates = (eventItem) => {
   const startDate = new Date(eventItem.eventStartDate);
@@ -56,17 +58,19 @@ export const sortArrList = (arrList) => {
     return tmpArr;
 }
 
-// export const getGoogleCalendarUrl = (info) => {
-// 	let utcMomentObject = moment(new Date(info.eventStartDate)).utc();
-// 	let googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=" + utcMomentObject.format("YYYYMMDDTHHmmss") + "Z%2F" + utcMomentObject.add(30, 'minutes').format("YYYYMMDDTHHmmss") + "Z&details=" + encodeURIComponent(info.description) + "&text=" + info.title;
-// 	return googleCalendarUrl;
-// }
+export const getGoogleCalendarUrl = (info) => {
+	let utcMomentObject = moment(new Date(info.eventStartDate)).utc();
+	let googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=" + utcMomentObject.format("YYYYMMDDTHHmmss") + "Z%2F" + utcMomentObject.add(30, 'minutes').format("YYYYMMDDTHHmmss") + "Z&details=" + encodeURIComponent(info.title) + "&text=" + info.title;
+	return googleCalendarUrl;
+}
 
-// export const getOutlookCalendarUrl = (info) => {
-// 	let utcMomentObject = moment(new Date(info.startTime)).utc();
-// 	let outlookCalendarUrl = "https://outlook.live.com/calendar/0/action/compose?allday=false&body=" + encodeURIComponent(info.description) + "&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=" + utcMomentObject.format("YYYY-MM-DDTHH") + "%3A" + utcMomentObject.format("mm") + "%3A" + utcMomentObject.format("ss") + "%2B00%3A00&subject=" + info.title;
-// 	return outlookCalendarUrl;
-// }
+export const getOutlookLiveCalendarUrl = (info) => {
+	let utcStartObject = moment(new Date(info.eventStartDate)).utc();
+  let utcEndObject = moment(new Date(info.eventEndDate)).utc();
+  let outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&rrv=addevent&startdt=${utcStartObject.format("YYYY-MM-DDTHH")}&enddt=${utcEndObject.format("YYYY-MM-DDTHH")}&location=Green%20Valley%20Ranch%20Resort,%202300%20Paseo%20Verde%20Pkwy,%20Henderson,%20NV,%2089052,%20United%20States&subject=${info.title}&body`;
+	// let outlookCalendarUrl = "https://outlook.live.com/calendar/0/action/compose?allday=false&body=" + encodeURIComponent(info.title) + "&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=" + utcMomentObject.format("YYYY-MM-DDTHH") + "%3A" + utcMomentObject.format("mm") + "%3A" + utcMomentObject.format("ss") + "%2B00%3A00&subject=" + info.title;
+	return outlookCalendarUrl;
+}
 
 // export const getIcsFileContent = (info) => {
 // 	const utcMomentObject = moment(new Date(info.startTime)).utc();

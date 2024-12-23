@@ -183,34 +183,6 @@ export const BlogTabContent = ({title, tabKey}) => {
       <h4 className='text-[42px] leading-[54.6px] font-medium my-4'>{title}</h4>
       <Box className="w-full my-4">
         {firstBlog.postType == 'post' ? <TabFirstElement firstBlog={firstBlog}/>:<TabNewsFirstElement firstBlog={firstBlog}/>}
-        
-        
-        {/* <Grid2 container spacing={2} >
-          <Grid2 size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 9}} className="text-start text-white p-6 rounded-2xl min-h-[300px]"
-            display={"flex"} flexDirection={"column"} justifyContent={"end"} alignItems={"flex-start"}
-            sx={{background: `url(${firstBlog?.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
-          >
-            <h4 className="cursor-pointer text-[42px] leading-[54.6px] font-medium">
-              {firstBlog?.title}
-            </h4>
-            {firstBlog.postType == 'post' &&  <Box className="cursor-pointer w-full py-3" display={'flex'} gap={6}>
-              <span>{calculateCreatedAgo(firstBlog)}</span>
-              <span>By {firstBlog?.creator}</span>
-            </Box>}
-          </Grid2>
-          <Grid2 size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
-            {firstBlog.postType == 'post' && 
-              <p className="line-clamp-[12]">
-                {firstBlog.content}
-              </p>
-            }
-            {firstBlog.postType != 'post' && 
-              <Box>
-
-              </Box>
-            }
-          </Grid2>
-        </Grid2> */}
       </Box>
       <Box className="w-full py-4">
         <Grid2 container spacing={2}>
@@ -224,13 +196,13 @@ export const BlogTabContent = ({title, tabKey}) => {
                 <h6 className="cursor-pointer line-clamp-2 text-[24px] leading-[32px] font-medium my-3">{itemData.title}</h6>
               </Box>
               {itemData.postType == 'post' && 
-                <Box className="cursor-pointer w-full mt-9 text-[#949494] text-[12px] leading-[21px]" display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={4}>
+                <Box className="cursor-pointer w-full mt-4 text-[#949494] text-[12px] leading-[21px]" display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={4}>
                   <span>{calculateCreatedAgo(itemData)}</span>
                   <span>By {itemData.creator}</span>
                 </Box>
               }
               {itemData.postType != 'post' && 
-                <Box className="cursor-pointer w-full mt-9 text-[#949494] text-[12px] leading-[21px]" display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={4}>
+                <Box className="cursor-pointer w-full mt-4 text-[#949494] text-[12px] leading-[21px]" display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={4}>
                   <span>{printEventDates(itemData)}</span>
                 </Box>
               }

@@ -17,11 +17,18 @@ import { useEffect } from "react";
 import blogContents from "../../providers/datas/blogcontents.json";
 import eventlist from "../../providers/datas/events.json";
 import postArrlist from "../../providers/datas/blogs.json";
+import originEvents from "../../providers/datas_old/events.json";
 export const Blogs = () => {
   
   useEffect(() => {
-    // analyzeBlogs();
+    analyzeEvents();
   }, [])
+
+  const analyzeEvents = () => {
+    originEvents.map((event) => {
+      console.log(event);
+    });
+  }
 
   const analyzeBlogs = () => {
     let blogArr = [];
