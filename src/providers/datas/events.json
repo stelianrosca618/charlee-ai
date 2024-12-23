@@ -8,6 +8,7 @@
         "postDate": "2023-02-06 19:11:14",
         "venueId": "21400",
         "addressData": {
+            "title": "Omni Orlando Resort",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -39,6 +40,7 @@
         "postDate": "2023-02-06 19:25:11",
         "venueId": "21404",
         "addressData": {
+            "title": "Green Valley Ranch Resort",
             "origin": "events-calendar",
             "phone": "(702) 617-7777",
             "address": "2300 Paseo Verde Pkwy",
@@ -71,6 +73,7 @@
         "postDate": "2023-02-07 17:54:55",
         "venueId": "21420",
         "addressData": {
+            "title": "Orlando World Center Marriott",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -103,6 +106,7 @@
         "postDate": "2023-02-07 18:15:11",
         "venueId": "21424",
         "addressData": {
+            "title": "Pier 60 Chelsea Piers",
             "origin": "events-calendar",
             "phone": "",
             "address": "Pier 60, 60 Chelsea Piers",
@@ -135,6 +139,7 @@
         "postDate": "2023-02-07 18:25:15",
         "venueId": "21428",
         "addressData": {
+            "title": "CLM Annual Conference",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -188,6 +193,7 @@
         "postDate": "2023-02-07 19:59:14",
         "venueId": "21436",
         "addressData": {
+            "title": "Renaissance Nashville Hotel",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -220,6 +226,7 @@
         "postDate": "2023-02-07 20:11:12",
         "venueId": "21440",
         "addressData": {
+            "title": "Marriott Marquis",
             "origin": "events-calendar",
             "phone": "(312) 824-0500",
             "address": "2121 S Prairie Ave",
@@ -252,6 +259,7 @@
         "postDate": "2023-02-07 20:25:58",
         "venueId": "21444",
         "addressData": {
+            "title": "Music City Center",
             "origin": "events-calendar",
             "phone": "",
             "address": "201 Rep. John Lewis Way S",
@@ -284,6 +292,7 @@
         "postDate": "2023-02-07 20:47:14",
         "venueId": "21449",
         "addressData": {
+            "title": "Mohegan Sun",
             "origin": "events-calendar",
             "phone": "(888) 226-7711",
             "address": "1 Mohegan Sun Blvd",
@@ -316,6 +325,7 @@
         "postDate": "2023-02-15 00:22:09",
         "venueId": "21488",
         "addressData": {
+            "title": "Ritz-Carlton, Laguna Niguel",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -348,6 +358,7 @@
         "postDate": "2023-02-15 00:33:06",
         "venueId": "21493",
         "addressData": {
+            "title": "Embassy Suites",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -380,6 +391,7 @@
         "postDate": "2023-02-16 23:29:52",
         "venueId": "21498",
         "addressData": {
+            "title": "Minneapolis Convention Center",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -412,6 +424,7 @@
         "postDate": "2023-02-16 23:37:42",
         "venueId": "21502",
         "addressData": {
+            "title": "San Francisco",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -444,6 +457,7 @@
         "postDate": "2023-02-17 20:08:00",
         "venueId": "21506",
         "addressData": {
+            "title": "Boston",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -476,6 +490,7 @@
         "postDate": "2023-02-17 20:15:49",
         "venueId": "21510",
         "addressData": {
+            "title": "New York",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -508,6 +523,7 @@
         "postDate": "2023-02-17 20:22:55",
         "venueId": "21514",
         "addressData": {
+            "title": "Park Hyatt Beaver Creek Resort and Spa",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -540,6 +556,7 @@
         "postDate": "2023-02-17 20:29:00",
         "venueId": "21440",
         "addressData": {
+            "title": "Marriott Marquis",
             "origin": "events-calendar",
             "phone": "(312) 824-0500",
             "address": "2121 S Prairie Ave",
@@ -572,6 +589,7 @@
         "postDate": "2023-02-17 20:38:39",
         "venueId": "21520",
         "addressData": {
+            "title": "National Harbor",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -604,6 +622,7 @@
         "postDate": "2023-02-17 20:43:53",
         "venueId": "21524",
         "addressData": {
+            "title": "Mandalay Bay",
             "origin": "events-calendar",
             "phone": "",
             "address": "3950 S Las Vegas Blvd",
@@ -636,6 +655,7 @@
         "postDate": "2023-02-17 21:27:32",
         "venueId": "21528",
         "addressData": {
+            "title": "Chicago, IL",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -668,6 +688,7 @@
         "postDate": "2023-02-28 01:28:26",
         "venueId": "21535",
         "addressData": {
+            "title": "gaylord opryland",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -700,6 +721,7 @@
         "postDate": "2023-05-05 18:26:04",
         "venueId": "21657",
         "addressData": {
+            "title": "Marriott Harbor Beach Resort & Spa",
             "origin": "events-calendar",
             "phone": "",
             "address": "3030 Holiday Dr",
@@ -732,6 +754,7 @@
         "postDate": "2023-11-17 00:23:49",
         "venueId": "21888",
         "addressData": {
+            "title": "Sheraton Denver",
             "origin": "events-calendar",
             "phone": "(303) 893-3333",
             "address": "1550 Court Pl",
@@ -764,6 +787,7 @@
         "postDate": "2023-11-17 00:59:16",
         "venueId": "21404",
         "addressData": {
+            "title": "Green Valley Ranch Resort",
             "origin": "events-calendar",
             "phone": "(702) 617-7777",
             "address": "2300 Paseo Verde Pkwy",
@@ -796,6 +820,7 @@
         "postDate": "2023-11-17 01:11:14",
         "venueId": "21506",
         "addressData": {
+            "title": "Boston",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -828,6 +853,7 @@
         "postDate": "2023-11-17 01:56:27",
         "venueId": "21424",
         "addressData": {
+            "title": "Pier 60 Chelsea Piers",
             "origin": "events-calendar",
             "phone": "",
             "address": "Pier 60, 60 Chelsea Piers",
@@ -860,6 +886,7 @@
         "postDate": "2023-11-20 23:14:31",
         "venueId": "21907",
         "addressData": {
+            "title": "Austin",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -892,6 +919,7 @@
         "postDate": "2023-11-20 23:23:00",
         "venueId": "21911",
         "addressData": {
+            "title": "Waldorf Astoria Monarch Beach Resort",
             "origin": "events-calendar",
             "phone": "(949) 234-3200",
             "address": "1 Monarch Beach Resort N",
@@ -924,6 +952,7 @@
         "postDate": "2023-11-20 23:34:07",
         "venueId": "21449",
         "addressData": {
+            "title": "Mohegan Sun",
             "origin": "events-calendar",
             "phone": "(888) 226-7711",
             "address": "1 Mohegan Sun Blvd",
@@ -956,6 +985,7 @@
         "postDate": "2023-11-21 00:36:15",
         "venueId": "21440",
         "addressData": {
+            "title": "Marriott Marquis",
             "origin": "events-calendar",
             "phone": "(312) 824-0500",
             "address": "2121 S Prairie Ave",
@@ -988,6 +1018,7 @@
         "postDate": "2023-11-21 00:44:17",
         "venueId": "21923",
         "addressData": {
+            "title": "Pittsburg",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -1020,6 +1051,7 @@
         "postDate": "2023-11-21 01:08:42",
         "venueId": "21502",
         "addressData": {
+            "title": "San Francisco",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -1052,6 +1084,7 @@
         "postDate": "2023-12-19 09:31:17",
         "venueId": "21965",
         "addressData": {
+            "title": "Hyatt Regency Austin",
             "origin": "events-calendar",
             "phone": "(512) 477-1234",
             "address": "208 Barton Springs Rd",
@@ -1105,6 +1138,7 @@
         "postDate": "2024-03-01 20:07:32",
         "venueId": "21657",
         "addressData": {
+            "title": "Marriott Harbor Beach Resort & Spa",
             "origin": "events-calendar",
             "phone": "",
             "address": "3030 Holiday Dr",
@@ -1137,6 +1171,7 @@
         "postDate": "2024-03-01 20:16:42",
         "venueId": "22019",
         "addressData": {
+            "title": "Javits Center",
             "origin": "events-calendar",
             "phone": "",
             "address": "429 11th Ave",
@@ -1169,6 +1204,7 @@
         "postDate": "2024-03-21 16:39:23",
         "venueId": "21444",
         "addressData": {
+            "title": "Music City Center",
             "origin": "events-calendar",
             "phone": "",
             "address": "201 Rep. John Lewis Way S",
@@ -1201,6 +1237,7 @@
         "postDate": "2024-03-21 16:56:10",
         "venueId": "22042",
         "addressData": {
+            "title": "Courtyard by Marriott Chicago Downtown/Magnificent Mile",
             "origin": "events-calendar",
             "phone": "",
             "address": "165 E Ontario St",
@@ -1254,6 +1291,7 @@
         "postDate": "2024-03-21 17:19:37",
         "venueId": "22050",
         "addressData": {
+            "title": "Hyatt Regency Monterey",
             "origin": "events-calendar",
             "phone": "",
             "address": "",
@@ -1286,6 +1324,7 @@
         "postDate": "2024-04-05 23:19:29",
         "venueId": "22063",
         "addressData": {
+            "title": "Monterey Plaza Hotel",
             "origin": "events-calendar",
             "phone": "",
             "address": "400 Cannery Row",
@@ -1318,6 +1357,7 @@
         "postDate": "2024-04-05 23:27:18",
         "venueId": "22067",
         "addressData": {
+            "title": "Marriott Hutchinson Island Beach Resort",
             "origin": "events-calendar",
             "phone": "",
             "address": "555 NE Ocean Boulevard",
@@ -1350,6 +1390,7 @@
         "postDate": "2024-05-02 16:44:23",
         "venueId": "22096",
         "addressData": {
+            "title": "Gaylord Rockies Resort & Convention Center",
             "origin": "events-calendar",
             "phone": "",
             "address": "6700 North Gaylord Rockies Boulevard",
@@ -1382,6 +1423,7 @@
         "postDate": "2024-05-02 16:59:54",
         "venueId": "22110",
         "addressData": {
+            "title": "Loews New Orleans Hotel",
             "origin": "events-calendar",
             "phone": "",
             "address": "300 Poydras St",
@@ -1414,6 +1456,7 @@
         "postDate": "2024-05-02 17:08:04",
         "venueId": "22114",
         "addressData": {
+            "title": "Austin Convention Center",
             "origin": "events-calendar",
             "phone": "",
             "address": "500 E Cesar Chavez St",
@@ -1446,6 +1489,7 @@
         "postDate": "2024-05-02 17:13:27",
         "venueId": "22118",
         "addressData": {
+            "title": "Gaylord Opryland Resort & Convention Center",
             "origin": "events-calendar",
             "phone": "",
             "address": "2800 Opryland Dr",
@@ -1499,6 +1543,7 @@
         "postDate": "2024-05-02 19:14:41",
         "venueId": "21524",
         "addressData": {
+            "title": "Mandalay Bay",
             "origin": "events-calendar",
             "phone": "",
             "address": "3950 S Las Vegas Blvd",
@@ -1531,6 +1576,7 @@
         "postDate": "2024-06-18 11:18:10",
         "venueId": "22224",
         "addressData": {
+            "title": "The Boca Raton Resort",
             "origin": "events-calendar",
             "phone": "",
             "address": "501 E Camino Real",
@@ -1563,6 +1609,7 @@
         "postDate": "2024-09-16 18:18:05",
         "venueId": "22366",
         "addressData": {
+            "title": "The Westin New York at Times Square",
             "origin": "events-calendar",
             "phone": "",
             "address": "270 W 43rd St",
@@ -1594,6 +1641,7 @@
         "postDate": "2024-09-16 18:27:33",
         "venueId": "22370",
         "addressData": {
+            "title": "The Colonnade Hotel",
             "origin": "events-calendar",
             "phone": "",
             "address": "120 Huntington Ave",
@@ -1626,6 +1674,7 @@
         "postDate": "2024-12-16 09:31:15",
         "venueId": "22458",
         "addressData": {
+            "title": "DoubleTree by Hilton at the Entrance to Universal Orlando",
             "origin": "events-calendar",
             "phone": "",
             "address": "5780 Major Boulevard",
@@ -1658,6 +1707,7 @@
         "postDate": "2024-12-16 09:34:15",
         "venueId": "21404",
         "addressData": {
+            "title": "Green Valley Ranch Resort",
             "origin": "events-calendar",
             "phone": "(702) 617-7777",
             "address": "2300 Paseo Verde Pkwy",
@@ -1690,6 +1740,7 @@
         "postDate": "2024-12-16 09:44:54",
         "venueId": "21444",
         "addressData": {
+            "title": "Music City Center",
             "origin": "events-calendar",
             "phone": "",
             "address": "201 Rep. John Lewis Way S",
@@ -1722,6 +1773,7 @@
         "postDate": "2024-12-16 09:56:08",
         "venueId": "21440",
         "addressData": {
+            "title": "Marriott Marquis",
             "origin": "events-calendar",
             "phone": "(312) 824-0500",
             "address": "2121 S Prairie Ave",
