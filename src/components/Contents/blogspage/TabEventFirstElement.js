@@ -4,7 +4,7 @@ import HouseOutlinedIcon from '@mui/icons-material/HouseOutlined';
 import RoomIcon from '@mui/icons-material/Room';
 import PhoneSharpIcon from '@mui/icons-material/PhoneSharp';
 import { CalendarDownMenu } from "./CalendarDownMenu";
-export const TabNewsFirstElement = ({firstBlog}) => {
+export const TabEventFirstElement = ({firstBlog}) => {
   return (
     <Grid2 container spacing={2} >
       <Grid2 size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 9}} className="text-start text-white rounded-2xl min-h-[400px]"
@@ -25,14 +25,18 @@ export const TabNewsFirstElement = ({firstBlog}) => {
             WebSite
           </h3>  
           <p className="pl-2">
-            <a className="break-words underline text-[#22c0b1]" href={firstBlog.link}>
+            <a className="break-words underline text-[#22c0b1]" href={firstBlog.eventUrl}>
               {firstBlog.eventUrl}
             </a>
           </p>
+          
           <h3 className="text-[22px] font-semibold py-2">
             <RoomIcon className="mx-2"/>
             Address
           </h3>  
+          <h5 className="pl-2 font-semibold py-2">
+            {firstBlog.addressData.title}
+          </h5>
           <p className="pl-2 underline">
             {firstBlog.addressData.address}
           </p>

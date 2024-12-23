@@ -19,7 +19,7 @@ import { useEffect, useState } from "react";
 import { calculateCreatedAgo, printEventDates, sortArrList } from "../../commonFunc";
 import eventlist from "../../../providers/datas/events.json";
 import { TabFirstElement } from "./TabFirstElement";
-import { TabNewsFirstElement } from "./TabNewsFirstElement";
+import { TabEventFirstElement } from "./TabEventFirstElement";
 // const blogItems = [
 //   {
 //     blogImg: blog1,
@@ -175,6 +175,8 @@ export const BlogTabContent = ({title, tabKey}) => {
   const blogNavigation = (blogPath, postType) => {
     if(postType == 'post'){
       navigate(`/blog/${blogPath}`);
+    }else{
+      navigate(`/event/${blogPath}`);
     }
     
   }
@@ -182,7 +184,7 @@ export const BlogTabContent = ({title, tabKey}) => {
     <Box className="w-full text-start">
       <h4 className='text-[42px] leading-[54.6px] font-medium my-4'>{title}</h4>
       <Box className="w-full my-4">
-        {firstBlog.postType == 'post' ? <TabFirstElement firstBlog={firstBlog}/>:<TabNewsFirstElement firstBlog={firstBlog}/>}
+        {firstBlog.postType == 'post' ? <TabFirstElement firstBlog={firstBlog}/>:<TabEventFirstElement firstBlog={firstBlog}/>}
       </Box>
       <Box className="w-full py-4">
         <Grid2 container spacing={2}>
@@ -192,7 +194,7 @@ export const BlogTabContent = ({title, tabKey}) => {
                 <div className="cursor-pointer w-full aspect-[300/200] rounded-2xl blog-card" 
                   style={{background: `url(${itemData.postMedia})`}}>
                     <img src={itemData.postMedia} alt="blog-img" className="w-full aspect-[300/200] rounded-2xl opacity-0"/>
-                  </div>
+                </div>
                 <h6 className="cursor-pointer line-clamp-2 text-[24px] leading-[32px] font-medium my-3">{itemData.title}</h6>
               </Box>
               {itemData.postType == 'post' && 

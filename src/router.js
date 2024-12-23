@@ -10,6 +10,7 @@ import { DocuCharlee } from './pages/products/docucharlee/DocuCharlee';
 import { FindCharlee } from './pages/products/findcharlee/FindCharlee';
 import { Blogs } from './pages/blogs/Blogs';
 import { BlogContent } from './pages/blogs/BlogContent';
+import { EventContent } from './pages/blogs/EventContent';
 
  export const Router = () => {
   return (
@@ -21,6 +22,7 @@ import { BlogContent } from './pages/blogs/BlogContent';
         <Route path='/connect' element={<Contact />} />
         <Route path='/solutions' element={<Solutions />}/>
         <Route path="/blogs/*" element={<Blogs />} />
+        <Route path="/event/:eventname" element={<EventContent />} />
         <Route path="/blog/:blogid" element={<BlogContent />} />
         <Route path='/product/askcharlee' element={<AskCharlee />} />
         <Route path='/product/seecharlee' element={<SeeCharlee />} />

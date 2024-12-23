@@ -67,13 +67,27 @@ export const getGoogleCalendarUrl = (info) => {
 export const getOutlookLiveCalendarUrl = (info) => {
 	let utcStartObject = moment(new Date(info.eventStartDate)).utc();
   let utcEndObject = moment(new Date(info.eventEndDate)).utc();
-  let outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&rrv=addevent&startdt=${utcStartObject.format("YYYY-MM-DDTHH")}&enddt=${utcEndObject.format("YYYY-MM-DDTHH")}&location=Green%20Valley%20Ranch%20Resort,%202300%20Paseo%20Verde%20Pkwy,%20Henderson,%20NV,%2089052,%20United%20States&subject=${info.title}&body`;
+  let outlookCalendarUrl = `https://outlook.live.com/owa/?path=/calendar/action/compose&rrv=addevent&startdt=${utcStartObject.format("YYYY-MM-DDTHH")}&enddt=${utcEndObject.format("YYYY-MM-DDTHH")}&location=${info.addressData.title},%20${info.addressData.address},%20${info.addressData.city},%20${info.addressData.state},%20${info.addressData.zip},%20${info.addressData.country}&subject=${info.title}&body`;
 	// let outlookCalendarUrl = "https://outlook.live.com/calendar/0/action/compose?allday=false&body=" + encodeURIComponent(info.title) + "&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=" + utcMomentObject.format("YYYY-MM-DDTHH") + "%3A" + utcMomentObject.format("mm") + "%3A" + utcMomentObject.format("ss") + "%2B00%3A00&subject=" + info.title;
 	return outlookCalendarUrl;
 }
 
+export const getOutlookOfficeCalendarUrl = (info) => {
+  let utcStartObject = moment(new Date(info.eventStartDate)).utc();
+  let utcEndObject = moment(new Date(info.eventEndDate)).utc();
+  let outlookCalendarUrl = `https://outlook.office.com/owa/?path=/calendar/action/compose&rrv=addevent&startdt=${utcStartObject.format("YYYY-MM-DDTHH")}&enddt=${utcEndObject.format("YYYY-MM-DDTHH")}&location=${info.addressData.title},%20${info.addressData.address},%20${info.addressData.city},%20${info.addressData.state},%20${info.addressData.zip},%20${info.addressData.country}&subject=${info.title}&body`;
+  // let outlookCalendarUrl = "https://outlook.live.com/calendar/0/action/compose?allday=false&body=" + encodeURIComponent(info.title) + "&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=" + utcMomentObject.format("YYYY-MM-DDTHH") + "%3A" + utcMomentObject.format("mm") + "%3A" + utcMomentObject.format("ss") + "%2B00%3A00&subject=" + info.title;
+  return outlookCalendarUrl;
+}
+export const getiCalendarUrl = (info) => {
+  let utcMomentObject = moment(new Date(info.eventStartDate)).utc();
+  const icalendarUrl = `webcal://charlee.ai/blogs/events/${info.title}/?ical=1`
+  // let icsFileContent = "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:AXION-MEETINGS\nMETHOD:REQUEST\nBEGIN:VEVENT\nDTSTART:" + utcMomentObject.format("YYYYMMDDTHHmmss") + "Z\n" + "ORGANIZER;CN=Hive Calendar:mailto: \nUID:" + info.venueId + "\nSEQUENCE:0\nDTSTAMP:" + moment().utc().format("YYYYMMDDTHHmmss") + "Z\nSUMMARY:" + info.title + "\nLOCATION:Hive Meeting System\nDESCRIPTION:" + info.title.replaceAll("\n", "\\n") + "\nSTATUS:CONFIRMED\nEND:VEVENT\nEND:VCALENDAR";
+  // let icsFileUrl = "data:text/calendar;charset=utf8," + encodeURIComponent(icsFileContent);
+  return icalendarUrl;
+}
 // export const getIcsFileContent = (info) => {
-// 	const utcMomentObject = moment(new Date(info.startTime)).utc();
+// 	const utcMomentObject = moment(new Date(info.eventStartDate)).utc();
 // 	let sequence = 1;
 // 	if (info.icsFile && info.icsFile.includes("SEQUENCE:")) {
 // 		sequence = Number(info.icsFile.split("SEQUENCE:")[1].split("\n")[0]) + 1;

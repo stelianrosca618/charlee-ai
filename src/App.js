@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Router } from './router';
+import { APIProvider } from "@vis.gl/react-google-maps";
 import { CssBaseline, createTheme, ThemeProvider, responsiveFontSizes } from "@mui/material";
 let theme = createTheme({  
   typography: {
@@ -14,8 +15,9 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <CssBaseline />
-          
-        <Router />
+        <APIProvider apiKey='AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao'>
+          <Router />
+        </APIProvider>
       </ThemeProvider>
       
     </div>

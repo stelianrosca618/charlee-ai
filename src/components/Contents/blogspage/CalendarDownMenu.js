@@ -2,7 +2,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { getGoogleCalendarUrl, getOutlookLiveCalendarUrl } from '../../commonFunc';
+import { getGoogleCalendarUrl, getiCalendarUrl, getOutlookLiveCalendarUrl, getOutlookOfficeCalendarUrl } from '../../commonFunc';
 
 export const CalendarDownMenu = ({eventObj}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -28,7 +28,18 @@ export const CalendarDownMenu = ({eventObj}) => {
     handleClose();
   }
 
-
+  const onHandleOutlookOfficeCalendar = () => {
+    console.log('Outlook Office Calendar', eventObj);
+    const outlookOfficeCalendarUrl = getOutlookOfficeCalendarUrl(eventObj);
+    window.open(outlookOfficeCalendarUrl, '_blank');
+    handleClose()
+  }
+  const onhandleICalenadar = () => {
+    console.log('iCalendar', eventObj);
+    const icalendarUrl = getiCalendarUrl(eventObj);
+    window.open(icalendarUrl, '_blank');
+    handleClose()
+  }
   return (
     <div>
       <button
@@ -53,10 +64,10 @@ export const CalendarDownMenu = ({eventObj}) => {
         <MenuItem onClick={() => { onHandleGoogleCalendar() }}>
           Google Calendar
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        <MenuItem onClick={() => {onhandleICalenadar()}}>
           iCalendar
         </MenuItem>
-        <MenuItem onClick={() => { onhandleOutlookLiveCalendar() }}>
+        <MenuItem onClick={() => { onHandleOutlookOfficeCalendar() }}>
           Outlook 365
         </MenuItem>
         <MenuItem onClick={() => { onhandleOutlookLiveCalendar() }}>

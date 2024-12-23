@@ -84,16 +84,6 @@ export const BlogsTabs = () => {
                 <BlogTabContent title="Podcasts" tabKey="podcasts" />
               </TabPanel>} />
           </Routes>
-          
-          {/* <TabPanel value="2">
-            <BlogTabContent title="Events" tabKey="events"/>
-          </TabPanel>
-          <TabPanel value="4">
-            <BlogTabContent title="News" tabKey="news"/>
-          </TabPanel>
-          <TabPanel value="5">
-            <BlogTabContent title="Podcasts" tabKey="podcasts" />
-          </TabPanel> */}
         </TabContext>
       </Container>
     </Box>
