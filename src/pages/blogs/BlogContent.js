@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Grid2 } from "@mui/material"
 import { Footer } from "../../components/footers/Footer"
 import { HomeHeader } from "../../components/headers/HomeHeader"
-import { Link, useSearchParams, useParams, Routes, Route } from "react-router-dom"
+import { Link, useSearchParams, useParams, Routes, Route, useNavigate } from "react-router-dom"
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import blog1 from '../../assets/imgs/news/blog1.png';
 import blog2 from '../../assets/imgs/news/blog2.png';
@@ -67,6 +67,7 @@ import {Post22421} from "./blogpages/Post22421";
 import {Post22441} from "./blogpages/Post22441";
 import {Post22469} from "./blogpages/Post22469";
 export const BlogContent = () => {
+  const navigate = useNavigate()
   const searchParams = useParams();
   const [blogData, setBlogData] = useState();
   const [relatedBlogs, setRelatedBlogs] = useState([]);
@@ -86,6 +87,14 @@ export const BlogContent = () => {
   const renderBlogDate = (blogItem) => {
     const dateStr = new Date(blogItem.postDate);
     return dateStr.toDateString();
+  }
+  const blogNavigation = (blogPath, postType) => {
+    if(postType == 'post'){
+      navigate(`/blog/${blogPath}`);
+    }else{
+      navigate(`/event/${blogPath}`);
+    }
+    
   }
   return (
     <div className="w-full overflow-hidden bg-[#F3F4F4]">
@@ -197,7 +206,7 @@ export const BlogContent = () => {
               <Box className="w-full py-14">
                 <Grid2 container spacing={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
                   {relatedBlogs.map((blogItem, key) => (
-                    <Grid2 key={key} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
+                    <Grid2 key={key} onClick={() => {blogNavigation(itemData.postName, itemData.postType)}} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
                       <div className="w-full aspect-video rounded-xl hover:scale-105" style={{backgroundImage: `url(${blogItem.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                       </div>
                       <h5 className="text-start text-[24px] leading-[32px] font-normal line-clamp-2 my-5">
