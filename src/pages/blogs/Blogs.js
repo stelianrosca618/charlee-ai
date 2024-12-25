@@ -27,6 +27,7 @@ import postArrlist from "../../providers/datas/blogs.json";
 export const Blogs = () => {
   
   useEffect(() => {
+    updateBlogMedia();
     // parsingEvents();
     // updateEventMedia();
   }, [])
