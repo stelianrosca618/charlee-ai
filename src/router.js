@@ -23,7 +23,7 @@ import { EventContent } from './pages/blogs/EventContent';
         <Route path='/solutions' element={<Solutions />}/>
         <Route path="/blogs/*" element={<Blogs />} />
         <Route path="/event/:eventname" element={<EventContent />} />
-        <Route path="/blog/:blogid" element={<BlogContent />} />
+        <Route path="/blog/*" element={<BlogContent />} />
         <Route path='/product/askcharlee' element={<AskCharlee />} />
         <Route path='/product/seecharlee' element={<SeeCharlee />} />
         <Route path='/product/docucharlee' element={<DocuCharlee />} />
