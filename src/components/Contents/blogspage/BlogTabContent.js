@@ -200,7 +200,7 @@ export const BlogTabContent = ({title, tabKey}) => {
               {itemData.postType == 'post' && 
                 <Box className="cursor-pointer w-full mt-4 text-[#949494] text-[12px] leading-[21px]" display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={4}>
                   <span>{calculateCreatedAgo(itemData)}</span>
-                  <span>By {itemData.creator}</span>
+                  <span>By Charlee.ai</span>
                 </Box>
               }
               {itemData.postType != 'post' && 
