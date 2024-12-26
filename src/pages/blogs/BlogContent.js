@@ -206,7 +206,7 @@ export const BlogContent = () => {
               <Box className="w-full py-14">
                 <Grid2 container spacing={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
                   {relatedBlogs.map((blogItem, key) => (
-                    <Grid2 key={key} onClick={() => {blogNavigation(itemData.postName, itemData.postType)}} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
+                    <Grid2 key={key} onClick={() => {blogNavigation(blogItem.postName, blogItem.postType)}} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>
                       <div className="w-full aspect-video rounded-xl hover:scale-105" style={{backgroundImage: `url(${blogItem.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
                       </div>
                       <h5 className="text-start text-[24px] leading-[32px] font-normal line-clamp-2 my-5">
