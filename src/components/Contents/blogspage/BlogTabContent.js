@@ -2,16 +2,6 @@ import { Box, Divider, Grid2, List, Pagination, PaginationItem } from "@mui/mate
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
-import blog10 from "../../../assets/imgs/news/blog10.png"
-import blog1 from "../../../assets/imgs/news/blog1.png";
-import blog2 from "../../../assets/imgs/news/blog2.png";
-import blog3 from "../../../assets/imgs/news/blog3.png";
-import blog4 from "../../../assets/imgs/news/blog4.png";
-import blog5 from "../../../assets/imgs/news/blog5.png";
-import blog6 from "../../../assets/imgs/news/blog6.png";
-import blog7 from "../../../assets/imgs/news/blog7.png";
-import blog8 from "../../../assets/imgs/news/blog8.png";
-import blog9 from "../../../assets/imgs/news/blog9.png";
 import { usePagination } from "@mui/lab";
 import { useNavigate } from "react-router-dom";
 import blogItems from "../../../providers/datas/blogs.json";
@@ -20,6 +10,7 @@ import { calculateCreatedAgo, printEventDates, sortArrList } from "../../commonF
 import eventlist from "../../../providers/datas/events.json";
 import { TabFirstElement } from "./TabFirstElement";
 import { TabEventFirstElement } from "./TabEventFirstElement";
+
 // const blogItems = [
 //   {
 //     blogImg: blog1,

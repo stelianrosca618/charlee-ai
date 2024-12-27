@@ -153,7 +153,7 @@ export const EventContent = () => {
                 <h4 className="text-[42px] leading-[54.6px] font-medium" >Relevant Articles</h4>
                 <Link to={'/blogs/events'}>
                   <button className="text-[18px] font-medium leading-[24px] rounded-full border border-[#021744] hover:bg-[#021744] hover:text-white px-8 py-4">
-                    View all news
+                    View all Events
                   </button>
                 </Link>
               </Box>

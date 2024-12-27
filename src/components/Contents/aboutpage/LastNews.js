@@ -3,6 +3,7 @@ import blogImg1 from "../../../assets/imgs/news/blog1.png";
 import blogImg2 from "../../../assets/imgs/news/blog2.png";
 import blogImg3 from "../../../assets/imgs/news/blog3.png";
 import blogImg4 from "../../../assets/imgs/news/blog4.png";
+import { Link } from "react-router-dom";
 
 export const LastNews = () => {
   return (
@@ -11,9 +12,11 @@ export const LastNews = () => {
         <Box className="w-full">
           <Box className="w-full" display={"flex"} flexDirection={{xs: "column", sm: "column", md: "row", lg: "row", xl: "row"}} justifyContent={"space-between"} alignItems={{xs: "flex-start", sm: "flex-start", md: "center", lg: "center", xl: "center"}}>
             <h4 className="text-[42px] leading-[54.6px] font-medium" >Latest News</h4>
-            <button className="text-[18px] font-medium leading-[24px] rounded-full border border-[#021744] hover:bg-[#021744] hover:text-white px-8 py-4">
-              View all news
-            </button>
+            <Link to={'/blogs'} >
+              <button className="text-[18px] font-medium leading-[24px] rounded-full border border-[#021744] hover:bg-[#021744] hover:text-white px-8 py-4">
+                View all news
+              </button>
+            </Link>
           </Box>
           <Box className="w-full py-14">
             <Grid2 container spacing={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>

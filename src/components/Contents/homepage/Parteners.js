@@ -6,7 +6,7 @@ import oneshield from "../../../assets/imgs/brands/oneshield.png";
 import snapSheet from "../../../assets/imgs/brands/snapsheet.png";
 import quicksilver from "../../../assets/imgs/brands/quicksilver.png";
 import duckgreeck from "../../../assets/imgs/brands/duckcreek.png";
-import inspire from "../../../assets/imgs/brands/Inspire.png"
+import sapiens from "../../../assets/imgs/brands/sapiens.png"
 import { Link } from "react-router-dom";
 export const Parteners = () => {
   return(
@@ -28,14 +28,14 @@ export const Parteners = () => {
             <Grid2 size={{xs:12, md:3}}>
               <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
-                  <img src={majesco} alt="majesco"/>
+                  <img src={duckgreeck} alt="duckgreeck"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
               <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
-                  <img src={awsmarket} alt="awsmarket"/>
+                  <img src={majesco} alt="majesco"/>
                 </Box>
               </Box>
             </Grid2>
@@ -60,17 +60,21 @@ export const Parteners = () => {
                 </Box>
               </Box>
             </Grid2>
+           
+            
+            
+            
             <Grid2 size={{xs:12, md:3}}>
               <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
-                  <img src={duckgreeck} alt="duckgreeck"/>
+                  <img src={sapiens} alt="sapiens" className="p-4"/>
                 </Box>
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, md:3}}>
               <Box data-aos-duration="1000" data-aos="flip-up" className="w-full rounded-xl gradient-border">
                 <Box className="w-full rounded-xl bg-[#EDF3F8] h-28" display={"flex"} justifyContent={"center"} alignItems={"center"}>
-                  <img src={inspire} alt="inspire"/>
+                  <img src={awsmarket} alt="awsmarket"/>
                 </Box>
               </Box>
             </Grid2>
