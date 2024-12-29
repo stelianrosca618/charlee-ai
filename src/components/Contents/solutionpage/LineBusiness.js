@@ -17,7 +17,7 @@ export const LineBusiness = () => {
         <ImgLeftContent 
           preTitle={'Claims Risk Management'}
           title={'Workflow Summary with AI Insights'}
-          detail={'Charlee® gives claims teams a full view of data to manage claim severity with precision. By identifying patterns in collision injuries, Charlee® helps reduce risks and enables faster, fairer resolutions'}
+          detail={'Charlee® gives claims teams a full view of data to manage claim severity with precision. by identifying patterns, Charlee® helps reduce risks and enables faster, fairer resolutions'}
           cases={['Case Study 1', 'Case Study 2', 'Case Study 3']}
           bgImg={blog5}
           btnBg={'#F9F9F9'}
