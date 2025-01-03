@@ -11,6 +11,7 @@ import { FindCharlee } from './pages/products/findcharlee/FindCharlee';
 import { Blogs } from './pages/blogs/Blogs';
 import { BlogContent } from './pages/blogs/BlogContent';
 import { EventContent } from './pages/blogs/EventContent';
+import { Usecase } from './pages/usecase/Usecase';
 
  export const Router = () => {
   return (
@@ -28,6 +29,7 @@ import { EventContent } from './pages/blogs/EventContent';
         <Route path='/product/seecharlee' element={<SeeCharlee />} />
         <Route path='/product/docucharlee' element={<DocuCharlee />} />
         <Route path='/product/findcharlee' element={<FindCharlee />} />
+        <Route path='/usecase/*' element={<Usecase />} />
       </Routes>
     </BrowserRouter>
   )
