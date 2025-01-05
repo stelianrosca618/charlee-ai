@@ -2,7 +2,19 @@ import { Box, Container, Grid2 } from "@mui/material"
 import { HomeHeader } from "../../components/headers/HomeHeader"
 import { Footer } from "../../components/footers/Footer"
 import blogImg from "../../assets/imgs/news/blog7.png"
+import { ContactUsPopup } from "../../components/modals/ContactUsPopup"
+import { useState } from "react"
+
 export const Usecase = () => {
+  const [isOpenContact, setIsOpenContact] = useState(false)
+  
+    const handleOpenContact = () => {
+      setIsOpenContact(true);
+    }
+    const handleCloseContact = () => {
+      setIsOpenContact(false);
+    }
+  
   return (
     <div className="w-full overflow-hidden bg-[#F9F9F9]">
       <HomeHeader headerColor={'#F9F9F9'} textColor={'#021744'}/>
@@ -18,7 +30,7 @@ export const Usecase = () => {
                   </Grid2>
                   <Grid2 size={8} className="text-start z-10 pt-32">
                     <div className="w-full bg-[#0099B0] z-10 text-white py-10">
-                      <h4 data-aos="fade-up" className="text-[42px] leading-[54.6px] font-medium uppercase">Use Cases</h4>
+                      <h4 data-aos="fade-up" className="text-[42px] leading-[54.6px] font-medium uppercase">Use Case</h4>
                       <h6 data-aos="fade-up" className="text-[24px] leading-[32px] font-normal py-5" >
                         Detecting Suspicious Injury Claims by Analyzing Patterns in Witness Statements, Police Reports, and Injury Reports
                       </h6>
@@ -29,7 +41,7 @@ export const Usecase = () => {
                 <Grid2 container spacing={1} className="w-full z-0 absolute bottom-0">
                   <Grid2 size={2}></Grid2>
                   <Grid2 size={10} className="bg-[#0099B0] text-start text-[#0099B0] py-10">
-                    <h4 className="text-[42px] leading-[54.6px] font-medium uppercase">Use Cases</h4>
+                    <h4 className="text-[42px] leading-[54.6px] font-medium uppercase">Use Case</h4>
                     <h6 className="text-[24px] leading-[32px] font-normal py-5" >
                       Detecting Suspicious Injury Claims by Analyzing Patterns in Witness Statements, Police Reports, and Injury Reports
                     </h6>
@@ -147,9 +159,16 @@ export const Usecase = () => {
                     </Box>
                   </Grid2>
                 </Grid2>
+                <Box className="w-full text-center">
+                  <button 
+                    onClick={() => {handleOpenContact()}} 
+                    className="text-[18px] leading-[24px] font-medium py-4 px-14  mt-2 border border-[#0D131E] hover:bg-[#0D131E] hover:text-white rounded-full">
+                      Contact Us
+                  </button>
+                </Box>
               </Box>
             </Container>
-            
+            <ContactUsPopup open={isOpenContact} handleClose={handleCloseContact}/>
           </Box>
         </div>
       <Footer />
