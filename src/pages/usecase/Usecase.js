@@ -12,6 +12,8 @@ import { AskCharleeClamInsight1 } from "./usecases/AskCharleeClamInsight1"
 import { AskCharleeClamInsight2 } from "./usecases/AskCharleeClamInsight2"
 import { AskCharleeClamInsight3 } from "./usecases/AskCharleeClamInsight3"
 import { AskCharleeClamInsight4 } from "./usecases/AskCharleeClamInsight4"
+import { CharleeUW1 } from "./usecases/CharleeUW1"
+import { CharleeUW2 } from "./usecases/CharleeUW2"
 
 export const Usecase = () => {
   const [isOpenContact, setIsOpenContact] = useState(false)
@@ -36,6 +38,8 @@ export const Usecase = () => {
               <Route path="/AskCharleeClamInsight2" element={<AskCharleeClamInsight2 />} />
               <Route path="/AskCharleeClamInsight3" element={<AskCharleeClamInsight3 />} />
               <Route path="/AskCharleeClamInsight4" element={<AskCharleeClamInsight4 />} />
+              <Route path="/CharleeUW1" element={<CharleeUW1 />} />
+              <Route path="/CharleeUW2" element={<CharleeUW2 />} />
             </Routes>
             <Box className="w-full text-center">
               <button 

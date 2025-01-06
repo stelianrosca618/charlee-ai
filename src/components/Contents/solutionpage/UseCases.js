@@ -53,7 +53,16 @@ export const UseCases = () => {
           preTitle={'Underwriting'}
           title={'Key Risk Factors and Emerging Risks '}
           detail={'The Charlee Insurance Insights Engine (patent pending) provides a great resource for Underwriting Management Risk Analysis in evaluating and managing portfolios. Previous years of claims data can be leveraged for powerful Artificial Intelligence generated insights for a good understanding of prior losses. These Insights can help an Underwriting Manager develop and monitor an efficient and effective Underwriting strategy, including risk selection and endorsements'}
-          cases={['Case Study 1', 'Case Study 2', 'Case Study 3', 'Case Study 4']}
+          cases={[
+            {
+              name: 'Case Study 1',
+              path: '/usecase/CharleeUW1',
+            },
+            {
+              name: 'Case Study 2',
+              path: '/usecase/CharleeUW2',
+            }
+          ]}
           bgImg={usecaseImg2}
           btnBg={'#021744'}
           imgCols={6}
