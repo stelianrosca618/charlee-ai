@@ -1,6 +1,7 @@
 import { Box, Container, Grid2 } from "@mui/material"
 import { IoHeartSharp } from "react-icons/io5";
 import patternSvg from "../../assets/imgs/pattens/patterns.svg"
+import { Link } from "react-router-dom";
 export const SolutionHero = () => {
   return (
     <Box className="w-full py-40 relative">
@@ -63,9 +64,11 @@ export const SolutionHero = () => {
                 </p>
               </Box>
               <Box className="w-full text-start">
+                <Link to={'/product/askcharlee'}>
                 <button className="rounded-full text-[14px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                   Learn more
                 </button>
+                </Link>
               </Box>
             </Grid2>
             <Grid2 size={{xs: 12, md: 6, lg: 6, xl: 6}} className="solution-cards rounded-xl shadow-xl bg-white p-9"
@@ -85,9 +88,11 @@ export const SolutionHero = () => {
                 </p>
               </Box>
               <Box className="w-full text-start">
+                <Link to={'/product/findcharlee'}>
                 <button className="rounded-full text-[14px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
                   Learn more
                 </button>
+                </Link>
               </Box>
             </Grid2>
           </Grid2>
