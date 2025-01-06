@@ -28,7 +28,20 @@ export const UseCases = () => {
           preTitle={'Claims'}
           title={'Claim Severity Management'}
           detail={'Charlee® gives claims teams a full view of data to manage claim severity with precision. by identifying patterns, Charlee® helps reduce risks and enables faster, fairer resolutions'}
-          cases={['Case Study 1', 'Case Study 2', 'Case Study 3']}
+          cases={[
+            {
+              name: 'Case Study 1',
+              path: '/usecase/AskCharleeClamInsight1'
+            },
+            {
+              name: 'Case Study 2',
+              path: '/usecase/AskCharleeClamInsight2'
+            },
+            {
+              name: 'Case Study 3',
+              path: '/usecase/AskCharleeClamInsight3'
+            },
+          ]}
           bgImg={usecaseImg1}
           btnBg={'#021744'}
           imgCols={6}

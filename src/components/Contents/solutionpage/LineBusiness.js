@@ -18,7 +18,20 @@ export const LineBusiness = () => {
           preTitle={'Claims Risk Management'}
           title={'Workflow Summary with AI Insights'}
           detail={'Charlee® gives claims teams a full view of data to manage claim severity with precision. by identifying patterns, Charlee® helps reduce risks and enables faster, fairer resolutions'}
-          cases={['Case Study 1', 'Case Study 2', 'Case Study 3']}
+          cases={[
+            {
+              name: 'Case Study 1',
+              path: '/usecase/AskCharleeClamInsight1'
+            },
+            {
+              name: 'Case Study 2',
+              path: '/usecase/AskCharleeClamInsight2'
+            },
+            {
+              name: 'Case Study 3',
+              path: '/usecase/AskCharleeClamInsight3'
+            },
+          ]}
           bgImg={blog5}
           btnBg={'#F9F9F9'}
           imgCols={5}
@@ -40,7 +53,20 @@ export const LineBusiness = () => {
           preTitle={'Compliance and Performance Monitering'}
           title={'Quality Control Alerts for Potential Fraud'}
           detail={'Insurance fraud affects everyone, and Charlee® helps Claims, Underwriting, and Special Investigation Units (SIU) tackle it head-on. Using AI-driven insights, Charlee® identifies QC Alerts and Red Flags, uncovering patterns in claims and policies that could signal fraud. With intelligent data delivery, Charlee® empowers your anti-fraud team to spot schemes faster and make informed decisions, turning unstructured text into actionable insights to prevent and reduce fraud.'}
-          cases={['Case Study 1', 'Case Study 2', 'Case Study 3']}
+          cases={[
+            {
+              name: 'Case Study 1',
+              path: '/usecase/AskCharleeClamInsight1'
+            },
+            {
+              name: 'Case Study 2',
+              path: '/usecase/AskCharleeClamInsight2'
+            },
+            {
+              name: 'Case Study 3',
+              path: '/usecase/AskCharleeClamInsight3'
+            },
+          ]}
           bgImg={blog2}
           btnBg={'#F9F9F9'}
           imgCols={5}

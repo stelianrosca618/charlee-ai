@@ -58,7 +58,24 @@ export const DocuAllPlatforms = () => {
             preTitle={''}
             title={'Claims Severity Management '}
             detail={`Low-impact collisions with soft tissue injuries are a top driver of claim severity in auto insurance. Properly identifying and classifying these injuries is essential for tracking severity and potential litigation risks. The Charlee® Insurance Insights Engine enables Claim Examiners to accurately identify and monitor injuries, guiding effective resolutions. Powered by AI, Charlee® uncovers hidden patterns tied to high severity, allowing your claims team to quickly spot these trends, learn from them, and take prompt, informed actions for a swift and fair settlement.`}
-            cases={['Case Study 1', 'Case Study 2', 'Case Study 3', 'Case Study 4']}
+            cases={[
+              {
+                name: 'Case Study 1',
+                path: '/usecase/AskCharleeClamInsight1'
+              },
+              {
+                name: 'Case Study 2',
+                path: '/usecase/AskCharleeClamInsight2'
+              },
+              {
+                name: 'Case Study 3',
+                path: '/usecase/AskCharleeClamInsight3'
+              },
+              {
+                name: 'Case Study 4',
+                path: '/usecase/AskCharleeClamInsight4'
+              },
+            ]}
             bgImg={useCaseOne}
             btnBg={'#F9F9F9'}
             imgCols={5}

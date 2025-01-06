@@ -1,4 +1,5 @@
 import { Box, Grid2 } from "@mui/material"
+import { Link } from "react-router-dom"
 
 export const ImgLeftContent = ({preTitle, cases, title, detail, bgImg, btnBg, imgCols, contentCols, isDark}) => {
   return (
@@ -14,11 +15,13 @@ export const ImgLeftContent = ({preTitle, cases, title, detail, bgImg, btnBg, im
             <h6 className="text-[24px] leading-[32px] font-normal">{preTitle}</h6>
             <Box className="w-full" marginY={'30px'}>
             {cases.map((caseItem, key) => (
-              <button className="rounded-lg gradient-border p-1 mt-3 mr-3">
-                <div className={`rounded-lg bg-[${btnBg}] hover:bg-transparent hover:text-white py-2 px-3`}>
-                {caseItem}
-                </div>
-              </button>
+              <Link to={caseItem.path}>
+                <button className="rounded-lg gradient-border p-1 mt-3 mr-3">
+                  <div className={`rounded-lg bg-[${btnBg}] hover:bg-transparent hover:text-white py-2 px-3`}>
+                    {caseItem.name}
+                  </div>
+                </button>
+              </Link>
             ))}
              
             </Box>

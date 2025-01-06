@@ -49,7 +49,20 @@ export const AllPlatform = () => {
             preTitle={''}
             title={'Workflow Summary with AI Insights'}
             detail={'The Charlee® Insurance Insights Engine (patent pending) utilizes Artificial Intelligence and Machine Learning with Natural Language Processing (NLP) to help monitor the Claim Examiner’s performance, including the progress towards resolving a claim. In addition, the increased severity of claims with specific Topics and Entities can be closely measured and evaluated. The Claims Manager can quickly identify and take appropriate action to improve the job performance of the claims team.'}
-            cases={['Case Study 1', 'Case Study 2', 'Case Study 3']}
+            cases={[
+              {
+                name: 'Case Study 1',
+                path: '/usecase/AskCharleeClamInsight1'
+              },
+              {
+                name: 'Case Study 2',
+                path: '/usecase/AskCharleeClamInsight2'
+              },
+              {
+                name: 'Case Study 3',
+                path: '/usecase/AskCharleeClamInsight3'
+              },
+            ]}
             bgImg={blog5}
             btnBg={'#021744'}
             imgCols={6}

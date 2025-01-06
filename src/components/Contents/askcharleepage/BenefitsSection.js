@@ -60,7 +60,24 @@ export const BenefitsSection = () => {
             preTitle={''}
             title={'Claims Insights '}
             detail={'Claims Examiners are vital to customer satisfaction, yet managing high claim volumes can be challenging. The Charlee® Insurance Insights Engine empowers Examiners with valuable Quality Control (QC) Alerts and Red Flags (RF), providing confidence to make informed decisions. Its intuitive dashboard ensures Examiners stay on track with legal deadlines and reduce costs, leveraging AI-driven insights to keep claims on course and under control.'}
-            cases={['Case Study 1', 'Case Study 2', 'Case Study 3', 'Case Study 4']}
+            cases={[
+              {
+                name: 'Case Study 1',
+                path: '/usecase/AskCharleeClamInsight1'
+              },
+              {
+                name: 'Case Study 2',
+                path: '/usecase/AskCharleeClamInsight2'
+              },
+              {
+                name: 'Case Study 3',
+                path: '/usecase/AskCharleeClamInsight3'
+              },
+              {
+                name: 'Case Study 4',
+                path: '/usecase/AskCharleeClamInsight4'
+              },
+            ]}
             bgImg={blog6}
             btnBg={'#F9F9F9'}
             imgCols={5}

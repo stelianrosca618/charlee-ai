@@ -49,7 +49,20 @@ export const FindCharleeBenefits = () => {
           preTitle={''}
           title={'Red Flags/Quality Control Alerts for Potential Fraud'}
           detail={'The power of Charlee® for litigation prediction allows the Claims Examiner and Manager to identify the claims at risk for possible litigation, allowing the claim handler to take action to resolve the claim efficiently and promptly. The Charlee® Insurance Insights Engine (patent pending) will alert the user weeks before the claim falls into litigation. Artificial Intelligence and natural language processing, coupled with Charlee.ai proprietary insights, brings these predictions with over 80 percent accuracy.'}
-          cases={['Case Study 1', 'Case Study 2', 'Case Study 3']}
+          cases={[
+            {
+              name: 'Case Study 1',
+              path: '/usecase/findcharlee1'
+            },
+            {
+              name: 'Case Study 2',
+              path: '/usecase/findcharlee2'
+            },
+            {
+              name: 'Case Study 3',
+              path: '/usecase/findcharlee3'
+            },
+          ]}
           bgImg={blog7}
           btnBg={'#021744'}
           imgCols={6}
