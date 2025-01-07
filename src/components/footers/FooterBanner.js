@@ -63,6 +63,7 @@ export const FooterBanner = () => {
                 Sign up for a personalized demo today and see how Charlee can help you stay ahead of potential fraud, mitigate losses, and optimize efficiency.
                 </p>
                 <Box className="w-full" display={'flex'} justifyContent={"flex-start"} alignItems={"flex-end"} gap={2}>
+                  
                   <Box>
                     <Box display={"flex"} alignItems={"center"} gap={2} marginBottom={1}>
                       <input type="text" id="firstName-input" placeholder="Enter your first name" className="w-full rounded-lg py-3 px-4 bg-white"/>
