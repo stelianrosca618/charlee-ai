@@ -1,6 +1,7 @@
 import { Box, Container, Grid2 } from "@mui/material"
 import parttern1 from "../../assets/imgs/pattens/pattern1.png"
 import handPhone from "../../assets/imgs/banners/handPhone.png";
+import aboutBoard from "../../assets/imgs/banners/AboutBoard.png";
 
 export const AboutHero = () => {
   return (
@@ -27,19 +28,19 @@ export const AboutHero = () => {
               <Grid2 size={{xs:12, sm: 12, md:7, lg: 7, xl: 7}}>
                 <Box className="aboutHand-text w-full text-left pt-[110px] pb-4 md:pb-[190px]">
                   <h4 className="text-[42px] leading-[54.6px] font-medium py-4">Our Journey from Fraud Detection to Predictive Insights</h4>
-                  <p className="py-4">At Charlee, we began as a fraud analytics platform focused on effective detection, and have since evolved into a leading predictive engine, harnessing Natural Language Processing (NLP) to extract vital insights on risk, litigation, and attorney involvement through our patented Claims Language Model.</p>
-                  <p className="py-4">Since launching, customers have seen the value in our prioritized claims lists and reserve management features. Our journey started with life insurance and expanded into workers' compensation through partnerships with the District Attorney in California and the Department of Insurance, providing millions of claims to refine our models. As we continue to enhance our features, we are committed to delivering actionable insights to transform your claims management experience.</p>
+                  <p className="py-4 text-[16px]">At Charlee, we began as a fraud analytics platform focused on effective detection, and have since evolved into a leading predictive engine, harnessing Natural Language Processing (NLP) to extract vital insights on risk, litigation, and attorney involvement through our patented Claims Language Model.</p>
+                  <p className="py-4 text-[14px]">Since launching, customers have seen the value in our prioritized claims lists and reserve management features. Our journey started with life insurance and expanded into workers' compensation through partnerships with the District Attorney in California and the Department of Insurance, providing millions of claims to refine our models. As we continue to enhance our features, we are committed to delivering actionable insights to transform your claims management experience.</p>
                 </Box>
               </Grid2>
               <Grid2 size={{xs:12, sm: 12, md:5, lg:5, xl: 5}} className="relative">
                 <Box className="w-full relative">
-                  <img src={handPhone} alt="handPhone" className=" relative w-full h-full block md:hidden -right-4"/>
+                  <img src={aboutBoard} alt="handPhone" className=" relative w-full h-full block md:hidden -right-4"/>
                 </Box>
               </Grid2>
             </Grid2>
           </Box>
         </Container>
-        <img src={handPhone} alt="alt-handphone" className="aboutHand-image hidden md:block absolute h-[120%] bottom-0 right-0" />
+        <img src={aboutBoard} alt="alt-handphone" className="aboutHand-image hidden md:block absolute h-[120%] bottom-5 -right-5" />
       </Box>
     </>
     
