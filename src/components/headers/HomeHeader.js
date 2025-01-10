@@ -1,13 +1,11 @@
-import { Box, Container, Typography } from "@mui/material"
-import headerIco from "../../assets/imgs/icons/head-logo.svg"
-import navIco from "../../assets/imgs/icons/NavIco.svg"
-import { useEffect, useState } from "react"
+import { Box, Container } from "@mui/material"
+import { useEffect} from "react"
 import { MobileMenu } from "./MobileMenu"
 import { Link } from "react-router-dom"
 import { useLocation } from "react-router-dom"
 import { HeadLogo } from "../Icons/HeadLogo"
-import { NavIcon } from "../Icons/NavIcon"
 import { NavButton } from "./NavButton"
+import { NavMenuIconBtn } from "./NavMenuIconBtn"
 
 const paths = [
   {
@@ -60,7 +58,6 @@ const paths = [
 ]
 
 export const HomeHeader = ({headerColor,  textColor}) => {
-  const [anchorElUser, setAnchorElUser] = useState(null);
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -82,7 +79,7 @@ export const HomeHeader = ({headerColor,  textColor}) => {
               {paths.map((pathItem, key) => (
                 <NavButton 
                   navInfo={pathItem}
-                  isActive={location.pathname == pathItem.pathName}
+                  isActive={location.pathname === pathItem.pathName}
                   textColor={textColor}
                   bgColor={headerColor}
                 />
@@ -98,7 +95,7 @@ export const HomeHeader = ({headerColor,  textColor}) => {
               
               <Box className="pl-3">
                 {/* <img src={navIco}  alt="nav-ico" className="h-5"/> */}
-                <NavIcon iconColor={textColor} />
+                <NavMenuIconBtn bgColor={headerColor} textColor={textColor}/>
               </Box>
             </Box>
           </Box>

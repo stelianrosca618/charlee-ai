@@ -29,25 +29,32 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 					</button>
 					<Menu
 					id="basic-menu"
+					onMouseLeave={handleClose}
 					anchorEl={anchorEl}
 					getContentAnchorEl={null}
 					open={open}
 					onClose={handleClose}
-
-					sx={{top: '80px',
+					anchorOrigin={{
+						vertical: 'top',
+						horizontal: 'left',
+					  }}
+					  transformOrigin={{
+						vertical: 'top',
+						horizontal: 'left',
+					  }}
+					sx={{
+						// paddingTop: '80px',
 						'& .MuiPaper-root': {
+						top: '80px',
 						width: "fix-content",
 						maxWidth: "fit-content",
-            background: bgColor,
-            color: textColor,
+						background: bgColor,
+						color: textColor,
 						
-          },
-					"& .MuiPaper-elevation": {
-						top: '0px !important'
-					},
-					"& .MuiBackdrop-root": {
-							top: '80px'
-						}
+						  },
+						"& .MuiPaper-elevation": {
+							top: '80px !important'
+						},
 					}}
 					
 				>
