@@ -132,7 +132,7 @@ export const PartenerList = () => {
     <Box className="w-full py-28">
       <Container maxWidth="lg">
         <Box className="w-full">
-          <h5 className="partners-subTitle text-[29px] leading-[40px] font-medium">Trusted by 18 partners and counting</h5>
+          <h5 className="partners-subTitle text-[29px] leading-[40px] font-medium">Trusted by over 15 partners and growing</h5>
           <h4 className="partners-title overflow-hidden text-[32px] md:text-[42px] leading-[41px] md:leading-[54.6px] font-medium py-5">You may contact us directly or visit our partners</h4>
         </Box>
        

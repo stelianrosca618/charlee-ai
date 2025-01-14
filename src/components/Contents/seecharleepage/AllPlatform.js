@@ -68,6 +68,8 @@ export const AllPlatform = () => {
             imgCols={6}
             contentCols={6}
             isDark={true}
+            isVideoButton={true}
+            videolink={'/medias/Charlee_ai_User_Roles.mp4'}
           />  
         </Box>
       </Container>

@@ -85,6 +85,7 @@ export const BlogTabContent = ({title, tabKey}) => {
     loadBlogArr()
   }, [tabKey])
   const loadBlogArr = () => {
+    console.log(tabKey);
     let tmpBlogs = [];
     if(tabKey == 'featured'){
       const tmpAllArr = blogItems.concat(eventlist);
@@ -92,6 +93,12 @@ export const BlogTabContent = ({title, tabKey}) => {
     }else{
       if(tabKey == 'events'){
         tmpBlogs = sortArrList(eventlist);
+      }else if(tabKey == 'blog'){
+        blogItems.map(blogItem => {
+          tmpBlogs.push(blogItem);
+        })
+        tmpBlogs = sortArrList(tmpBlogs)
+        tmpBlogs = sortArrList(tmpBlogs)
       }else{
         blogItems.map(blogItem => {
           const categoryItem = blogItem.category.find(cItem => cItem.nickName == tabKey);
@@ -103,7 +110,6 @@ export const BlogTabContent = ({title, tabKey}) => {
       }
       
     }
-    
     
     const firstItem = tmpBlogs[0];
     console.log(firstItem);
@@ -175,12 +181,12 @@ export const BlogTabContent = ({title, tabKey}) => {
     <Box className="w-full text-start">
       <h4 className='text-[42px] leading-[54.6px] font-medium my-4'>{title}</h4>
       <Box className="w-full my-4">
-        {firstBlog.postType == 'post' ? <TabFirstElement firstBlog={firstBlog}/>:<TabEventFirstElement firstBlog={firstBlog}/>}
+        {firstBlog?.postType == 'post' ? <TabFirstElement firstBlog={firstBlog}/>:<TabEventFirstElement firstBlog={firstBlog}/>}
       </Box>
       <Box className="w-full py-4">
         <Grid2 container spacing={2}>
           {pageBlogs.map((itemData, key) => (
-            <Grid2 display={"flex"} flexDirection={"column"} justifyContent={"space-between"} onClick={() => {blogNavigation(itemData.postName, itemData.postType)}} key={key} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}} marginTop={2}>
+            <Grid2 display={"flex"} flexDirection={"column"} justifyContent={"space-between"} onClick={() => {blogNavigation(itemData.postName, itemData?.postType)}} key={key} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}} marginTop={2}>
               <Box className="w-full">
                 <div className="cursor-pointer w-full aspect-[300/200] rounded-2xl blog-card" 
                   style={{background: `url(${itemData.postMedia})`}}>

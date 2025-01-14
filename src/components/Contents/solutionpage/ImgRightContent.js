@@ -1,7 +1,16 @@
 import { Box, Grid2 } from "@mui/material"
 import { Link } from "react-router-dom"
+import { VideoDialog } from "./VideoDialog"
+import { useState } from "react"
 
-export const ImgRightContent = ({preTitle, cases, title, detail, bgImg, btnBg, imgCols, contentCols, isDark}) => {
+export const ImgRightContent = ({preTitle, cases, title, detail, bgImg, btnBg, imgCols, contentCols, isDark, isVideoButton, videolink}) => {
+  const [openVideo, setOpenVideo] = useState(false);
+  const handleOpenVideo = () => {
+    setOpenVideo(true);
+  }
+  const handleCloseVideo = () => {
+    setOpenVideo(false);
+  }
   return (
     <Box className="w-full py-10 md:py-28">
       <Grid2 container spacing={6}>
@@ -23,11 +32,14 @@ export const ImgRightContent = ({preTitle, cases, title, detail, bgImg, btnBg, i
               {title}
             </h2>
             <p>{detail}</p>
-            {isDark? <button className="mt-16 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-white text-white hover:text-[#021744] hover:bg-white">
-              Watch Video
-            </button>:<button className="mt-16 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
-              Watch Video
-            </button>}
+            {isVideoButton&& <>
+              {isDark? <button className="mt-16 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-white text-white hover:text-[#021744] hover:bg-white">
+                Watch Video
+              </button>:<button className="mt-16 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
+                Watch Video
+              </button>}
+            </>}
+            
           </Box>
         </Grid2>
         <Grid2 data-aos="fade-left" order={{xs: 1, md: 2, lg: 2, xl: 2}} size={{xs: 12, sm: 12, md: imgCols, lg: imgCols, xl: imgCols}} className="relative min-h-[520px]">
@@ -36,6 +48,7 @@ export const ImgRightContent = ({preTitle, cases, title, detail, bgImg, btnBg, i
           ></div>
         </Grid2>
       </Grid2>
+      <VideoDialog open={openVideo} handleClose={handleCloseVideo} videoUrl={videolink} />
     </Box>
   )
 }

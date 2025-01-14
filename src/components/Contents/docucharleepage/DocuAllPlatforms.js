@@ -81,6 +81,8 @@ export const DocuAllPlatforms = () => {
             imgCols={5}
             contentCols={7}
             isDark={false}
+            isVideoButton={true}
+            videolink={'/medias/DocuCharlee_Intro_2024.mp4'}
           />
         </Box>
       </Container>

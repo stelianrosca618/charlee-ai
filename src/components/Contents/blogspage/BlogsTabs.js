@@ -23,6 +23,9 @@ export const BlogsTabs = () => {
       case 'events':
         setValue('2');
         break;
+      case 'blog':
+          setValue('3');
+          break;
       case 'news':
         setValue('4');
         break;
@@ -42,6 +45,9 @@ export const BlogsTabs = () => {
         break;
       case '2':
         navigate('./events');
+        break;
+      case '3':
+        navigate('./blog');
         break;
       case '4':
         navigate('./news');
@@ -64,6 +70,7 @@ export const BlogsTabs = () => {
               <Tab label="Events" value="2" sx={tabMenuStyle} />
               <Tab label="News" value="4" sx={tabMenuStyle} />
               <Tab label="Podcasts" value="5" sx={tabMenuStyle} />
+              <Tab label="Blogs" value="3" sx={tabMenuStyle} />
             </TabList>
           </Box>
           <Routes>
@@ -82,6 +89,10 @@ export const BlogsTabs = () => {
             <Route path="/podcasts" element={
               <TabPanel value="5">
                 <BlogTabContent title="Podcasts" tabKey="podcasts" />
+              </TabPanel>} />
+            <Route path="/blog" element={
+              <TabPanel value="3">
+                <BlogTabContent title="Blogs" tabKey="blog"/>
               </TabPanel>} />
           </Routes>
         </TabContext>

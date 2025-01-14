@@ -32,6 +32,7 @@ export const printEventDates = (eventItem) => {
   const startDate = new Date(eventItem.eventStartDate);
   const startDateStr = startDate.toLocaleDateString(undefined, 
     {
+      year: 'numeric',
       month: 'long',
       day: 'numeric',
     }
@@ -39,6 +40,7 @@ export const printEventDates = (eventItem) => {
   const endDate = new Date(eventItem.eventEndDate)
   const endDateStr = endDate.toLocaleDateString(undefined, 
     {
+      year: 'numeric',
       month: 'long',
       day: 'numeric',
     }
