@@ -61,7 +61,7 @@ export const NavMenuIconBtn = ({bgColor, textColor}) => {
          <MenuItem sx={{color: textColor}} onClick={() => handleNavManu('/blogs/news')}>News</MenuItem>
          <MenuItem sx={{color: textColor}} onClick={() => handleNavManu('/blogs/events')}>Events</MenuItem>
          <MenuItem sx={{color: textColor}} onClick={() => handleNavManu('/blogs/podcasts')}>Podcasts</MenuItem>
-         <MenuItem sx={{color: textColor}} onClick={() => handleNavManu('/blogs')}>Blogs</MenuItem>
+         <MenuItem sx={{color: textColor}} onClick={() => handleNavManu('/blogs/blog')}>Blogs</MenuItem>
       </Menu>
     </Box>
   )

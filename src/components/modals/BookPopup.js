@@ -1,10 +1,31 @@
 import { Box, Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from "@mui/material"
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import { sendEmail } from "../../providers/apis/emailApi";
+import { useState } from 'react';
 export const BookPopup = ({open, handleClose}) => {
   const openPolicy = () => {
     window.open('https://app.termly.io/policy-viewer/policy.html?policyUUID=b5b033f7-4a2f-4c82-a576-1ecd7648f913')
   }
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: ''
+  });
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formData.firstName && formData.lastName && formData.email) {
+      sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
+    }
+  };
   return (
     <Dialog
       open={open}
@@ -12,7 +33,6 @@ export const BookPopup = ({open, handleClose}) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-     
       <DialogContent className="gradient-background">
         <Box className="w-full" display={"flex"} justifyContent={"flex-end"}>
           <IconButton onClick={handleClose} aria-label="delete" sx={{color: 'white'}}>
@@ -26,15 +46,40 @@ export const BookPopup = ({open, handleClose}) => {
           Sign up for a personalized demo today and see how Charlee can help you stay ahead of potential fraud, mitigate losses, and optimize efficiency.
           </p>
           <Box className="w-full" gap={2}>
-            <Box className="w-full">
+            <Box component={'form'} onSubmit={handleSubmit} className="w-full">
               <Box display={"flex"} alignItems={"center"} gap={2} marginBottom={1}>
-                <input type="text" placeholder="Enter your first name" className="w-full rounded-lg py-3 px-4 bg-white"/>
-                <input type="text" placeholder="Enter your last name" className="w-full rounded-lg py-3 px-4 bg-white"/>
+                <input type="text" 
+                name="firstName"
+                onChange={handleInputChange}
+                required
+                pattern="[A-Za-z]+"
+                title="Please enter only letters"
+                minLength="2"
+                placeholder="Enter your first name" 
+                className="w-full rounded-lg py-3 px-4 bg-white"/>
+                <input type="text" 
+                name="lastName"
+                required
+                pattern="[A-Za-z]+"
+                title="Please enter only letters"
+                minLength="2"
+                onChange={handleInputChange} 
+                placeholder="Enter your last name" 
+                className="w-full rounded-lg py-3 px-4 bg-white"/>
               </Box>
-              <input type="text" placeholder="Enter your email" className="w-full rounded-lg py-3 px-4 bg-white"/>
+              <input type="email"
+              name="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please enter a valid email address"
+              onChange={handleInputChange}
+              placeholder="Enter your email" 
+              className="w-full rounded-lg py-3 px-4 bg-white"/>
             </Box>
             <Box className="w-full mt-2">
-              <button className="rounded-lg w-full font-medium text-[18px] leading-[24px] px-8 py-3 border border-[#42DDD1] bg-[#42DDD1] hover:bg-transparent hover:text-white">
+              <button 
+              type="submit"
+              className="rounded-lg w-full font-medium text-[18px] leading-[24px] px-8 py-3 border border-[#42DDD1] bg-[#42DDD1] hover:bg-transparent hover:text-white">
                 Submit
               </button>
             </Box>
@@ -44,7 +89,6 @@ export const BookPopup = ({open, handleClose}) => {
           </p>
         </Box>
       </DialogContent>
-      
     </Dialog>
   )
 }
