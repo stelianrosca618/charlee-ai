@@ -2,6 +2,7 @@ import { Box, Dialog, DialogActions, DialogContent, DialogTitle, IconButton } fr
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { sendEmail } from "../../providers/apis/emailApi";
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 export const BookPopup = ({open, handleClose}) => {
   const openPolicy = () => {
     window.open('https://app.termly.io/policy-viewer/policy.html?policyUUID=b5b033f7-4a2f-4c82-a576-1ecd7648f913')
@@ -20,12 +21,14 @@ export const BookPopup = ({open, handleClose}) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     console.log('handleSubmit');
     e.preventDefault();
     if (formData.firstName && formData.lastName && formData.email) {
-      console.log('checked submit form');
-      sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
+      console.log('checked submit form', formData);
+      await sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
+      toast.success('Email was Sent!');
+      handleClose();
     }
   };
   return (
@@ -80,8 +83,8 @@ export const BookPopup = ({open, handleClose}) => {
             </Box>
             <Box className="w-full mt-2">
               <button 
-              type="submit"
-              className="rounded-lg w-full font-medium text-[18px] leading-[24px] px-8 py-3 border border-[#42DDD1] bg-[#42DDD1] hover:bg-transparent hover:text-white">
+                type="submit"
+                className="rounded-lg w-full font-medium text-[18px] leading-[24px] px-8 py-3 border border-[#42DDD1] bg-[#42DDD1] hover:bg-transparent hover:text-white">
                 Submit
               </button>
             </Box>
