@@ -21,8 +21,10 @@ export const BookPopup = ({open, handleClose}) => {
   };
 
   const handleSubmit = (e) => {
+    console.log('handleSubmit');
     e.preventDefault();
     if (formData.firstName && formData.lastName && formData.email) {
+      console.log('checked submit form');
       sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
     }
   };
@@ -45,8 +47,8 @@ export const BookPopup = ({open, handleClose}) => {
           <p className="font-normal text-white text-[20px] leading-[31px] py-11">
           Sign up for a personalized demo today and see how Charlee can help you stay ahead of potential fraud, mitigate losses, and optimize efficiency.
           </p>
-          <Box className="w-full" gap={2}>
-            <Box component={'form'} onSubmit={handleSubmit} className="w-full">
+          <Box component={'form'} onSubmit={handleSubmit} className="w-full" gap={2}>
+            <Box className="w-full">
               <Box display={"flex"} alignItems={"center"} gap={2} marginBottom={1}>
                 <input type="text" 
                 name="firstName"
