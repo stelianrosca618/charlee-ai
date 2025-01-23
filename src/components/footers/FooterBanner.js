@@ -5,9 +5,24 @@ import gsap, {} from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextPlugin from "gsap/TextPlugin";
 import { useGSAP } from '@gsap/react';
+import { useState } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
 export const FooterBanner = () => {
+
+  const [formData, setFormData] = useState({
+      firstName: '',
+      lastName: '',
+      email: ''
+    });
+  
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    };
 
   useGSAP(() => {
     const tl = gsap.timeline({repeat:1, repeatDelay:1, yoyo:true});
@@ -62,7 +77,7 @@ export const FooterBanner = () => {
                 <p className="footerBanner-detail font-normal text-white text-[20px] leading-[31px] py-11 ">
                 Sign up for a personalized demo today and see how Charlee can help you stay ahead of potential fraud, mitigate losses, and optimize efficiency.
                 </p>
-                <Box className="w-full" display={'flex'} justifyContent={"flex-start"} alignItems={"flex-end"} gap={2}>
+                <Box component={'form'} className="w-full" display={'flex'} justifyContent={"flex-start"} alignItems={"flex-end"} gap={2}>
                   
                   <Box>
                     <Box display={"flex"} alignItems={"center"} gap={2} marginBottom={1}>
@@ -72,7 +87,7 @@ export const FooterBanner = () => {
                     <input type="text" id="email-input" placeholder="Enter your email" className="w-full rounded-lg py-3 px-4 bg-white"/>
                   </Box>
                   <Box>
-                    <button className="footerBanner-submit rounded-lg font-medium text-[18px] leading-[24px] px-8 py-3 border border-[#42DDD1] bg-[#42DDD1] hover:bg-transparent hover:text-white mx-2">
+                    <button type="submit" className="footerBanner-submit rounded-lg font-medium text-[18px] leading-[24px] px-8 py-3 border border-[#42DDD1] bg-[#42DDD1] hover:bg-transparent hover:text-white mx-2">
                       Submit
                     </button>
                   </Box>

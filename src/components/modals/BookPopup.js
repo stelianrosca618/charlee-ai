@@ -45,8 +45,10 @@ export const BookPopup = ({open, handleClose}) => {
           </IconButton>
         </Box>
         <Box className="w-full text-left ">
-          <h2 className="font-medium text-white text-[48px] leading-[52.8px] md:text-[65px] md:leading-[71.5px]">Ready to dive in? <br />
-          Request a demo today</h2>
+          <h2 className="font-medium text-white text-[48px] leading-[52.8px] md:text-[65px] md:leading-[71.5px]">
+            Ready to dive in? <br />
+            Request a demo today
+          </h2>
           <p className="font-normal text-white text-[20px] leading-[31px] py-11">
           Sign up for a personalized demo today and see how Charlee can help you stay ahead of potential fraud, mitigate losses, and optimize efficiency.
           </p>
