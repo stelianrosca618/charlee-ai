@@ -157,7 +157,7 @@ export const Footer = () => {
         </Box>
         <Box className="w-full pt-8 border-t border-t-[#4B5563]" display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"space-between"} alignItems={{xs: "start", md:"center"}}>
           <Box className="text-left py-2">
-            <p className="text-[12px] text-white">© 2024 Charlee.ai. All rights reserved.</p>
+            <p className="text-[12px] text-white">© 2025 Charlee.ai. All rights reserved.</p>
           </Box>
           <Box className=" py-2" display={"flex"} justifyContent={"flex-end"} justifyItems={"center"}>
             <FaFacebook  onClick={() => {window.open('https://www.facebook.com/charleeai/')}} className="mx-1 cursor-pointer" color="white" size={'24px'}/>

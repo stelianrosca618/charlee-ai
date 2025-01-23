@@ -10,7 +10,7 @@ export const Withus = () => {
         <p className="text-[20px] leading-[31px] font-normal mt-5 mb-11">
           We’re always looking for partnerships that align with our mission. Whether you’re in technology, insurance, or claims management, let’s explore how we can work together to create smarter claims solutions.
         </p>
-        <Link to={'/partners'}>
+        <Link to={'/partner'}>
           <button className="rounded-full bg-transparent border border-white hover:bg-white hover:text-black text-[18px] leading-[24px] font-medium py-3 px-12">Connect</button>
         </Link>
       </Box>

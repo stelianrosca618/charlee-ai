@@ -1,6 +1,7 @@
 import { Box, Container, Grid2 } from "@mui/material"
 import securityCover from "../../assets/imgs/icons/security-cover.png"
 import rechardAvata from "../../assets/imgs/avatars/rechard.png"
+import MariesAvata from "../../assets/imgs/avatars/Maries.png";
 import seeCharleeMagicDashboard from "../../assets/imgs/Dashboards/seeCharleeMagicDashboard.png";
 
 import eyeSymbol from "../../assets/imgs/icons/eye.png";
@@ -65,11 +66,11 @@ export const SeeCharleeHero = () => {
                 </Box>
                 <Box className="w-full text-start mt-8">
                   <p className="askCharlee-reveiwTxt py-6">
-                  “With the addition of AskCharlee our claim staff are able to look back into large numbers of claims for fast insights on value and strategy. Combined with Charlee.ai’s predictive analytics, we can now do extensive exploratory data analysis both forward and backward, gaining valuable insights into potential exposure, value, and strategy supporting settlement, defense, and cost containment.”
+                  “We were in production within 30 days.  Charlee is helping make a difference and the staff at Charlee are responsive and knowledgeable.”
                   </p>
                   <Box className="askCharlee-reviewer" display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
-                    <img src={rechardAvata} alt="avata" className="h-6 w-6 rounded-full"/>
-                    <span className="mx-2 ">Richard M. Lord, VP & Head of Claims, NLC Insurance Companies </span>
+                    <img src={MariesAvata} alt="avata" className="h-6 w-6 rounded-full"/>
+                    <span className="mx-2 ">Brian Maries AVP, Claims Olympus Insurance </span>
                   </Box>
                 </Box>
               </Grid2>

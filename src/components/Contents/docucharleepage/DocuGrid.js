@@ -58,7 +58,7 @@ export const DocuGrid = () => {
         <Box className="w-full">
           <Grid2 container spacing={2}>
             {gridItems.map((itemData, key) => (
-              <Grid2 key={key} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}} display={"flex"} flexDirection={"column"} justifyContent={"space-between"} alignItems={'flex-start'} className="docuGrid-card bg-white rounded-2xl shadow-xl text-start p-7">
+              <Grid2 key={key} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}} display={"flex"} flexDirection={"column"} justifyContent={"flex-start"} alignItems={'flex-start'} className="docuGrid-card bg-white rounded-2xl shadow-xl text-start p-7">
                 <img src={itemData.icon} alt="file-icon" className="h-[52px]" />
                 <Box className="w-full pt-6">
                   <h5 className="text-[29px] leading-[40px] font-medium">

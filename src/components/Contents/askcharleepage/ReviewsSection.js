@@ -62,9 +62,9 @@ export const ReviewsSection = () => {
         </Box>
         <Box data-aos="fade-left" className="reviewSwiper">
           <Swiper
-            modules={[Navigation, Pagination, A11y]}
+            modules={[Navigation, A11y]}
             spaceBetween={100}
-            slidesPerView={1.5}
+            slidesPerView={1}
             breakpoints={{
               640: {
                 slidesPerView: 1.5,
@@ -75,24 +75,68 @@ export const ReviewsSection = () => {
                 spaceBetween: 100,
               },
               1024: {
-                slidesPerView: 2.5,
-                spaceBetween: 100,
+                slidesPerView: 3,
+                spaceBetween: 70,
               },
             }}
             loop={true}
             freeMode={true}
-            watchSlidesProgress={true}
-            pagination={{
-              dynamicBullets: true,
-              clickable: true,
-            }}
+            // watchSlidesProgress={true}
+            // pagination={{
+            //   dynamicBullets: true,
+            //   clickable: true,
+            // }}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
             
           >
             {reviewContexts.map((reviewItem, key) => (
               <SwiperSlide  key={key}>
-                <Box className="relative w-full h-[90%] bg-white rounded-2xl shadow-xl p-8" display={'flex'} justifyContent={"space-between"} flexDirection={"column"}>
+                <div className="w-full h-full bg-white rounded-2xl shadow-xl p-6">
+                  <div className="w-full text-start">
+                    <h5 className="text-[20px] md:text-[29px] leading-[30px] md:leading-[40px] font-medium">{reviewItem.head}</h5>
+                    <p className="mt-6" >
+                      {reviewItem.text}
+                    </p>
+                  </div>
+                  <div className="w-full">
+                    <div className="relative block md:hidden mt-8 pt-5 pl-8 pr-4">
+                      <div className="absolute z-10 top-0 left-0 p-1 bg-white rounded-full">
+                        <img src={reviewItem.avata} alt="review-avata" className="rounded-full w-[60px] h-[60px]" />
+                      </div>
+                      <div className=" py-4 pl-10 pr-5 bg-[#F3F4F4] rounded-lg">
+                        <div display={"flex"} justifyContent={"space-between"} alignItems={"center"}>
+                          <img src={GradientHeadingSvg} alt="heading-svg" className="h-[22px]"/>
+                          <img src={symbolIco} alt="symbol-icon" className="h-[25px]" />
+                        </div>
+                        <h6 className="text-start text-[12px] leading-[21.5px] font-normal">
+                          {reviewItem.question}
+                        </h6>
+                      </div>
+                    </div>
+                    <div className="relative hidden md:block mt-8 pt-5 pl-8 pr-4">
+                      <div className="absolute z-10 top-0 left-0 p-2 bg-white w-fit h-fit rounded-full shadow-xl">
+                        <img src={reviewItem.avata} alt="review-avata" className="rounded-full w-[76px] h-[76px]" />
+                      </div>
+                      <div className="pl-16 pr-5 py-6 bg-[#F3F4F4] rounded-lg">
+                        <div className="mb-5 pr-0 flex justify-start items-center">
+                          <img src={headingSvg} alt="heading-svg" className="h-[43px]"/>
+                          <h6 className="text-start text-[20px] leading-[31px] font-normal pl-2">
+                            {reviewItem.question}
+                          </h6>
+                        </div>
+                        <Divider />
+                        <div className="mt-5 pr-0 flex justify-start items-center" >
+                          <img src={symbolIco} alt="symbol-icon" className="h-16" />
+                          <p className="text-start pl-2">
+                            {reviewItem.detail}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* <Box className="relative w-full h-[90%] bg-white rounded-2xl shadow-xl p-8" display={'flex'} justifyContent={"space-between"} flexDirection={"column"}>
                   <Box className="w-full text-start">
                     <h5 className="text-[20px] md:text-[29px] leading-[30px] md:leading-[40px] font-medium">{reviewItem.head}</h5>
                     <p className="mt-6" >
@@ -136,7 +180,7 @@ export const ReviewsSection = () => {
                       </Box>
                     </Box>
                   </Box>
-                </Box>
+                </Box> */}
               </SwiperSlide>
             ))}
             

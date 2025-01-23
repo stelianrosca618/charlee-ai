@@ -8,8 +8,47 @@ import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { CiBasketball } from "react-icons/ci";
 import charleeface from "../../assets/imgs/icons/charlee-face.png"
+import { useState } from "react";
+import { sendEmail } from "../../providers/apis/emailApi";
+import { toast } from "react-toastify";
 
 export const ContactUsPopup = ({open, handleClose}) => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    companyTitle: '',
+    message: '',
+    interests: {
+      poc: false,
+      productInfo: false,
+      demo: false,
+      whitepaper: false
+    }
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({...prev, [name]: value}));
+  };
+
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      interests: {...prev.interests, [name]: checked}
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add form submission logic here
+    console.log(formData);
+    sendEmail(formData.email, formData.fullName);
+    toast.success('Email was Sent!');
+    handleClose();
+  };
+
   return (
     <Dialog
       open={open}
@@ -48,53 +87,65 @@ export const ContactUsPopup = ({open, handleClose}) => {
               </Box>
             </Grid2>
             <Grid2 size={{xs:12, sm:12, md:7, lg:7, xl:7}}>
-              <Box className="w-full h-full text-start">
+              <Box component={'form'} onSubmit={handleSubmit} className="w-full h-full text-start">
+              
+
                 <h6 className="text-[24px] leading-[32px] font-normal">I would like to...</h6>
                 <FormControl sx={{my: 3}} component="fieldset" variant="standard">
                   <FormGroup>
                     <FormControlLabel
                       control={
-                        <Checkbox  name="gilad" />
+                        <Checkbox onChange={handleCheckboxChange} name="poc" />
                       }
                       label="Learn more about the free POC"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox name="jason" />
+                        <Checkbox onChange={handleCheckboxChange} name="productInfo" />
                       }
                       label="Receive product information"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox name="antoine" />
+                        <Checkbox onChange={handleCheckboxChange} name="demo" />
                       }
                       label="Request a demo"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox name="antoine" />
+                        <Checkbox onChange={handleCheckboxChange} name="whitepaper" />
                       }
                       label="Receive your Whitepaper"
                     />
                   </FormGroup>
                 </FormControl>
                 <Box className="w-full my-4">
-                  <TextField fullWidth size="small" id="outlined-basic" label="Full Name" variant="outlined" />
+                  <TextField fullWidth size="small" id="outlined-basic" label="Full Name"
+                    name="fullName" onChange={handleInputChange}
+                  variant="outlined" required/>
                 </Box>
                 <Box className="w-full my-4">
-                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Email" variant="outlined" />
+                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Email" 
+                  name="email" onChange={handleInputChange}
+                  variant="outlined"  required/>
                 </Box>
                 <Box className="w-full my-4">
-                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Phone" variant="outlined" />
+                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Phone" 
+                  name="phone" onChange={handleInputChange}
+                  variant="outlined"  required/>
                 </Box>
                 <Box className="w-full my-4">
-                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Company Title" variant="outlined" />
+                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Company Title" 
+                  name="companyTitle" onChange={handleInputChange}
+                  variant="outlined"  required/>
                 </Box>
                 <Box className="w-full my-4">
-                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Message" variant="outlined"  multiline rows={4} maxRows={4}/>
+                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Message" 
+                  name="message" onChange={handleInputChange}
+                  variant="outlined"  multiline rows={4} maxRows={4}/>
                 </Box>
                 <Box className="w-full my-4" display={"flex"} alignItems={"center"} gap={2}>
-                  <button className="text-[18px] leading-[24px] font-medium py-4 px-14  my-2 border border-[#0D131E] hover:bg-[#0D131E] hover:text-white rounded-full">Submit</button>
+                  <button type="submit" className="text-[18px] leading-[24px] font-medium py-4 px-14  my-2 border border-[#0D131E] hover:bg-[#0D131E] hover:text-white rounded-full">Submit</button>
                   <button onClick={() => handleClose()} className="text-[18px] leading-[24px] font-medium py-4 px-14  my-2 border text-red-500 border-red-500 hover:bg-red-500 hover:text-white rounded-full">Cancel</button>
                 </Box>
               </Box>

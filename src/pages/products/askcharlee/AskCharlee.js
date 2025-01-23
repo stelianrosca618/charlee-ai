@@ -33,6 +33,11 @@ export const AskCharlee = () => {
       types: 'lines, words, chars',
       tagName: 'p'
     })
+    const askcharleeReview = new SplitType('.askCharlee-reviewer', {
+      types: 'lines, words, chars',
+      tagName: 'p'  
+    })
+    const charleeAvata = gsap.utils.toArray('.askCharlee-avata');
     const askCharleeBook = gsap.utils.toArray('.askCharleeBook-btn');
     const askCharleeFeatures = gsap.utils.toArray('.askCharlee-features');
     const askCharleeTimeline = gsap.timeline();
@@ -78,6 +83,30 @@ export const AskCharlee = () => {
       }
     );
     askCharleeTimeline.fromTo(askCharleeBook[0], {clipPath: 'circle(0%)'}, {clipPath: 'circle(100%)', duration:0.5})
+    askCharleeTimeline.fromTo(
+      askcharleeReview.lines,
+      { 
+        y: '-100%',
+        opacity: 0
+      },
+      {
+        y: '0',
+        opacity: 1,
+        stagger: 0.05,
+        duration: 1,
+        ease: 'power4.out',
+      }
+    );
+    askCharleeTimeline.fromTo(charleeAvata[0], 
+      { y: '-100%',
+      opacity: 0}
+      , {
+        y: '0',
+        opacity: 1,
+        stagger: 0.05,
+        duration: 1,
+        ease: 'power4.out'
+      })
     askCharleeTimeline.fromTo(askCharleeFeatures[0], {clipPath: 'inset(100%)'}, {clipPath: 'inset(-30%)', duration:0.5})
     const benefitLeft = gsap.utils.toArray('.benefits-left');
     const benefitsRightItems = gsap.utils.toArray('.benefits-rightItem');

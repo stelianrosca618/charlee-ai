@@ -2,6 +2,7 @@ import { Box, Container } from "@mui/material"
 import askCharleehand from "../../assets/imgs/banners/askCharleehand.png"
 import searchCover from "../../assets/imgs/icons/search-cover.png"
 import patterns from "../../assets/imgs/pattens/Path.png"
+import rechardAvata from "../../assets/imgs/avatars/rechard.png"
 import { useState } from "react"
 import { BookPopup } from "../modals/BookPopup"
 
@@ -37,6 +38,15 @@ export const AskCharleeHero = () => {
             <button onClick={() => {handleOpenBook()}} className="askCharleeBook-btn mt-10 rounded-full text-[18px] leading-[24px] bg-transparent border py-3 px-10 border-[#021744] text-[#021744] hover:text-white hover:bg-[#021744]">
               Book a demo
             </button>
+            <div className="w-full text-start mt-8">
+              <p className="askCharlee-reviewer text-center py-6">
+                “With the addition of AskCharlee our claim staff are able to look back into large numbers of claims for fast insights on value and strategy. Combined with Charlee.ai’s predictive analytics, we can now do extensive exploratory data analysis both forward and backward, gaining valuable insights into potential exposure, value, and strategy supporting settlement, defense, and cost containment.”
+              </p>
+              <div className="askCharlee-avata flex justify-center items-center">
+                <img src={rechardAvata} alt="avata" className="h-6 w-6 rounded-full"/>
+                <span className="mx-2 ">Richard M. Lord, VP & Head of Claims, NLC Insurance Companies </span>
+              </div>
+            </div>
           </Box>
         </Container>
       </Box>
