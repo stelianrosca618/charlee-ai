@@ -13,7 +13,8 @@ export const TabFirstElement = ({firstBlog}) => {
         </h4>
         <Box className="cursor-pointer w-full py-3" display={'flex'} gap={6}>
           <span>{calculateCreatedAgo(firstBlog)}</span>
-          <span>By {firstBlog?.creator}</span>
+          {/* <span>By {firstBlog?.creator}</span> */}
+          <span>By Charlee.ai</span>
         </Box>
       </Grid2>
       <Grid2 size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}}>

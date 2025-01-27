@@ -6,7 +6,7 @@ import { usePagination } from "@mui/lab";
 import { useNavigate } from "react-router-dom";
 import blogItems from "../../../providers/datas/blogs.json";
 import { useEffect, useState } from "react";
-import { calculateCreatedAgo, printEventDates, sortArrList } from "../../commonFunc";
+import { calculateCreatedAgo, eventSort, printEventDates, sortArrList, upcommingEvent } from "../../commonFunc";
 import eventlist from "../../../providers/datas/events.json";
 import { TabFirstElement } from "./TabFirstElement";
 import { TabEventFirstElement } from "./TabEventFirstElement";
@@ -92,7 +92,7 @@ export const BlogTabContent = ({title, tabKey}) => {
       tmpBlogs = sortArrList(tmpAllArr)
     }else{
       if(tabKey == 'events'){
-        tmpBlogs = sortArrList(eventlist);
+        tmpBlogs = upcommingEvent(eventlist);
       }else if(tabKey == 'blog'){
         blogItems.map(blogItem => {
           tmpBlogs.push(blogItem);
@@ -112,7 +112,7 @@ export const BlogTabContent = ({title, tabKey}) => {
     }
     
     const firstItem = tmpBlogs[0];
-    console.log(firstItem);
+    
     setFirstBlog(firstItem);
     setBlogArr(tmpBlogs);
   }

@@ -33,7 +33,7 @@ export const DocuAllPlatforms = () => {
             <h6 className="uppercase text-[#4CFFE9] text-[14px] leading-[15.96px] font-bold">Everything you need</h6>
             <h4 className="mt-4 text-[42px] leading-[54.6px] font-medium">All-in-one-platform</h4>
             <p className="my-6 text-[24px] leading-[32px] font-normal">
-						Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec.
+						All the components of the Charlee platform are integrated and work together seamlessly to provide a suite of insights, alerts and summaries.
             </p>
           </Box>
           <Box className="w-full text-start px-5 md:px-0" flex={2} >

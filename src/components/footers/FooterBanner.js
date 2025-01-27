@@ -32,7 +32,7 @@ export const FooterBanner = () => {
       if (formData.firstName && formData.lastName && formData.email) {
         console.log('checked submit form', formData);
         await sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
-        toast.success('Email was Sent!');
+        toast.success('Thank you for your email.   You will be hearing from us shortly.');
         // handleClose();
         setFormData({
           firstName: '',

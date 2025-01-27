@@ -45,8 +45,21 @@ export const ContactUsPopup = ({open, handleClose}) => {
     // Add form submission logic here
     console.log(formData);
     sendEmail(formData.email, formData.fullName);
-    toast.success('Email was Sent!');
+    toast.success('Thank you for your email.   You will be hearing from us shortly.');
     handleClose();
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      companyTitle: '',
+      message: '',
+      interests: {
+        poc: false,
+        productInfo: false,
+        demo: false,
+        whitepaper: false
+      }
+    });
   };
 
   return (
