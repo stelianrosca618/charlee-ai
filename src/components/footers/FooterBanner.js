@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextPlugin from "gsap/TextPlugin";
 import { useGSAP } from '@gsap/react';
 import { useState } from "react";
-import { sendEmail } from "../../providers/apis/emailApi";
+import { sendEmail, sendRequestEmail } from "../../providers/apis/emailApi";
 import { toast } from "react-toastify";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
@@ -31,14 +31,21 @@ export const FooterBanner = () => {
       e.preventDefault();
       if (formData.firstName && formData.lastName && formData.email) {
         console.log('checked submit form', formData);
-        await sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
-        toast.success('Thank you for your email.   You will be hearing from us shortly.');
-        // handleClose();
+        // await sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
+        const requstData = {
+          fullname: `${formData.firstName} ${formData.lastName}`,
+          requestmail: formData.email
+        }
+        await sendRequestEmail(formData.email, `${formData.firstName} ${formData.lastName}`, requstData);
         setFormData({
+          ...formData,
           firstName: '',
           lastName: '',
           email: ''
         });
+        toast.success('Thank you for your email.   You will be hearing from us shortly.');
+        // handleClose();
+       
       }
     };
     
@@ -100,14 +107,14 @@ export const FooterBanner = () => {
                   <Box>
                     <Box display={"flex"} alignItems={"center"} gap={2} marginBottom={1}>
                       <input type="text" id="firstName-input" placeholder="Enter your first name" 
-                      name="firstName" onChange={handleInputChange}
+                      name="firstName" onChange={handleInputChange} value={formData.firstName}
                         className="w-full rounded-lg py-3 px-4 bg-white"/>
                       <input type="text" id="lastName-input" placeholder="Enter your last name" 
-                      name="lastName" onChange={handleInputChange}
+                      name="lastName" onChange={handleInputChange} value={formData.lastName}
                         className="w-full rounded-lg py-3 px-4 bg-white"/>
                     </Box>
                     <input type="text" id="email-input" placeholder="Enter your email" 
-                      name="email" onChange={handleInputChange}
+                      name="email" onChange={handleInputChange} value={formData.email}
                       className="w-full rounded-lg py-3 px-4 bg-white"/>
                   </Box>
                   <Box>

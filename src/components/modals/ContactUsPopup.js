@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa";
 import { CiBasketball } from "react-icons/ci";
 import charleeface from "../../assets/imgs/icons/charlee-face.png"
 import { useState } from "react";
-import { sendEmail } from "../../providers/apis/emailApi";
+import { sendContactEmail, sendEmail } from "../../providers/apis/emailApi";
 import { toast } from "react-toastify";
 
 export const ContactUsPopup = ({open, handleClose}) => {
@@ -26,6 +26,7 @@ export const ContactUsPopup = ({open, handleClose}) => {
       whitepaper: false
     }
   });
+  const [wants, setWants] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -33,19 +34,31 @@ export const ContactUsPopup = ({open, handleClose}) => {
   };
 
   const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
+    console.log(e);
+    const { name, checked, labels } = e.target;
     setFormData(prev => ({
       ...prev,
       interests: {...prev.interests, [name]: checked}
     }));
+    setWants(labels[0].textContent);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Add form submission logic here
     console.log(formData);
-    sendEmail(formData.email, formData.fullName);
-    toast.success('Thank you for your email.   You will be hearing from us shortly.');
+    // sendEmail(formData.email, formData.fullName);
+    const constactData = {
+      wants: wants,
+      name: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      companyname: formData.companyTitle,
+      message: formData.message
+    }
+    await sendContactEmail(formData.email, formData.fullName, constactData);
+
+    toast.success('Thank you for your email. You will be hearing from us shortly.');
     handleClose();
     setFormData({
       fullName: '',
@@ -108,25 +121,25 @@ export const ContactUsPopup = ({open, handleClose}) => {
                   <FormGroup>
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} name="poc" />
+                        <Checkbox onChange={handleCheckboxChange} ariaLabel="Learn more about the free POC" name="poc" />
                       }
                       label="Learn more about the free POC"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} name="productInfo" />
+                        <Checkbox onChange={handleCheckboxChange} ariaLabel="Receive product information" name="productInfo" />
                       }
                       label="Receive product information"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} name="demo" />
+                        <Checkbox onChange={handleCheckboxChange} ariaLabel="Request a demo" name="demo" />
                       }
                       label="Request a demo"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} name="whitepaper" />
+                        <Checkbox onChange={handleCheckboxChange} ariaLabel="Receive your Whitepaper" name="whitepaper" />
                       }
                       label="Receive your Whitepaper"
                     />

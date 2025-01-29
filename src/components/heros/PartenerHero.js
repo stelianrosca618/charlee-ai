@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material"
 import parttern1 from "../../assets/imgs/pattens/pattern1.png"
-import { sendEmail } from "../../providers/apis/emailApi"
+import { sendEmail, sendLearnEmail } from "../../providers/apis/emailApi"
 import { useState } from "react"
 import { toast } from "react-toastify"
 export const PartenerHero = () => {
@@ -17,7 +17,7 @@ export const PartenerHero = () => {
       return
     }
 
-    await sendEmail(email, 'charlee.ai');
+    await sendLearnEmail(email, 'charlee.ai', {studymail: email});
     toast.success('Thank you for your email.   You will be hearing from us shortly.');
     // console.log('Form submitted with email:', email)
     setEmail('')
