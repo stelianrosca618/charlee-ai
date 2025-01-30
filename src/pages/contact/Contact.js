@@ -16,12 +16,75 @@ import gsap, {} from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextPlugin from "gsap/TextPlugin";
 import { useGSAP } from '@gsap/react';
-import { useRef } from "react"
+import { useRef, useState } from "react"
+import { sendContactEmail } from "../../providers/apis/emailApi";
+import { toast } from "react-toastify";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, TextPlugin);
 
 export const Contact = () => {
   const contactRes = useRef();
+
+  const [formData, setFormData] = useState({
+      fullName: '',
+      email: '',
+      phone: '',
+      companyTitle: '',
+      message: '',
+      interests: {
+        poc: false,
+        productInfo: false,
+        demo: false,
+        whitepaper: false
+      }
+    });
+    const [wants, setWants] = useState(false);
+  
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData(prev => ({...prev, [name]: value}));
+    };
+  
+    const handleCheckboxChange = (e) => {
+      console.log(e);
+      const { name, checked, labels } = e.target;
+      setFormData(prev => ({
+        ...prev,
+        interests: {...prev.interests, [name]: checked}
+      }));
+      setWants(labels[0].textContent);
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      // Add form submission logic here
+      console.log(formData);
+      // sendEmail(formData.email, formData.fullName);
+      const constactData = {
+        wants: wants,
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        companyname: formData.companyTitle,
+        message: formData.message
+      }
+      await sendContactEmail(formData.email, formData.fullName, constactData);
+  
+      toast.success('Thank you for your email. You will be hearing from us shortly.');
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        companyTitle: '',
+        message: '',
+        interests: {
+          poc: false,
+          productInfo: false,
+          demo: false,
+          whitepaper: false
+        }
+      });
+    };
 
   useGSAP(() => {
     const charleeFace = gsap.utils.toArray('.charlee-face');
@@ -76,53 +139,70 @@ export const Contact = () => {
                   </Box>
                 </Grid2>
                 <Grid2 size={{xs:12, sm:12, md:7, lg:7, xl:7}}>
-                  <Box className="contactForm-content w-full h-full text-start">
+                  <Box component={'form'} onSubmit={handleSubmit} className="contactForm-content w-full h-full text-start">
                     <h6 className="text-[24px] leading-[32px] font-normal">I would like to...</h6>
                     <FormControl sx={{my: 3}} component="fieldset" variant="standard">
                       <FormGroup>
                         <FormControlLabel
                           control={
-                            <Checkbox  name="gilad" />
+                            <Checkbox  name="poc" 
+                            onChange={handleCheckboxChange} aria-label="Learn more about the free POC"
+                            />
                           }
                           label="Learn more about the free POC"
                         />
                         <FormControlLabel
                           control={
-                            <Checkbox name="jason" />
+                            <Checkbox name="productInfo" 
+                            onChange={handleCheckboxChange} aria-label="Receive product information"
+                            />
                           }
                           label="Receive product information"
                         />
                         <FormControlLabel
                           control={
-                            <Checkbox name="antoine" />
+                            <Checkbox name="demo" 
+                            onChange={handleCheckboxChange} aria-label="Request a demo"
+                            />
                           }
                           label="Request a demo"
                         />
                         <FormControlLabel
                           control={
-                            <Checkbox name="antoine" />
+                            <Checkbox name="whitepaper" 
+                            onChange={handleCheckboxChange} aria-label="Receive your Whitepaper"
+                            />
                           }
                           label="Receive your Whitepaper"
                         />
                       </FormGroup>
                     </FormControl>
                     <Box className="w-full my-4">
-                      <TextField fullWidth size="small" id="outlined-basic" label="Full Name" variant="outlined" />
+                      <TextField fullWidth size="small" 
+                      name="fullName" onChange={handleInputChange} value={formData.fullName} id="outlined-basic" label="Full Name" variant="outlined" />
                     </Box>
                     <Box className="w-full my-4">
-                      <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Email" variant="outlined" />
+                      <TextField fullWidth size="small" 
+                      name="email" onChange={handleInputChange} value={formData.email}
+                      className="my-3" id="outlined-basic" label="Email" variant="outlined" />
                     </Box>
                     <Box className="w-full my-4">
-                      <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Phone" variant="outlined" />
+                      <TextField fullWidth size="small" 
+                      name="phone" onChange={handleInputChange} value={formData.phone}
+                      className="my-3" id="outlined-basic" label="Phone" variant="outlined" />
                     </Box>
                     <Box className="w-full my-4">
-                      <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Company Title" variant="outlined" />
+                      <TextField fullWidth
+                      name="companyTitle" onChange={handleInputChange} value={formData.companyTitle}
+                      size="small" className="my-3" id="outlined-basic" label="Company Title" variant="outlined" />
                     </Box>
                     <Box className="w-full my-4">
-                      <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Message" variant="outlined"  multiline rows={4} maxRows={4}/>
+                      <TextField fullWidth size="small" 
+                      name="message" onChange={handleInputChange} value={formData.message}
+                      className="my-3" id="outlined-basic" label="Message" variant="outlined"  multiline rows={4} maxRows={4}/>
                     </Box>
                     <Box className="w-full my-4">
-                      <button className="text-[18px] leading-[24px] font-medium py-4 px-14  my-2 border border-[#0D131E] hover:bg-[#0D131E] hover:text-white rounded-full">Submit</button>
+                      <button type="submit" className="text-[18px] leading-[24px] font-medium py-4 px-14  my-2 border border-[#0D131E] hover:bg-[#0D131E] hover:text-white rounded-full">Submit</button>
                     </Box>
                   </Box>
                 </Grid2>
