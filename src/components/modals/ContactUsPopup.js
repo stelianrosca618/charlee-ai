@@ -18,6 +18,7 @@ export const ContactUsPopup = ({open, handleClose}) => {
     email: '',
     phone: '',
     companyTitle: '',
+    companyName: "",
     message: '',
     interests: {
       poc: false,
@@ -53,7 +54,8 @@ export const ContactUsPopup = ({open, handleClose}) => {
       name: formData.fullName,
       email: formData.email,
       phone: formData.phone,
-      companyname: formData.companyTitle,
+      companyname: formData.companyName,
+      compnaytitle: formData.companyTitle,
       message: formData.message
     }
     await sendContactEmail(formData.email, formData.fullName, constactData);
@@ -65,6 +67,7 @@ export const ContactUsPopup = ({open, handleClose}) => {
       email: '',
       phone: '',
       companyTitle: '',
+      companyName: "",
       message: '',
       interests: {
         poc: false,
@@ -121,25 +124,33 @@ export const ContactUsPopup = ({open, handleClose}) => {
                   <FormGroup>
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} ariaLabel="Learn more about the free POC" name="poc" />
+                        <Checkbox onChange={handleCheckboxChange} 
+                        checked={formData.interests.poc}
+                        ariaLabel="Learn more about the free POC" name="poc" />
                       }
                       label="Learn more about the free POC"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} ariaLabel="Receive product information" name="productInfo" />
+                        <Checkbox onChange={handleCheckboxChange} 
+                        checked={formData.interests.productInfo}
+                        ariaLabel="Receive product information" name="productInfo" />
                       }
                       label="Receive product information"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} ariaLabel="Request a demo" name="demo" />
+                        <Checkbox onChange={handleCheckboxChange} 
+                        checked={formData.interests.demo}
+                        ariaLabel="Request a demo" name="demo" />
                       }
                       label="Request a demo"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} ariaLabel="Receive your Whitepaper" name="whitepaper" />
+                        <Checkbox onChange={handleCheckboxChange} 
+                        checked={formData.interests.whitepaper}
+                        ariaLabel="Receive your Whitepaper" name="whitepaper" />
                       }
                       label="Receive your Whitepaper"
                     />
@@ -161,9 +172,18 @@ export const ContactUsPopup = ({open, handleClose}) => {
                   variant="outlined"  required/>
                 </Box>
                 <Box className="w-full my-4">
-                  <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Company Title" 
-                  name="companyTitle" onChange={handleInputChange}
-                  variant="outlined"  required/>
+                  <Grid2 container spacing={2}>
+                    <Grid2 size={{xs:12, sm:12, md:6, lg:6, xl:6}}>
+                      <TextField fullWidth required
+                      name="companyTitle" onChange={handleInputChange} value={formData.companyTitle}
+                      size="small" className="my-3" id="outlined-basic" label="Title" variant="outlined" />
+                    </Grid2>
+                    <Grid2 size={{xs:12, sm:12, md:6, lg:6, xl:6}}>
+                      <TextField fullWidth required
+                      name="companyName" onChange={handleInputChange} value={formData.companyName}
+                      size="small" className="my-3" id="outlined-basic" label="Company" variant="outlined" />
+                    </Grid2>
+                  </Grid2>
                 </Box>
                 <Box className="w-full my-4">
                   <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Message" 

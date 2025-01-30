@@ -62,12 +62,23 @@ export const upcommingEvent = (eventList) => {
   
   });
 
+  
   // const tmpArr = eventList.filter(item => {
   //   const startDate = new Date(item.eventStartDate);
   //   return  0-(startDate - nowDate);
   // });
   return tmpArr;
 }
+
+export const previousEvents = (eventList) => {
+  const nowDate = new Date();
+  const tmpArr = eventList.filter(item => {
+    const startDate = new Date(item.eventStartDate);
+    return  0-(startDate - nowDate);
+  });
+  return tmpArr;
+}
+
 
 export const eventSort = (eventList) => {
   const tmpArr = eventList.sort((a, b) => {
