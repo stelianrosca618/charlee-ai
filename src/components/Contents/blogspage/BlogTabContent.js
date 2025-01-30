@@ -85,7 +85,7 @@ export const BlogTabContent = ({title, tabKey}) => {
     loadBlogArr()
   }, [tabKey])
   const loadBlogArr = () => {
-    console.log(tabKey);
+    console.log(tabKey, eventlist);
     let tmpBlogs = [];
     if(tabKey == 'featured'){
       const tmpAllArr = blogItems.concat(eventlist);
@@ -115,7 +115,7 @@ export const BlogTabContent = ({title, tabKey}) => {
     }
     
     const firstItem = tmpBlogs[0];
-    
+    console.log(firstItem);
     setFirstBlog(firstItem);
     setBlogArr(tmpBlogs);
   }

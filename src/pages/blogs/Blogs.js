@@ -17,7 +17,7 @@ import { BlogsTabs } from "../../components/Contents/blogspage/BlogsTabs";
 import oldMedias from "../../providers/datas_old/medias.json"
 import oldPosts from "../../providers/datas_old/posts.json";
 import oldVenues from "../../providers/datas_old/venues.json";
-import oldEvents from "../../providers/datas_old/events.json"
+import oldEvents from "../../providers/datas_old/uevents.json"
 import orgEvents from "../../providers/datas_old/uOrgEvents.json";
 import { useEffect } from "react";
 import medialist from "../../providers/datas/medias.json";
@@ -28,6 +28,7 @@ export const Blogs = () => {
   
   useEffect(() => {
     // updateBlogMedia();
+    // parsingXmlEvents();
     // parsingEvents();
     // updateEventMedia();
   }, [])
@@ -49,14 +50,39 @@ export const Blogs = () => {
     const eventItems = [];
     eventlist.map(item => {
       console.log(item.postMedia);
-      const splitedStr = item.postMedia.split('/');
-      const fileName = splitedStr[splitedStr.length-1];
-      const filePath = `/blog-photos/${fileName}`;
       let eventObj = item;
-      eventObj.postMedia = filePath;
+      if(item.postMedia){
+        const splitedStr = item.postMedia.split('/');
+        const fileName = splitedStr[splitedStr.length-1];
+        const filePath = `/blog-photos/${fileName}`;
+        let eventObj = item;
+        eventObj.postMedia = filePath;
+
+      }
+      // const splitedStr = item.postMedia.split('/');
+      // const fileName = splitedStr[splitedStr.length-1];
+      // const filePath = `/blog-photos/${fileName}`;
+      
+      // eventObj.postMedia = filePath;
       eventItems.push(eventObj);
     })
     console.log('updatedEvent', eventItems);
+  }
+
+  const parsingXmlEvents = () => {
+    let eveArr = [];
+    oldEvents.map(eItem => {
+       eveArr.push({ 
+        title: eItem.title,
+        link: eItem.link,
+        postId: eItem.post_id.__text,
+        postName: eItem.post_name.__cdata,
+        postType: eItem.post_type.__cdata,
+        postDate: eItem.post_date.__cdata,
+        metaData:genPostMeta(eItem.postmeta),
+      })
+    })
+    console.log('oldARRR', eveArr);
   }
 
   const parsingEvents = () => {

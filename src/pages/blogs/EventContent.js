@@ -109,26 +109,29 @@ export const EventContent = () => {
                     </a>
                   </p>
                   
-                  <h3 className="text-[22px] font-semibold py-2">
-                    <RoomIcon className="mx-2"/>
-                    Address
-                  </h3>  
-                  <h5 className="pl-2 font-semibold py-2">
-                    {eventData.addressData.title}
-                  </h5>
-                  <p className="pl-2 underline">
-                    {eventData.addressData.address}
-                  </p>
-                  <p className="pl-2 underline">
-                    {eventData.addressData.city} {eventData.addressData.state} {eventData.addressData.zip} {eventData.addressData.country}
-                  </p>
-                  <h3 className="text-[22px] font-semibold py-2">
-                    <PhoneSharpIcon className="mx-2"/>
-                    Phone
-                  </h3>  
-                  <p className="pl-2 underline">
-                    {eventData.addressData.phone}
-                  </p>
+                  {eventData?.addressData && <>
+                    <h3 className="text-[22px] font-semibold py-2">
+                      <RoomIcon className="mx-2"/>
+                      Address
+                    </h3>  
+                    <h5 className="pl-2 font-semibold py-2">
+                      {eventData.addressData.title}
+                    </h5>
+                    <p className="pl-2 underline">
+                      {eventData.addressData.address}
+                    </p>
+                    <p className="pl-2 underline">
+                      {eventData.addressData.city} {eventData.addressData.state} {eventData.addressData.zip} {eventData.addressData.country}
+                    </p>
+                    <h3 className="text-[22px] font-semibold py-2">
+                      <PhoneSharpIcon className="mx-2"/>
+                      Phone
+                    </h3>  
+                    <p className="pl-2 underline">
+                      {eventData.addressData.phone}
+                    </p>
+                  </>}
+                  
                 </Box>
               </Grid2>
              </Grid2>
