@@ -49,8 +49,11 @@ export const EventContent = () => {
     console.log(tempEvents);
     tempEvents = sortArrList(tempEvents)
     setRelatedEvents(tempEvents.splice(0, 4));
-    const addressStr = `${eventObj.addressData.address} ${eventObj.addressData.city} ${eventObj.addressData.state} ${eventObj.addressData.zip} ${eventObj.addressData.country}`;
-    loadLocation(addressStr)
+    if(eventObj.addressData){
+      const addressStr = `${eventObj.addressData.address} ${eventObj.addressData.city} ${eventObj.addressData.state} ${eventObj.addressData.zip} ${eventObj.addressData.country}`;
+      loadLocation(addressStr)
+    }
+    
   }
 
   const eventNavigation = (eventname) => {
