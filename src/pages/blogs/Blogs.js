@@ -18,7 +18,7 @@ import oldMedias from "../../providers/datas_old/medias.json"
 import oldPosts from "../../providers/datas_old/posts.json";
 import oldVenues from "../../providers/datas_old/venues.json";
 import oldEvents from "../../providers/datas_old/events.json"
-import orgEvents from "../../providers/datas_old/orgEvents.json";
+import orgEvents from "../../providers/datas_old/uOrgEvents.json";
 import { useEffect } from "react";
 import medialist from "../../providers/datas/medias.json";
 import venueList from "../../providers/datas/venues.json"
@@ -27,7 +27,7 @@ import postArrlist from "../../providers/datas/blogs.json";
 export const Blogs = () => {
   
   useEffect(() => {
-    updateBlogMedia();
+    // updateBlogMedia();
     // parsingEvents();
     // updateEventMedia();
   }, [])
@@ -56,17 +56,17 @@ export const Blogs = () => {
       eventObj.postMedia = filePath;
       eventItems.push(eventObj);
     })
-    console.log(eventItems);
+    console.log('updatedEvent', eventItems);
   }
 
   const parsingEvents = () => {
     let eventArr = [];
     orgEvents.map(eItem => {
-      if(eItem.postType !== 'attachment'){
+       if(eItem.postType !== 'attachment'){
         
         const venueId = eItem.metaData._EventVenueID;
         const mediaId = eItem.metaData._thumbnail_id;
-        console.log(eItem, mediaId);
+        // console.log(eItem, mediaId);
         // eventArr.push({ 
         //   title: eItem.title.__cdata,
         //   link: eItem.link,
@@ -98,9 +98,9 @@ export const Blogs = () => {
           eventEndDate: eItem.metaData._EventEndDate,
           eventOrigin: eItem.metaData._EventOrigin
         })
-      }
+       }
     });
-    console.log(eventArr);
+    console.log('eventARRR', eventArr);
   }
 
   const getVenueData = (venueId) => {

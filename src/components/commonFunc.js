@@ -50,23 +50,24 @@ export const printEventDates = (eventItem) => {
 
 export const upcommingEvent = (eventList) => {
   const nowDate = new Date();
-  const tmpArr = eventList.sort((a, b) => {
-    const aStartDate = new Date(a.eventStartDate);
-    const createA = (aStartDate - nowDate);
+  // const tmpArr = eventList.sort((a, b) => {
+  //   const aStartDate = new Date(a.eventStartDate);
+  //   const createA = (aStartDate - nowDate);
 
-    const bStartDate = new Date(b.eventStartDate);
-    const createB = (bStartDate - nowDate);
-    console.log('createA', createA);
-    console.log('createB', createB);
-    return createB - createA;
+  //   const bStartDate = new Date(b.eventStartDate);
+  //   const createB = (bStartDate - nowDate);
+  //   console.log('createA', createA);
+  //   console.log('createB', createB);
+  //   return createB - createA;
   
-  });
-
-  
-  // const tmpArr = eventList.filter(item => {
-  //   const startDate = new Date(item.eventStartDate);
-  //   return  0-(startDate - nowDate);
   // });
+
+  
+  const tmpArr = eventList.filter(item => {
+    const startDate = new Date(item.eventStartDate);
+    return (nowDate - startDate) < 0;
+  });
+  
   return tmpArr;
 }
 
@@ -74,9 +75,10 @@ export const previousEvents = (eventList) => {
   const nowDate = new Date();
   const tmpArr = eventList.filter(item => {
     const startDate = new Date(item.eventStartDate);
-    return  0-(startDate - nowDate);
+    return (nowDate - startDate) > 0;
   });
-  return tmpArr;
+  const resultArr = eventSort(tmpArr);
+  return resultArr;
 }
 
 

@@ -32,12 +32,7 @@ export const Contact = () => {
       companyTitle: '',
       companyName: "",
       message: '',
-      interests: {
-        poc: false,
-        productInfo: false,
-        demo: false,
-        whitepaper: false
-      }
+      interests: ''
     });
     const [wants, setWants] = useState(false);
   
@@ -51,7 +46,7 @@ export const Contact = () => {
       const { name, checked, labels } = e.target;
       setFormData(prev => ({
         ...prev,
-        interests: {...prev.interests, [name]: checked}
+        interests: name
       }));
       setWants(labels[0].textContent);
     };
@@ -149,7 +144,7 @@ export const Contact = () => {
                         <FormControlLabel
                           control={
                             <Checkbox  name="poc" 
-                            checked={formData.interests.poc}
+                            checked={formData.interests == 'poc'}
                             onChange={handleCheckboxChange} aria-label="Learn more about the free POC"
                             />
                           }
@@ -158,7 +153,7 @@ export const Contact = () => {
                         <FormControlLabel
                           control={
                             <Checkbox name="productInfo" 
-                            checked={formData.interests.productInfo}
+                            checked={formData.interests == 'productInfo'}
                             onChange={handleCheckboxChange} aria-label="Receive product information"
                             />
                           }
@@ -167,7 +162,7 @@ export const Contact = () => {
                         <FormControlLabel
                           control={
                             <Checkbox name="demo" 
-                            checked={formData.interests.demo}
+                            checked={formData.interests == 'demo'}
                             onChange={handleCheckboxChange} aria-label="Request a demo"
                             />
                           }
@@ -176,7 +171,7 @@ export const Contact = () => {
                         <FormControlLabel
                           control={
                             <Checkbox name="whitepaper" 
-                            checked={formData.interests.whitepaper}
+                            checked={formData.interests == 'whitepaper'}
                             onChange={handleCheckboxChange} aria-label="Receive your Whitepaper"
                             />
                           }
@@ -194,19 +189,19 @@ export const Contact = () => {
                       className="my-3" id="outlined-basic" label="Email" variant="outlined" />
                     </Box>
                     <Box className="w-full my-4">
-                      <TextField fullWidth size="small" required 
+                      <TextField fullWidth size="small"  
                       name="phone" onChange={handleInputChange} value={formData.phone}
                       className="my-3" id="outlined-basic" label="Phone" variant="outlined" />
                     </Box>
                     <Box className="w-full my-4">
                       <Grid2 container spacing={2}>
                         <Grid2 size={{xs:12, sm:12, md:6, lg:6, xl:6}}>
-                          <TextField fullWidth required
+                          <TextField fullWidth 
                           name="companyTitle" onChange={handleInputChange} value={formData.companyTitle}
                           size="small" className="my-3" id="outlined-basic" label="Title" variant="outlined" />
                         </Grid2>
                         <Grid2 size={{xs:12, sm:12, md:6, lg:6, xl:6}}>
-                          <TextField fullWidth required
+                          <TextField fullWidth 
                           name="companyName" onChange={handleInputChange} value={formData.companyName}
                           size="small" className="my-3" id="outlined-basic" label="Company" variant="outlined" />
                         </Grid2>

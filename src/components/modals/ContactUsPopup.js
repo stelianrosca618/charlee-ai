@@ -39,7 +39,7 @@ export const ContactUsPopup = ({open, handleClose}) => {
     const { name, checked, labels } = e.target;
     setFormData(prev => ({
       ...prev,
-      interests: {...prev.interests, [name]: checked}
+      interests: name
     }));
     setWants(labels[0].textContent);
   };
@@ -124,33 +124,37 @@ export const ContactUsPopup = ({open, handleClose}) => {
                   <FormGroup>
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} 
-                        checked={formData.interests.poc}
-                        ariaLabel="Learn more about the free POC" name="poc" />
+                        <Checkbox  name="poc" 
+                        checked={formData.interests == 'poc'}
+                        onChange={handleCheckboxChange} aria-label="Learn more about the free POC"
+                        />
                       }
                       label="Learn more about the free POC"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} 
-                        checked={formData.interests.productInfo}
-                        ariaLabel="Receive product information" name="productInfo" />
+                        <Checkbox name="productInfo" 
+                        checked={formData.interests == 'productInfo'}
+                        onChange={handleCheckboxChange} aria-label="Receive product information"
+                        />
                       }
                       label="Receive product information"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} 
-                        checked={formData.interests.demo}
-                        ariaLabel="Request a demo" name="demo" />
+                        <Checkbox name="demo" 
+                        checked={formData.interests == 'demo'}
+                        onChange={handleCheckboxChange} aria-label="Request a demo"
+                        />
                       }
                       label="Request a demo"
                     />
                     <FormControlLabel
                       control={
-                        <Checkbox onChange={handleCheckboxChange} 
-                        checked={formData.interests.whitepaper}
-                        ariaLabel="Receive your Whitepaper" name="whitepaper" />
+                        <Checkbox name="whitepaper" 
+                        checked={formData.interests == 'whitepaper'}
+                        onChange={handleCheckboxChange} aria-label="Receive your Whitepaper"
+                        />
                       }
                       label="Receive your Whitepaper"
                     />
@@ -169,17 +173,17 @@ export const ContactUsPopup = ({open, handleClose}) => {
                 <Box className="w-full my-4">
                   <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Phone" 
                   name="phone" onChange={handleInputChange}
-                  variant="outlined"  required/>
+                  variant="outlined"  />
                 </Box>
                 <Box className="w-full my-4">
                   <Grid2 container spacing={2}>
                     <Grid2 size={{xs:12, sm:12, md:6, lg:6, xl:6}}>
-                      <TextField fullWidth required
+                      <TextField fullWidth 
                       name="companyTitle" onChange={handleInputChange} value={formData.companyTitle}
                       size="small" className="my-3" id="outlined-basic" label="Title" variant="outlined" />
                     </Grid2>
                     <Grid2 size={{xs:12, sm:12, md:6, lg:6, xl:6}}>
-                      <TextField fullWidth required
+                      <TextField fullWidth 
                       name="companyName" onChange={handleInputChange} value={formData.companyName}
                       size="small" className="my-3" id="outlined-basic" label="Company" variant="outlined" />
                     </Grid2>
