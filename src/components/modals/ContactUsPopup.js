@@ -55,7 +55,7 @@ export const ContactUsPopup = ({open, handleClose}) => {
       email: formData.email,
       phone: formData.phone,
       companyname: formData.companyName,
-      compnaytitle: formData.companyTitle,
+      companytitle: formData.companyTitle,
       message: formData.message
     }
     await sendContactEmail(formData.email, formData.fullName, constactData);
@@ -176,15 +176,15 @@ export const ContactUsPopup = ({open, handleClose}) => {
                   variant="outlined"  />
                 </Box>
                 <Box className="w-full my-4">
-                    <TextField fullWidth 
-                        name="companyTitle" onChange={handleInputChange} value={formData.companyTitle}
-                        size="small" className="my-3" id="outlined-basic" label="Title" variant="outlined" />
-                  </Box>
-                  <Box className="w-full my-4">
-                    <TextField fullWidth 
-                      name="companyName" onChange={handleInputChange} value={formData.companyName}
-                      size="small" className="my-3" id="outlined-basic" label="Company" variant="outlined" />
-                  </Box>
+                  <TextField fullWidth 
+                      name="companyTitle" onChange={handleInputChange} value={formData.companyTitle}
+                      size="small" className="my-3" id="outlined-basic" label="Title" variant="outlined" />
+                </Box>
+                <Box className="w-full my-4">
+                  <TextField fullWidth 
+                    name="companyName" onChange={handleInputChange} value={formData.companyName}
+                    size="small" className="my-3" id="outlined-basic" label="Company" variant="outlined" />
+                </Box>
                 <Box className="w-full my-4">
                   <TextField fullWidth size="small" className="my-3" id="outlined-basic" label="Message" 
                   name="message" onChange={handleInputChange}

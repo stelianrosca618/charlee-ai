@@ -62,7 +62,7 @@ export const Contact = () => {
         email: formData.email,
         phone: formData.phone,
         companyname: formData.companyName,
-        compnaytitle: formData.companyTitle,
+        companytitle: formData.companyTitle,
         message: formData.message
       }
       await sendContactEmail(formData.email, formData.fullName, constactData);
