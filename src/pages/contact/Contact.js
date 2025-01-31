@@ -194,19 +194,14 @@ export const Contact = () => {
                       className="my-3" id="outlined-basic" label="Phone" variant="outlined" />
                     </Box>
                     <Box className="w-full my-4">
-                      <Grid2 container spacing={2}>
-                        <Grid2 size={{xs:12, sm:12, md:6, lg:6, xl:6}}>
-                          <TextField fullWidth 
+                      <TextField fullWidth 
                           name="companyTitle" onChange={handleInputChange} value={formData.companyTitle}
                           size="small" className="my-3" id="outlined-basic" label="Title" variant="outlined" />
-                        </Grid2>
-                        <Grid2 size={{xs:12, sm:12, md:6, lg:6, xl:6}}>
-                          <TextField fullWidth 
-                          name="companyName" onChange={handleInputChange} value={formData.companyName}
-                          size="small" className="my-3" id="outlined-basic" label="Company" variant="outlined" />
-                        </Grid2>
-                      </Grid2>
-                      
+                    </Box>
+                    <Box className="w-full my-4">
+                      <TextField fullWidth 
+                        name="companyName" onChange={handleInputChange} value={formData.companyName}
+                        size="small" className="my-3" id="outlined-basic" label="Company" variant="outlined" />
                     </Box>
                     <Box className="w-full my-4">
                       <TextField fullWidth size="small"
