@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControl, FormControlLabel, FormGroup, Grid2, TextField } from "@mui/material"
+import { Box, Button, Checkbox, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, FormControl, FormControlLabel, FormGroup, Grid2, Radio, RadioGroup, TextField } from "@mui/material"
 import { FiPhone } from "react-icons/fi";
 import { MdMailOutline } from "react-icons/md";
 
@@ -120,7 +120,18 @@ export const ContactUsPopup = ({open, handleClose}) => {
               
 
                 <h6 className="text-[24px] leading-[32px] font-normal">I would like to...</h6>
-                <FormControl sx={{my: 3}} component="fieldset" variant="standard">
+                <RadioGroup
+                  aria-labelledby="demo-radio-buttons-group-label"
+                  defaultValue="female"
+                  name="interests"
+                  onChange={handleCheckboxChange}
+                >
+                  <FormControlLabel value="poc" control={<Radio />} label="Learn more about the free POC" />
+                  <FormControlLabel value="productInfo" control={<Radio />} label="Receive product information" />
+                  <FormControlLabel value="demo" control={<Radio />} label="Request a demo" />
+                  <FormControlLabel value="whitepaper" control={<Radio />} label="Receive your Whitepaper" />
+                </RadioGroup>
+                {/* <FormControl sx={{my: 3}} component="fieldset" variant="standard">
                   <FormGroup>
                     <FormControlLabel
                       control={
@@ -159,7 +170,7 @@ export const ContactUsPopup = ({open, handleClose}) => {
                       label="Receive your Whitepaper"
                     />
                   </FormGroup>
-                </FormControl>
+                </FormControl> */}
                 <Box className="w-full my-4">
                   <TextField fullWidth size="small" id="outlined-basic" label="Full Name"
                     name="fullName" onChange={handleInputChange}

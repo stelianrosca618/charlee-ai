@@ -1,4 +1,4 @@
-import { Box, Checkbox, Container, FormControl, FormControlLabel, FormGroup, Grid2, TextField } from "@mui/material"
+import { Box, Checkbox, Container, FormControl, FormControlLabel, FormGroup, Grid2, Radio, RadioGroup, TextField } from "@mui/material"
 import { HomeHeader } from "../../components/headers/HomeHeader"
 import { Footer } from "../../components/footers/Footer"
 import { FiPhone } from "react-icons/fi";
@@ -139,7 +139,19 @@ export const Contact = () => {
                 <Grid2 size={{xs:12, sm:12, md:7, lg:7, xl:7}}>
                   <Box component={'form'} onSubmit={handleSubmit} className="contactForm-content w-full h-full text-start">
                     <h6 className="text-[24px] leading-[32px] font-normal">I would like to...</h6>
-                    <FormControl sx={{my: 3}} component="fieldset" variant="standard">
+                    <RadioGroup
+                      aria-labelledby="demo-radio-buttons-group-label"
+                      defaultValue="female"
+                      name="interests"
+                      onChange={handleCheckboxChange}
+                    >
+                      <FormControlLabel value="poc" control={<Radio />} label="Learn more about the free POC" />
+                      <FormControlLabel value="productInfo" control={<Radio />} label="Receive product information" />
+                      <FormControlLabel value="demo" control={<Radio />} label="Request a demo" />
+                      <FormControlLabel value="whitepaper" control={<Radio />} label="Receive your Whitepaper" />
+                    </RadioGroup>
+
+                    {/* <FormControl sx={{my: 3}} component="fieldset" variant="standard">
                       <FormGroup>
                         <FormControlLabel
                           control={
@@ -178,7 +190,7 @@ export const Contact = () => {
                           label="Receive your Whitepaper"
                         />
                       </FormGroup>
-                    </FormControl>
+                    </FormControl> */}
                     <Box className="w-full my-4">
                       <TextField fullWidth size="small" required
                       name="fullName" onChange={handleInputChange} value={formData.fullName} id="outlined-basic" label="Full Name" variant="outlined" />
