@@ -330,10 +330,10 @@ const ResearchPage = () => {
                   <div className="w-full flex justify-between items-center">
                     <div className="w-fit">
                       {results.length > 0 && 
-                        <h3 className="text-2xl font-bold">Showing {((pagination.page - 1) * pagination.limit + 1)}-{(pagination.page * pagination.limit)} of more than {pagination.totals} results</h3>
+                        <h3 className="text-xl font-bold">Showing {((pagination.page - 1) * pagination.limit + 1)}-{(pagination.page * pagination.limit)} of more than {pagination.totals} results</h3>
                       }
                       {results.length == 0 && 
-                        <h3 className="text-2xl font-bold">There is no result</h3>
+                        <h3 className="text-xl font-bold">There is no result</h3>
                       }
                     </div>
                     <div className="w-fit flex justify-end items-center gap-2">
@@ -354,7 +354,7 @@ const ResearchPage = () => {
                   <div className="w-full flex-col gap-2 min-h-[20rem]">
                     {results.map((resultItem, key) => (
                       <div key={key} onClick={() => onArticleClick(resultItem)} className="w-full py-2">
-                        <h3 className="px-2 text-2xl font-bold text-start">{resultItem.title}</h3>
+                        <h3 className="cursor-pointer px-2 text-2xl font-bold text-start">{resultItem.title}</h3>
                         <div className="w-full flex justify-start items-center py-1">
                           <div className="px-2 uppercase font-bold"
                           style={{ color: resultItem.TypeColor }}
