@@ -18,7 +18,6 @@ export const BlogsTabs = () => {
   const navigate = useNavigate();
   const [value, setValue] = useState('1');
   useEffect(() => {
-    console.log(pageParams);
     switch(pageParams['*']) {
       case 'events':
         setValue('2');

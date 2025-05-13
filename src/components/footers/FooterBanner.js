@@ -27,10 +27,9 @@ export const FooterBanner = () => {
   };
 
   const handleSubmit = async (e) => {
-      console.log('handleSubmit');
       e.preventDefault();
       if (formData.firstName && formData.lastName && formData.email) {
-        console.log('checked submit form', formData);
+        
         // await sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
         const requstData = {
           fullname: `${formData.firstName} ${formData.lastName}`,

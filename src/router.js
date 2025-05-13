@@ -12,6 +12,7 @@ import { Blogs } from './pages/blogs/Blogs';
 import { BlogContent } from './pages/blogs/BlogContent';
 import { EventContent } from './pages/blogs/EventContent';
 import { Usecase } from './pages/usecase/Usecase';
+import ResearchPage from './pages/research/research';
 
  export const Router = () => {
   return (
@@ -19,7 +20,7 @@ import { Usecase } from './pages/usecase/Usecase';
       <Routes >
         <Route path="/" element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/partner' element={<Parteners />} />
+        <Route path='/partners' element={<Parteners />} />
         <Route path='/connect' element={<Contact />} />
         <Route path='/solutions' element={<Solutions />}/>
         <Route path="/blogs/*" element={<Blogs />} />
@@ -30,6 +31,7 @@ import { Usecase } from './pages/usecase/Usecase';
         <Route path='/product/docucharlee' element={<DocuCharlee />} />
         <Route path='/product/findcharlee' element={<FindCharlee />} />
         <Route path='/usecase/*' element={<Usecase />} />
+        <Route path='/research' element={<ResearchPage />} />
       </Routes>
     </BrowserRouter>
   )

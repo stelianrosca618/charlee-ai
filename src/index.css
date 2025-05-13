@@ -2,19 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-h1{
+h1 {
   font-size: 75px;
   line-height: 82.5px;
   font-weight: 500;
   letter-spacing: -4px;
 }
-h2{
+
+h2 {
   font-size: 65px;
   line-height: 71.5px;
 }
-p{
+
+p {
   line-height: 31px;
 }
+
 body {
   color: #021744;
   margin: 0;
@@ -26,4 +29,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.research-content h1 {
+  @apply text-[32px] leading-[38px] font-bold tracking-tight mb-3;
+}
+
+.research-content h2 {
+  @apply text-[28px] font-bold tracking-tight;
+}
+
+.research-content h3 {
+  @apply text-2xl font-bold;
+}
+
+.research-content h4 {
+  @apply text-xl font-bold;
+}
+
+.research-content h5 {
+  @apply text-lg font-bold;
+}
+
+.research-content h6,
+p {
+  @apply text-base;
+}
+
+.research-content span {
+  @apply text-sm;
 }

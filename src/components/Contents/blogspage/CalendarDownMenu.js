@@ -15,27 +15,26 @@ export const CalendarDownMenu = ({eventObj}) => {
   };
 
   const onHandleGoogleCalendar = () => {
-    console.log('Google Calendar', eventObj);
+    
     const googleCalendarUrl = getGoogleCalendarUrl(eventObj);
     window.open(googleCalendarUrl, '_blank');
     handleClose();
   }
 
   const onhandleOutlookLiveCalendar = () => {
-    console.log('Outlook Live Calendar', eventObj);
     const outlookLiveCalendarUrl = getOutlookLiveCalendarUrl(eventObj);
     window.open(outlookLiveCalendarUrl, '_blank');
     handleClose();
   }
 
   const onHandleOutlookOfficeCalendar = () => {
-    console.log('Outlook Office Calendar', eventObj);
+    
     const outlookOfficeCalendarUrl = getOutlookOfficeCalendarUrl(eventObj);
     window.open(outlookOfficeCalendarUrl, '_blank');
     handleClose()
   }
   const onhandleICalenadar = () => {
-    console.log('iCalendar', eventObj);
+    
     const icalendarUrl = getiCalendarUrl(eventObj);
     window.open(icalendarUrl, '_blank');
     handleClose()

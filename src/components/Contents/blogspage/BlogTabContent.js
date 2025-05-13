@@ -85,7 +85,6 @@ export const BlogTabContent = ({title, tabKey}) => {
     loadBlogArr()
   }, [tabKey])
   const loadBlogArr = () => {
-    console.log(tabKey, eventlist);
     let tmpBlogs = [];
     if(tabKey == 'featured'){
       const tmpAllArr = blogItems.concat(eventlist);
@@ -115,7 +114,7 @@ export const BlogTabContent = ({title, tabKey}) => {
     }
     
     const firstItem = tmpBlogs[0];
-    console.log(firstItem);
+    
     setFirstBlog(firstItem);
     setBlogArr(tmpBlogs);
   }
@@ -130,7 +129,7 @@ export const BlogTabContent = ({title, tabKey}) => {
   }
   useEffect(() => {
     const pagelength = Math.ceil(blogArr.length / 8);
-    console.log(pagelength);
+    
     setTotalPages(pagelength);
     rebuildPageItems();
   }, [blogArr])
@@ -165,7 +164,6 @@ export const BlogTabContent = ({title, tabKey}) => {
   //   return timeAgoStr;
   // }
   const pageMove = (event, value) => {
-    console.log(event, value)
     setCurrentPage(value);
   }
   const { items } = usePagination({

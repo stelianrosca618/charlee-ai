@@ -88,13 +88,13 @@ export const MobileMenu = ({bgColor, textColor}) =>{
             <MenuItem className="w-screen " sx={{color: textColor, borderBottom: `1px solid ${textColor}`}} onClick={() => handleNavManu('/about')}>About</MenuItem>    
           </ListItem>
           <ListItem disablePadding>
-            <MenuItem className="w-screen " sx={{color: textColor, borderBottom: `1px solid ${textColor}`}} onClick={()=>handleNavManu('/parteners')}>Parteners</MenuItem>
+            <MenuItem className="w-screen " sx={{color: textColor, borderBottom: `1px solid ${textColor}`}} onClick={()=>handleNavManu('/partners')}>Partners</MenuItem>
           </ListItem>
           <ListItem disablePadding>
             <MenuItem className="w-screen " sx={{color: textColor, borderBottom: `1px solid ${textColor}`}} onClick={() => handleNavManu('/solutions')}>Solutions</MenuItem>
           </ListItem>
           <ListItem disablePadding>
-            <MenuItem className="w-screen " sx={{color: textColor, borderBottom: `1px solid ${textColor}`}} onClick={() => handleNavManu('/connect')}>Connect</MenuItem>
+            <MenuItem className="w-screen " sx={{color: textColor, borderBottom: `1px solid ${textColor}`}} onClick={() => handleNavManu('/connect')}>Contact Us</MenuItem>
           </ListItem>
           <ListItem disablePadding>
             <MenuItem className="w-screen " sx={{color: textColor, borderBottom: `1px solid ${textColor}`}} onClick={() => handleNavManu('/blogs/news')}>News</MenuItem>

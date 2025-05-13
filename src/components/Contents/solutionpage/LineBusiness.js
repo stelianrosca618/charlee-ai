@@ -38,7 +38,7 @@ export const LineBusiness = () => {
           contentCols={7}
           isDark={false}
           isVideoButton={true}
-          videolink={'/medias/CharleeAI_Overview_2024.mp4'}
+          videolink={'/medias/charleeaI_overview_2024.mp4'}
         />  
         <ImgRightContent 
           preTitle={'Litigation and Claims Handling Efficiency'}
@@ -68,7 +68,7 @@ export const LineBusiness = () => {
           contentCols={7}
           isDark={false}
           isVideoButton={true}
-          videolink={'/medias/Charlee_ai_Product_overview_2024.mp4'}
+          videolink={'/medias/charlee_ai_product_overview_2024.mp4'}
         />
        <ImgLeftContent 
           preTitle={'Compliance and Performance Monitering'}
@@ -94,7 +94,7 @@ export const LineBusiness = () => {
           contentCols={7}
           isDark={false}
           isVideoButton={true}
-          videolink={'/medias/CharleeAI_Overview_2024.mp4'}
+          videolink={'/medias/charleeaI_overview_2024.mp4'}
         />  
         
         

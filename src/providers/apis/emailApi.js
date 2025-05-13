@@ -3,8 +3,8 @@ import Mailjet from 'node-mailjet';
 
 const mailApiKey = 'ce50e9702de44f50a6d16d1461c91b86';
 const mailSecretyKey = '43105879661fb99426026c7dce24a2d9';
-const host = '34.236.143.118';
-const localhost = 'localhost';
+const host = '72.167.46.56';
+// const host = 'localhost';
 const backendPath = `http://${host}:4000/email/send`;
 const requestEmailPath = `http://${host}:4000/email/send-request-demo`
 const learnEmailPath = `http://${host}:4000/email/send-learn-mode`

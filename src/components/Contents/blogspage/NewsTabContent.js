@@ -29,7 +29,7 @@ export const NewsTabContent = () => {
   }
   useEffect(() => {
     const pagelength = Math.ceil(blogArr.length / 8);
-    console.log(pagelength);
+    
     setTotalPages(pagelength);
     rebuildPageItems();
   }, [blogArr])
@@ -38,7 +38,6 @@ export const NewsTabContent = () => {
   },[currentPage])
  
   const pageMove = (event, value) => {
-    console.log(event, value)
     setCurrentPage(value);
   }
   const { items } = usePagination({

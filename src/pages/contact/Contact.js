@@ -118,7 +118,7 @@ export const Contact = () => {
                     <h2 className="contact-title text-[36px] md:text-[65px] leading-[39.6px] md:leading-[71.5px] font-medium">Get in touch!</h2>
                     <Box className="text-[16px] leading-[31px] font-normal" marginTop={'32px'} paddingX={1}>
                       <p className="contact-text">4900 Hopyard Road</p>
-                      <p className="contact-text">Plesanaton, CA 94588</p>
+                      <p className="contact-text">Pleasaton, CA 94588</p>
                     </Box>
                     <Box className="text-[16px] leading-[31px] font-normal" marginTop={'32px'} paddingX={1}>
                       <p className="contact-text flex justify-start items-center " ><FiPhone size={'20px'} className="mr-2" /> +1 (855) 242-7533</p>

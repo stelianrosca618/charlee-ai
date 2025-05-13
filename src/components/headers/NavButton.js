@@ -22,7 +22,7 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 					<button 
 						onMouseEnter={handleClick}
 						style={{color: textColor}} 
-						className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}
+						className={`text-[${textColor}] group whitespace-nowrap font-medium text-[18px] leading-[24px] relative`}
 					>
 						{navInfo.name}
 						<span style={{background: textColor}} className={open? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
@@ -59,7 +59,7 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 					
 				>
 					{navInfo.childs.map(((chileNav, key) => (
-							<MenuItem onClick={()=> onLinkMenu(chileNav.pathName)}>
+							<MenuItem key={key} onClick={()=> onLinkMenu(chileNav.pathName)}>
 								<button 
 									style={{color: textColor}} 
 									className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}
@@ -73,7 +73,7 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 				</Menu>
 			</>:
 				<Link to={navInfo.pathName}>
-					<button style={{color: textColor}} className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}>
+					<button style={{color: textColor}} className={`text-[${textColor}] group whitespace-nowrap font-medium text-[18px] leading-[24px] relative`}>
 						{navInfo.name}
 						<span style={{background: textColor}} className={isActive? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
 					</button>

@@ -22,10 +22,9 @@ export const BookPopup = ({open, handleClose}) => {
   };
 
   const handleSubmit = async (e) => {
-    console.log('handleSubmit');
+    
     e.preventDefault();
     if (formData.firstName && formData.lastName && formData.email) {
-      console.log('checked submit form', formData);
       await sendEmail(formData.email, `${formData.firstName} ${formData.lastName}`);
       toast.success('Thank you for your email.   You will be hearing from us shortly.');
       handleClose();

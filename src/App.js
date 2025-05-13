@@ -11,7 +11,7 @@ let theme = createTheme({
 });
 theme = responsiveFontSizes(theme);
 function App() {
-  console.log('screenTOp');
+  
   return (
     <div className="App">
       <ThemeProvider theme={theme}>

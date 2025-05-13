@@ -48,7 +48,7 @@ export const UseCases = () => {
           contentCols={6}
           isDark={true}
           isVideoButton={true}
-          videolink={'/medias/Charlee_ai_User_Roles.mp4'}
+          videolink={'/medias/charlee_ai_user_roles.mp4'}
         />  
 
         <ImgRightContent 

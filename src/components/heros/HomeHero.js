@@ -13,7 +13,7 @@ export const HomeHero = () => {
     <>
     <Box className="w-full overflow-y-auto">
       <Box className="w-full" sx={{backgroundImage: `url(${banerImg})`, backgroundSize: 'cover'}} >
-        <Container className="pt-20 pb-40 text-white flex justify-center items-center" maxWidth="lg">
+        <Container className="pt-24 pb-40 text-white flex justify-center items-center" maxWidth="lg">
           <Grid2  className="w-full" alignItems={"center"} container spacing={1}>
             <Grid2 size={{ xs: 12, md: 8}}>
               <Box className="w-full text-left hidden md:block overflow-hidden">
@@ -42,7 +42,7 @@ export const HomeHero = () => {
             </Grid2>
             <Grid2 size={{ xs: 12, md: 4}}>
               <Box display={"flex"} justifyContent={"center"} alignItems={"flex-start"}>
-                <img src={heroLogo} alt="hero-icon" className="charleeBot"/>
+                <img src={heroLogo} alt="hero-icon" className="charleeBot h-[40vh] md:h-auto lg:h-auto"/>
                 {/* <CharleeBot /> */}
               </Box>
             </Grid2>

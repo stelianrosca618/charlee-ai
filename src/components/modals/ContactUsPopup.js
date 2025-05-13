@@ -35,7 +35,7 @@ export const ContactUsPopup = ({open, handleClose}) => {
   };
 
   const handleCheckboxChange = (e) => {
-    console.log(e);
+    
     const { name, checked, labels } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -47,7 +47,6 @@ export const ContactUsPopup = ({open, handleClose}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Add form submission logic here
-    console.log(formData);
     // sendEmail(formData.email, formData.fullName);
     const constactData = {
       wants: wants,

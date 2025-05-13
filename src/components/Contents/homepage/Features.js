@@ -7,52 +7,62 @@ import { PiTarget, PiMagicWand } from "react-icons/pi";
 import { LuBellRing } from "react-icons/lu";
 import { LuMousePointerClick } from "react-icons/lu";
 import { SlDocs } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const featureItems = [
   {
     icon: <PiGaugeThin size={'24px'} className="mr-2"/>,
     title: 'Severity Management',
     detail: 'I provide reserving recommendations based on available data within the claim file',
+    link: '/product/seecharlee'
   },
   {
     icon: <AiOutlineLineChart size={'24px'} className="mr-2"/>,
     title: 'Claims Efficiency',
-    detail: 'Visual insights into your site’s performance.',
+    detail: 'I help claims close faster and for less.',
+    link: '/product/seecharlee'
   },
   {
     icon: <BsStars size={'24px'} className="mr-2"/>,
     title: 'Underwriting Intelligence',
     detail: 'Equip underwriters with data-backed analytics to refine risk selection.',
+    link: '/product/seecharlee'
   },
   {
     icon: <BsListCheck size={'24px'} className="mr-2"/>,
     title: 'Litigation Prediction',
     detail: 'I predict the likelihood of claims leading to litigation',
+    link: '/product/seecharlee'
   },
   {
     icon: <PiTarget size={'24px'} className="mr-2"/>,
     title: 'Predictive Analytics',
-    detail: 'Helps you set and achieve SEO goals with guided assistance.',
+    detail: 'See the predictions and the results to better manage claims solutions.',
+    link: '/product/seecharlee'
   },
   {
     icon: <LuBellRing size={'24px'} className="mr-2"/>,
     title: 'Fraud Detection',
-    detail: 'Detect potential fraud early with advanced pattern recognition.',
+    detail: 'Detect suspicious claims early with advanced pattern recognition.',
+    link: '/product/seecharlee'
   },
   {
     icon: <PiMagicWand size={'24px'} className="mr-2"/>,
     title: 'Attorney Involvement',
-    detail: 'Guides you through the process of creating and managing links.',
+    detail: 'I warn you before an attorney gets involved.',
+    link: '/product/seecharlee'
   },
   {
     icon: <LuMousePointerClick size={'24px'} className="mr-2"/>,
     title: 'Claims Insights',
     detail: 'Drive faster, smarter claims resolutions with that reduce severity.',
+    link: '/product/findcharlee'
   },
   {
     icon: <SlDocs size={'24px'} className="mr-2"/>,
     title: 'Instant Answers',
-    detail: 'Instantly access insights through our analytical AI assistant.',
+    detail: 'Instantly access insights through AskCharlee.',
+    link: '/product/askcharlee'
   },
   
 ]
@@ -84,11 +94,13 @@ export const Features = () => {
                       
                     </Box>
                     <Box paddingY={2}>
-                      <button className="font-semibold flex justify-start items-center group relative">
-                        Learn more
-                        <FaArrowRightLong className="mx-3"/>
-                        <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#1f1f20] group-hover:w-full"></span>
-                      </button>
+                      <Link to={featuerItem.link}>
+                        <button className="font-semibold flex justify-start items-center group relative">
+                          Learn more
+                          <FaArrowRightLong className="mx-3"/>
+                          <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-[#1f1f20] group-hover:w-full"></span>
+                        </button>
+                      </Link>
                     </Box>
                   </Box>
                 </Grid2>

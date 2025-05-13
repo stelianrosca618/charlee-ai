@@ -69,7 +69,7 @@ export const FindCharleeBenefits = () => {
           contentCols={6}
           isDark={true}
           isVideoButton={true}
-          videolink={'/medias/CharleeAI_Overview_2024.mp4'}
+          videolink={'/medias/charleeaI_overview_2024.mp4'}
         />  
       </Container>
     </Box>

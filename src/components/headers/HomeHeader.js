@@ -32,19 +32,25 @@ const paths = [
     pathName: "",
   },
   {
+    name: "Research",
+    childs: [],
+    isParent: false,
+    pathName: '/research',
+  },
+  {
     name: 'Solutions',
     childs: [],
     isParent: false,
     pathName: "/solutions",
   },
   {
-    name: 'Partner',
+    name: 'Partners',
     childs: [],
     isParent: false,
-    pathName: "/partner",
+    pathName: "/partners",
   },
   {
-    name: 'Connect',
+    name: 'Contact Us',
     childs: [],
     isParent: false,
     pathName: "/connect",
@@ -61,11 +67,11 @@ export const HomeHeader = ({headerColor,  textColor}) => {
   const location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-    console.log("check location change", location);
+    
   }, [location])
   
   return (
-    <Box className={`header w-screen bg-[${headerColor}] py-8 fixed top-0 z-50`}>
+    <Box className={`header w-screen bg-[${headerColor}] py-6 fixed top-0 z-50`}>
       <Container maxWidth={'lg'}>
         <Box display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={3}>
           <Box className="w-full">
@@ -78,19 +84,12 @@ export const HomeHeader = ({headerColor,  textColor}) => {
             <Box className="w-full" display={"flex"} justifyContent={"space-between"} >
               {paths.map((pathItem, key) => (
                 <NavButton 
+                  key={key}
                   navInfo={pathItem}
                   isActive={location.pathname === pathItem.pathName}
                   textColor={textColor}
                   bgColor={headerColor}
                 />
-                // <Box className="px-3">
-                //   <Link to={pathItem.pathName}>
-                //     <button style={{color: textColor}} className={`text-[${textColor}] group font-medium text-[18px] leading-[24px] relative`}>
-                //       {pathItem.name}
-                //       <span style={{background: textColor}} className={location.pathname == pathItem.pathName? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
-                //     </button>
-                //   </Link>
-                // </Box>
               ))}
               
               <Box className="pl-3">

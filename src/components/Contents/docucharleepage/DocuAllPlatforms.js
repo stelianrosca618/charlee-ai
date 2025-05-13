@@ -82,7 +82,7 @@ export const DocuAllPlatforms = () => {
             contentCols={7}
             isDark={false}
             isVideoButton={true}
-            videolink={'/medias/DocuCharlee_Intro_2024.mp4'}
+            videolink={'/medias/docucharlee_intro_2024.mp4'}
           />
         </Box>
       </Container>

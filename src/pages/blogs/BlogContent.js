@@ -72,7 +72,6 @@ export const BlogContent = () => {
   const [blogData, setBlogData] = useState();
   const [relatedBlogs, setRelatedBlogs] = useState([]);
   useEffect(() => {
-    console.log(searchParams['*'])
     loadBlogData(searchParams['*']);
   }, [searchParams])
   const loadBlogData = (blogId) => {
@@ -80,7 +79,6 @@ export const BlogContent = () => {
     setBlogData(blogObj);
     const blogObjCategory = blogObj.category[0].nickName;
     let tempBlogs = blogItems.filter(item => item.category.find(cItem => cItem.nickName == blogObjCategory));
-    console.log(tempBlogs);
     tempBlogs = sortArrList(tempBlogs)
     setRelatedBlogs(tempBlogs.splice(0, 4));
   }

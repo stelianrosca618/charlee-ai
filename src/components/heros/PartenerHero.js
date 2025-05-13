@@ -19,7 +19,7 @@ export const PartenerHero = () => {
 
     await sendLearnEmail(email, 'charlee.ai', {studymail: email});
     toast.success('Thank you for your email.   You will be hearing from us shortly.');
-    // console.log('Form submitted with email:', email)
+    
     setEmail('')
   }
 

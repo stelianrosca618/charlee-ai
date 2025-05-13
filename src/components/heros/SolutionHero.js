@@ -84,7 +84,7 @@ export const SolutionHero = () => {
                   Tailored for Insurance
                 </h5>
                 <p className="text-start">
-                hCharlee® seamlessly supports a wide range of insurance lines, including Personal, Commercial, Workers’ Compensation, and Specialty/Excess. With insights customized to each line of business, Charlee® enables you to address unique challenges, reduce risk, and enhance decision-making across your portfolio.
+                Charlee® seamlessly supports a wide range of insurance lines, including Personal, Commercial, Workers’ Compensation, and Specialty/Excess. With insights customized to each line of business, Charlee® enables you to address unique challenges, reduce risk, and enhance decision-making across your portfolio.
                 </p>
               </Box>
               <Box className="w-full text-start">
