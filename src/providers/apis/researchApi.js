@@ -1,6 +1,6 @@
 import axios from 'axios';
+// const host = '72.167.46.56';
 const host = '147.93.95.131';
-// const host = 'localhost';
 
 const backendPath = `http://${host}:4000/api/`;
 
