@@ -132,7 +132,7 @@ const ResearchPage = () => {
 
   const onArticleClick = (resultItem) => {
     console.log(resultItem);
-    setSelectedArticle(resultItem.body)
+    setSelectedArticle(resultItem.body || resultItem.Description);
     toggleDrawer(true);
   }
 
@@ -393,27 +393,27 @@ const ResearchPage = () => {
                           </mask>
                           <path d="M311.552 205.103C311.552 164.204 278.397 131.049 237.498 131.049H132.388C91.489 131.049 58.3337 164.204 58.3337 205.103C58.3337 246.002 91.489 279.158 132.388 279.158H237.498C278.397 279.158 311.552 246.002 311.552 205.103Z" fill="#E6E6E6"/>
                           <path d="M237.498 143.329H132.388V118.769H237.498V143.329ZM132.388 266.878H237.498V291.437H132.388V266.878ZM237.498 266.878C271.615 266.878 299.273 239.221 299.273 205.103H323.832C323.832 252.784 285.179 291.437 237.498 291.437V266.878ZM70.6134 205.103C70.6134 239.221 98.2709 266.878 132.388 266.878V291.437C84.7072 291.437 46.0541 252.784 46.0541 205.103H70.6134ZM132.388 143.329C98.2708 143.329 70.6134 170.986 70.6134 205.103H46.0541C46.0541 157.422 84.7071 118.769 132.388 118.769V143.329ZM237.498 118.769C285.179 118.769 323.832 157.422 323.832 205.103H299.273C299.273 170.986 271.615 143.329 237.498 143.329V118.769Z" fill="#E6E6E6" mask="url(#path-7-outside-1_4580_346)"/>
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M222.28 254.363C220.726 252.658 218.083 252.536 216.377 254.091C208.045 261.688 197.613 266.139 186.346 266.139C175.079 266.139 164.647 261.688 156.314 254.091C154.609 252.536 151.966 252.658 150.411 254.363C148.856 256.069 148.979 258.712 150.684 260.266C160.397 269.121 172.79 274.496 186.346 274.496C199.902 274.496 212.295 269.121 222.008 260.266C223.713 258.712 223.835 256.069 222.28 254.363Z" fill="#021744"/>
+                          <path fillRule="evenodd" clipRule="evenodd" d="M222.28 254.363C220.726 252.658 218.083 252.536 216.377 254.091C208.045 261.688 197.613 266.139 186.346 266.139C175.079 266.139 164.647 261.688 156.314 254.091C154.609 252.536 151.966 252.658 150.411 254.363C148.856 256.069 148.979 258.712 150.684 260.266C160.397 269.121 172.79 274.496 186.346 274.496C199.902 274.496 212.295 269.121 222.008 260.266C223.713 258.712 223.835 256.069 222.28 254.363Z" fill="#021744"/>
                           <rect width="208.466" height="86.7442" rx="43.3721" transform="matrix(-1 0 0 1 289.819 152.321)" fill="#021744"/>
                           <path d="M231.827 217.235C219.889 217.235 210.211 207.557 210.211 195.619C210.211 183.681 219.889 174.003 231.827 174.003C243.765 174.003 253.443 183.681 253.443 195.619C253.443 207.557 243.765 217.235 231.827 217.235Z" fill="#4CFFE9"/>
                           <path d="M138.782 217.235C126.844 217.235 117.166 207.557 117.166 195.619C117.166 183.681 126.844 174.003 138.782 174.003C150.721 174.003 160.398 183.681 160.398 195.619C160.398 207.557 150.721 217.235 138.782 217.235Z" fill="#4CFFE9"/>
                           <rect width="75.2489" height="15.5276" rx="7.76378" transform="matrix(-1 0 0 1 225.249 109.554)" fill="#E6E6E6"/>
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M183.492 77.3027V118.233H191.849V77.3027H183.492Z" fill="#E6E6E6"/>
+                          <path fillRule="evenodd" clipRule="evenodd" d="M183.492 77.3027V118.233H191.849V77.3027H183.492Z" fill="#E6E6E6"/>
                           <g filter="url(#filter0_d_4580_346)">
                           <path d="M187.916 92.8328C178.021 92.8328 170 84.8114 170 74.9164C170 65.0214 178.021 57 187.916 57C197.811 57 205.833 65.0214 205.833 74.9164C205.833 84.8114 197.811 92.8328 187.916 92.8328Z" fill="#4CFFE9"/>
                           </g>
                           <g filter="url(#filter1_f_4580_346)">
-                          <ellipse cx="110.448" cy="17.1503" rx="110.448" ry="17.1503" transform="matrix(-1 0 0 1 296.774 486.996)" fill="black" fill-opacity="0.4"/>
+                          <ellipse cx="110.448" cy="17.1503" rx="110.448" ry="17.1503" transform="matrix(-1 0 0 1 296.774 486.996)" fill="black" fillOpacity="0.4"/>
                           </g>
                           <path d="M308.702 325.141C308.707 325.112 308.734 325.085 308.763 325.081L313.121 324.524C313.15 324.52 313.171 324.541 313.168 324.57L305.474 389.867C305.471 389.897 305.443 389.925 305.413 389.929L298.355 390.832C298.325 390.836 298.304 390.814 298.309 390.784L308.702 325.141Z" fill="#6B7987"/>
                           <path d="M308.83 324.214C308.834 324.185 308.861 324.158 308.891 324.155L310.659 323.928C310.689 323.924 310.71 323.945 310.706 323.975L301.891 390.327C301.887 390.357 301.859 390.384 301.829 390.388L298.355 390.832C298.325 390.836 298.304 390.815 298.308 390.784L308.83 324.214Z" fill="#E6E6E6"/>
-                          <circle cx="314.498" cy="298.497" r="26.1908" transform="rotate(15 314.498 298.497)" fill="#0048ff" fill-opacity="0.3"/>
-                          <ellipse cx="311.223" cy="292.541" rx="21.4859" ry="21.2848" transform="rotate(15 311.223 292.541)" fill="#E6E6E6" fill-opacity="0.05"/>
+                          <circle cx="314.498" cy="298.497" r="26.1908" transform="rotate(15 314.498 298.497)" fill="#0048ff" fillOpacity="0.3"/>
+                          <ellipse cx="311.223" cy="292.541" rx="21.4859" ry="21.2848" transform="rotate(15 311.223 292.541)" fill="#E6E6E6" fillOpacity="0.05"/>
                           <ellipse cx="8.97175" cy="13.3687" rx="8.97175" ry="13.3687" transform="matrix(-0.966712 -0.255867 -0.255867 0.966712 321.392 339.591)" fill="#E6E6E6"/>
-                          <circle cx="314.498" cy="298.497" r="27.8001" transform="rotate(15 314.498 298.497)" stroke="#E6E6E6" stroke-width="4"/>
+                          <circle cx="314.498" cy="298.497" r="27.8001" transform="rotate(15 314.498 298.497)" stroke="#E6E6E6" strokeWidth="4"/>
                           <defs>
-                          <filter id="filter0_d_4580_346" x="113.816" y="0.81665" width="148.2" height="148.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                          <filter id="filter0_d_4580_346" x="113.816" y="0.81665" width="148.2" height="148.2" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                           <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                           <feOffset/>
                           <feGaussianBlur stdDeviation="28.0917"/>
@@ -422,8 +422,8 @@ const ResearchPage = () => {
                           <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4580_346"/>
                           <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4580_346" result="shape"/>
                           </filter>
-                          <filter id="filter1_f_4580_346" x="58.4779" y="469.596" width="255.696" height="69.1006" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                          <filter id="filter1_f_4580_346" x="58.4779" y="469.596" width="255.696" height="69.1006" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                          <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                           <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                           <feGaussianBlur stdDeviation="8.7" result="effect1_foregroundBlur_4580_346"/>
                           </filter>
