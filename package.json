@@ -57,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.14"
+    "tailwindcss": "^3.4.14",
+    "stylelint-fix": "^2.1.5"
   }
 }
