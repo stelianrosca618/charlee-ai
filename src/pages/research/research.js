@@ -523,7 +523,7 @@ const ResearchPage = () => {
             }}
           >
             <div className="research-content px-4" dangerouslySetInnerHTML={{ __html: selectedArticle }}></div>
-            <div className="block md:hidden w-fit h-fit absolute top-[100px] right-[10px]">
+            <div className="block md:hidden w-fit h-fit fixed top-[78px] right-0 rounded-bl-3xl pl-2 pb-2 pt-1 pr-1 bg-[#ff03038f]">
               <HighlightOffIcon fontSize="large" onClick={() => toggleDrawer(false)}/>
             </div>
             
