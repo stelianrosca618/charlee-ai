@@ -14,6 +14,7 @@ const productOptions = ['4SeeCharlee', 'DocuCharlee', 'AskCharlee', 'FindCharlee
 const areaOptions = ['Claims', 'Policy', 'FNOL', 'SIU', 'Fraud', 'Documents', 'Demand Packages', 'Medical Records', 'email'];
 
 const ResearchPage = () => {
+  const [openAccordion, setOpenAccordion] = useState(true); // Default open accordion
   const [isOpenDrawer, setIsOpenDrawer] = useState(false);
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
@@ -163,171 +164,198 @@ const ResearchPage = () => {
               </button>
             </div>
           </div>
-          <div className="w-full flex justify-start items-start gap-6">
-            <div className="w-[450px] flex flex-col gap-2 py-2">
-              <div className="w-full text-start">
-                <label className="w-full text-start mb-2" >Content Type</label>
-                <FormControl className="w-full" size="small">
-                  <Select
-                    multiple
-                    value={filters.ContentType}
-                    onChange={(e) => setFilters((prev) => ({ ...prev, ContentType: e.target.value }))}
-                    inputProps={{ 'aria-label': 'Without label' }}
-                    renderValue={(selected) => (
-                      
-                      <div className="flex flex-wrap gap-1">
-                        {selected.map((value) => (
-                          <Chip
-                            size="small"
-                            key={value}
-                            label={value}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  >
-                    {contentTypeOptions.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        <Checkbox checked={filters.ContentType.indexOf(option) > -1} />
-                        <ListItemText primary={option} />
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
+          <div className="w-full flex flex-col md:flex-row justify-start items-start gap-6">
+            <div className="w-full md:w-[450px] flex flex-col py-2">
+              <div className="w-full hidden md:block">
+                <h3 className="text-xl font-bold text-start mb-2">Filters</h3>
               </div>
-              <div className="w-full text-start">
-                <label className="w-full text-start mb-2" >Line(s) of Business</label>
-                <FormControl className="w-full" size="small">
-                  <Select
-                    multiple
-                    value={filters.LOB}
-                    onChange={(e) => setFilters((prev) => ({ ...prev, LOB: e.target.value }))}
-                    inputProps={{ 'aria-label': 'Without label' }}
-                    renderValue={(selected) => (
-                      
-                      <div className="flex flex-wrap gap-1">
-                        {selected.map((value) => (
-                          <Chip
-                            size="small"
-                            key={value}
-                            label={value}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  >
-                    {businesslineOptions.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        <Checkbox checked={filters.LOB.indexOf(option) > -1} />
-                        <ListItemText primary={option} />
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
+              <div className="border-b border-b-slate-600 md:hidden w-full flex justify-between items-center"  onClick={() => setOpenAccordion(!openAccordion)}>
+                <h3 className="text-xl font-bold text-start mb-2">Filters</h3>
+                <span className={`transform transition-transform ${openAccordion === true ? 'rotate-180' : ''}`}>
+                  ▼
+                </span>
               </div>
-              <div className="w-full text-start">
-                <label className="w-full text-start mb-2" >Role</label>
-                <FormControl className="w-full" size="small">
-                  <Select
-                    multiple
-                    value={filters.Role}
-                    onChange={(e) => setFilters((prev) => ({ ...prev, Role: e.target.value }))}
-                    inputProps={{ 'aria-label': 'Without label' }}
-                    renderValue={(selected) => (
-                      
-                      <div className="flex flex-wrap gap-1">
-                        {selected.map((value) => (
-                          <Chip
-                            size="small"
-                            key={value}
-                            label={value}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  >
-                    {roleOptions.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        <Checkbox checked={filters.Role.indexOf(option) > -1} />
-                        <ListItemText primary={option} />
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </div>
-              <div className="w-full text-start">
-                <label className="w-full text-start mb-2" >Product</label>
-                <FormControl className="w-full" size="small">
-                  <Select
-                    multiple
-                    value={filters.Product}
-                    onChange={(e) => setFilters((prev) => ({ ...prev, Product: e.target.value }))}
-                    inputProps={{ 'aria-label': 'Without label' }}
-                    renderValue={(selected) => (
-                      
-                      <div className="flex flex-wrap gap-1">
-                        {selected.map((value) => (
-                          <Chip
-                            size="small"
-                            key={value}
-                            label={value}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  >
-                    {productOptions.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        <Checkbox checked={filters.Product.indexOf(option) > -1} />
-                        <ListItemText primary={option} />
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </div>
-              <div className="w-full text-start">
-                <label className="w-full text-start mb-2" >Area</label>
-                <FormControl className="w-full" size="small">
-                  <Select
-                    multiple
-                    value={filters.Area}
-                    onChange={(e) => setFilters((prev) => ({ ...prev, Area: e.target.value }))}
-                    inputProps={{ 'aria-label': 'Without label' }}
-                    renderValue={(selected) => (
-                      <div className="flex flex-wrap gap-1">
-                        {selected.map((value) => (
-                          <Chip
-                            size="small"
-                            key={value}
-                            label={value}
-                          />
-                        ))}
-                      </div>
-                    )}
-                  >
-                    {areaOptions.map((option) => (
-                      <MenuItem key={option} value={option}>
-                        <Checkbox checked={filters.Area.indexOf(option) > -1} />
-                        <ListItemText primary={option} />
-                      </MenuItem>
-                    ))}
-                  </Select>
-                </FormControl>
-              </div>
-              <div className="w-full flex justify-center items-center py-4">
-                <button className="px-4 py-2 rounded-full border border-black bg-white text-black hover:bg-black hover:text-white" onClick={handleResetAll}>
-                  Reset All
-                </button>
+              <div className={`w-full flex flex-col gap-2 transition-all duration-200 ${openAccordion ? 'max-h-[500px]' : 'max-h-0'} overflow-hidden`}>
+                <div className="w-full text-start">
+                  <label className="w-full text-start mb-2" >Content Type</label>
+                  <FormControl className="w-full" size="small">
+                    <Select
+                      multiple
+                      displayEmpty
+                      value={filters.ContentType}
+                      onChange={(e) => setFilters((prev) => ({ ...prev, ContentType: e.target.value }))}
+                      inputProps={{ 'aria-label': 'Without label' }}
+                      renderValue={(selected) => {
+                        if (selected.length === 0) {
+                          return <span>All</span>;
+                        }
+                        return <div className="flex flex-wrap gap-1">
+                          {selected.map((value) => (
+                            <Chip
+                              size="small"
+                              key={value}
+                              label={value}
+                            />
+                          ))}
+                        </div>;
+                      }}
+                    >
+                      {contentTypeOptions.map((option) => (
+                        <MenuItem key={option} value={option}>
+                          <Checkbox checked={filters.ContentType.indexOf(option) > -1} />
+                          <ListItemText primary={option} />
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className="w-full text-start">
+                  <label className="w-full text-start mb-2" >Line(s) of Business</label>
+                  <FormControl className="w-full" size="small">
+                    <Select
+                      multiple
+                      displayEmpty
+                      value={filters.LOB}
+                      onChange={(e) => setFilters((prev) => ({ ...prev, LOB: e.target.value }))}
+                      inputProps={{ 'aria-label': 'Without label' }}
+                      renderValue={(selected) => {
+                        if (selected.length === 0) {
+                          return <span>All</span>;
+                        }
+                        return <div className="flex flex-wrap gap-1">
+                          {selected.map((value) => (
+                            <Chip
+                              size="small"
+                              key={value}
+                              label={value}
+                            />
+                          ))}
+                        </div>;
+                      }}
+                    >
+                      {businesslineOptions.map((option) => (
+                        <MenuItem key={option} value={option}>
+                          <Checkbox checked={filters.LOB.indexOf(option) > -1} />
+                          <ListItemText primary={option} />
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className="w-full text-start">
+                  <label className="w-full text-start mb-2" >Role</label>
+                  <FormControl className="w-full" size="small">
+                    <Select
+                      multiple
+                      displayEmpty
+                      value={filters.Role}
+                      onChange={(e) => setFilters((prev) => ({ ...prev, Role: e.target.value }))}
+                      inputProps={{ 'aria-label': 'Without label' }}
+                      renderValue={(selected) => {
+                        if (selected.length === 0) {
+                          return <span>All</span>;
+                        }
+                        return <div className="flex flex-wrap gap-1">
+                          {selected.map((value) => (
+                            <Chip
+                              size="small"
+                              key={value}
+                              label={value}
+                            />
+                          ))}
+                        </div>;
+                      }}
+                    >
+                      {roleOptions.map((option) => (
+                        <MenuItem key={option} value={option}>
+                          <Checkbox checked={filters.Role.indexOf(option) > -1} />
+                          <ListItemText primary={option} />
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className="w-full text-start">
+                  <label className="w-full text-start mb-2" >Product</label>
+                  <FormControl className="w-full" size="small">
+                    <Select
+                      multiple
+                      displayEmpty
+                      value={filters.Product}
+                      onChange={(e) => setFilters((prev) => ({ ...prev, Product: e.target.value }))}
+                      inputProps={{ 'aria-label': 'Without label' }}
+                      renderValue={(selected) => {
+                        if (selected.length === 0) {
+                          return <span>All</span>;
+                        }
+                        return <div className="flex flex-wrap gap-1">
+                          {selected.map((value) => (
+                            <Chip
+                              size="small"
+                              key={value}
+                              label={value}
+                            />
+                          ))}
+                        </div>;
+                      }}
+                    >
+                      {productOptions.map((option) => (
+                        <MenuItem key={option} value={option}>
+                          <Checkbox checked={filters.Product.indexOf(option) > -1} />
+                          <ListItemText primary={option} />
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className="w-full text-start">
+                  <label className="w-full text-start mb-2" >Area</label>
+                  <FormControl className="w-full" size="small">
+                    <Select
+                      multiple
+                      displayEmpty
+                      value={filters.Area}
+                      onChange={(e) => setFilters((prev) => ({ ...prev, Area: e.target.value }))}
+                      inputProps={{ 'aria-label': 'Without label' }}
+                      renderValue={(selected) => {
+                        if (selected.length === 0) {
+                          return <span>All</span>;
+                        }
+                        return <div className="flex flex-wrap gap-1">
+                          {selected.map((value) => (
+                            <Chip
+                              size="small"
+                              key={value}
+                              label={value}
+                            />
+                          ))}
+                        </div>;
+                      }}
+                    >
+                      {areaOptions.map((option) => (
+                        <MenuItem key={option} value={option}>
+                          <Checkbox checked={filters.Area.indexOf(option) > -1} />
+                          <ListItemText primary={option} />
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
+                </div>
+                <div className="w-full flex justify-center items-center py-4">
+                  <button className="w-full md:w-fit px-4 py-2 rounded-full border border-black bg-white text-black hover:bg-black hover:text-white" onClick={handleResetAll}>
+                    Reset All
+                  </button>
+                </div>
               </div>
             </div>
-            <div className="w-full pl-3 border-l border-l-slate-700">
+            <div className="w-full pl-0 md:pl-3 md:border-l border-l-slate-700">
               {loading ? ( // Show loading indicator
                 <div className="w-full flex justify-center items-center py-4 min-h-[22rem]">
                   <CircularProgress />
                 </div>
               ) : (
                 <>
-                  <div className="w-full flex justify-between items-center">
+                  <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-2 pb-2">
                     <div className="w-fit">
                       {results.length > 0 && 
                         <h3 className="text-xl font-bold">Showing {((pagination.page - 1) * pagination.limit + 1)}-{(pagination.page * pagination.limit)} of more than {pagination.totals} results</h3>
@@ -336,7 +364,7 @@ const ResearchPage = () => {
                         <h3 className="text-xl font-bold">There is no result</h3>
                       }
                     </div>
-                    <div className="w-fit flex justify-end items-center gap-2">
+                    <div className="w-full md:w-fit flex justify-between md:justify-end items-center gap-2">
                       <span className="uppercase">Sort By</span>
                       <select
                         value={sortOption}
@@ -354,22 +382,40 @@ const ResearchPage = () => {
                   <div className="w-full flex-col gap-2 min-h-[20rem]">
                     {results.map((resultItem, key) => (
                       <div key={key} onClick={() => onArticleClick(resultItem)} className="w-full py-2">
-                        <h3 className="cursor-pointer px-2 text-2xl font-bold text-start">{resultItem.title}</h3>
-                        <div className="w-full flex justify-start items-center py-1">
-                          <div className="px-2 uppercase font-bold"
+                        <h3 className="cursor-pointer px-0 md:px-2 text-2xl font-bold text-start">{resultItem.title}</h3>
+                        <div className="w-full flex md:hidden flex-col gap-1">
+                          <div className="w-full flex">
+                            <div className="whitespace-nowrap px-2 uppercase font-bold"
+                            style={{ color: resultItem.TypeColor }}
+                            >{resultItem.ContentType}</div>
+                            <div className="whitespace-nowrap px-2 border-l border-l-slate-700">{resultItem.ArticleDate}</div>  
+                          </div>
+                          <div className="w-full flex flex-wrap">
+                            <div className="px-2 border-l-slate-700 flex justify-start items-center gap-2">
+                              {resultItem.Area.map((areaItem, key) => (
+                                <span className="whitespace-nowrap" key={key}>{areaItem}</span>
+                              ))}
+                            </div>
+                            <div className="px-2 border-l border-l-slate-700 ">
+                              {resultItem.Product}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="w-full hidden md:flex flex-wrap justify-start items-center py-1">
+                          <div className="whitespace-nowrap px-2 uppercase font-bold"
                           style={{ color: resultItem.TypeColor }}
                           >{resultItem.ContentType}</div>
-                          <div className="px-2 border-l border-l-slate-700">{resultItem.ArticleDate}</div>
+                          <div className="whitespace-nowrap px-2 border-l border-l-slate-700">{resultItem.ArticleDate}</div>
                           <div className="px-2 border-l border-l-slate-700 flex justify-start items-center gap-2">
                             {resultItem.Area.map((areaItem, key) => (
-                              <span key={key}>{areaItem}</span>
+                              <span className="whitespace-nowrap" key={key}>{areaItem}</span>
                             ))}
                           </div>
                           <div className="px-2 border-l border-l-slate-700 ">
                             {resultItem.Product}
                           </div>
                         </div>
-                        <div className="px-2 w-full line-clamp-3 text-start text-[14px]">
+                        <div className="px-2 w-full line-clamp-3 text-start text-[14px] mt-1">
                           {resultItem.Description}
                         </div>
                         <div className="px-2 w-full text-start">

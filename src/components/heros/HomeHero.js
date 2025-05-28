@@ -123,7 +123,7 @@ export const HomeHero = () => {
                       <img src={searchIco} alt="folder-icon" className="w-8 h-8"/>
                     </Box>
                     <h4 className="text-white ml-2 font-medium text-[29px] leading-10">
-                      Ask Charlee
+                      AskCharlee
                     </h4>
                   </Box>
                   <Box className="bg-white rounded-b-lg min-h-[400px] w-full drop-shadow-2xl" display={"flex"} justifyContent={"space-between"} flexDirection={"column"} padding={'28px'}>
