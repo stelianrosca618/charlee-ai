@@ -23,7 +23,7 @@ import { VideoPages } from './pages/videos/videos';
         <Route path='/about' element={<About />} />
         <Route path='/partners' element={<Parteners />} />
         <Route path='/connect' element={<Contact />} />
-        <Route path='/solutions' element={<Solutions />}/>
+        <Route path='/solutions1' element={<Solutions />}/>
         <Route path="/blogs/*" element={<Blogs />} />
         <Route path="/event/:eventname" element={<EventContent />} />
         <Route path="/blog/*" element={<BlogContent />} />
@@ -32,7 +32,7 @@ import { VideoPages } from './pages/videos/videos';
         <Route path='/product/docucharlee' element={<DocuCharlee />} />
         <Route path='/product/findcharlee' element={<FindCharlee />} />
         <Route path='/usecase/*' element={<Usecase />} />
-        <Route path='/research' element={<ResearchPage />} />
+        <Route path='/solutions' element={<ResearchPage />} />
         <Route path='/videos-page' element={<VideoPages />} />
       </Routes>
     </BrowserRouter>

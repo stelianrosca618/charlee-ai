@@ -31,12 +31,12 @@ const paths = [
     isParent: true,
     pathName: "",
   },
-  {
-    name: "Research",
-    childs: [],
-    isParent: false,
-    pathName: '/research',
-  },
+  // {
+  //   name: "Research",
+  //   childs: [],
+  //   isParent: false,
+  //   pathName: '/research',
+  // },
   {
     name: 'Solutions',
     childs: [],
