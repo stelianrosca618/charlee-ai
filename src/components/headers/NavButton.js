@@ -27,7 +27,7 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 						{navInfo.name}
 						<span style={{background: textColor}} className={open? `absolute -bottom-1 left-0 transition-all h-0.5 w-full`:`absolute -bottom-1 left-0 w-0 transition-all h-0.5 group-hover:w-full`}></span>
 					</button>
-					<Menu
+				<Menu
 					id="basic-menu"
 					onMouseLeave={handleClose}
 					anchorEl={anchorEl}
@@ -38,10 +38,10 @@ export const NavButton = ({navInfo, isActive, textColor, bgColor}) => {
 						vertical: 'top',
 						horizontal: 'left',
 					  }}
-					  transformOrigin={{
+					transformOrigin={{
 						vertical: 'top',
 						horizontal: 'left',
-					  }}
+					}}
 					sx={{
 						// paddingTop: '80px',
 						'& .MuiPaper-root': {

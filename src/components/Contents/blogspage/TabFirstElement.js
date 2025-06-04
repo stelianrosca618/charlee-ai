@@ -1,9 +1,19 @@
 import { Box, Grid2 } from "@mui/material"
 import { calculateCreatedAgo } from "../../commonFunc"
+import { useNavigate } from "react-router-dom";
 
 export const TabFirstElement = ({firstBlog}) => {
+  const navigate = useNavigate();
+
+  const blogNavigation = (blogPath, postType) => {
+    if(postType == 'post'){
+      navigate(`/blog/${blogPath}`);
+    }else{
+      navigate(`/event/${blogPath}`);
+    }
+  }
   return (
-    <Grid2 container spacing={2} >
+    <Grid2 container spacing={2} onClick={() => {blogNavigation(firstBlog.postName, firstBlog?.postType)}} >
       <Grid2 size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 9}} className="text-start text-white p-6 rounded-2xl min-h-[300px]"
         display={"flex"} flexDirection={"column"} justifyContent={"end"} alignItems={"flex-start"}
         sx={{background: `url(${firstBlog?.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}

@@ -66,6 +66,7 @@ import {Post22417} from "./blogpages/Post22417";
 import {Post22421} from "./blogpages/Post22421";
 import {Post22441} from "./blogpages/Post22441";
 import {Post22469} from "./blogpages/Post22469";
+import { Post22470 } from "./blogpages/Post22470";
 export const BlogContent = () => {
   const navigate = useNavigate()
   const searchParams = useParams();
@@ -178,6 +179,7 @@ export const BlogContent = () => {
                   <Route path="/guest-speak-part-3-contd-ai-in-claims-workflow-management" element={<Post22421 />} />
                   <Route path="/path-to-improving-first-notice-of-loss-fnol-with-ai" element={<Post22441 />} />
                   <Route path="/understanding-accuracy-in-machine-learning" element={<Post22469 />} />
+                  <Route path="/are-legacy-systems-built-for-ai" element={<Post22470 />} />
                 </Routes>
               </Box>
             </Box>

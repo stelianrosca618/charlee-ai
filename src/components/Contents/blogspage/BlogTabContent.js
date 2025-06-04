@@ -176,8 +176,8 @@ export const BlogTabContent = ({title, tabKey}) => {
     }else{
       navigate(`/event/${blogPath}`);
     }
-    
   }
+  
   return (
     <Box className="w-full text-start">
       <h4 className='text-[42px] leading-[54.6px] font-medium my-4'>{title}</h4>
