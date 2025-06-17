@@ -12,7 +12,7 @@ const contentTypeOptions = ["Use Cases", "Case Study", "White Papers", "Blogs"];
 const businesslineOptions = ["Personal Auto", "Commercial Auto", "Homeowners", "Commercial Property", "General Liability", "Workers Compensation", "Business Owners", "Excess & Surplus", "Specialty"]
 const roleOptions = ['Claims Manager', 'Claims Adjuster', 'Executive', 'Underwriter', 'SIU', 'Fraud', 'Finance', 'Actuary'];
 const productOptions = ['4SeeCharlee', 'DocuCharlee', 'AskCharlee', 'FindCharlee'];
-const areaOptions = ['Claims', 'Policy', 'FNOL', 'SIU', 'Fraud', 'Documents', 'Demand Packages', 'Medical Records', 'email'];
+const areaOptions = ['Claims', 'Policy', 'FNOL', 'SIU', 'Fraud', 'Documents', 'Demand Packages', 'Medical Records', 'Email'];
 
 const ResearchPage = () => {
   const [openAccordion, setOpenAccordion] = useState(true); // Default open accordion
@@ -60,7 +60,7 @@ const ResearchPage = () => {
     setResults(tmp_results);
     setPagination({
       page: researchData.data.pagination.page,
-      limit: researchData.data.pagination.limit,
+      limit: researchData.data.pagination.total < researchData.data.pagination.limit? researchData.data.pagination.total : researchData.data.pagination.limit,
       totals: researchData.data.pagination.total,
       totalPages: researchData.data.pagination.pages,
     });
