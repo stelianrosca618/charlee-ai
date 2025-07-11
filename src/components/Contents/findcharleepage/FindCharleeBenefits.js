@@ -20,7 +20,7 @@ export const FindCharleeBenefits = () => {
         </Box>
         <Box data-aos="fade-up" paddingY={4} width={'100%'} display={"flex"} flexDirection={{xs: "column",  md: "row", lg: "row", xl: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}} paddingBottom={{md: '117px', lg: '117px', xl: '117px'}}>
           <Box maxWidth={'250px'} marginX={3} marginY={3}>
-            <h1 className="font-bold text-[#0099B0] text-[84px] leading-[95.76px]">55M</h1>
+            <h1 className="font-bold text-[#0099B0] text-[84px] leading-[95.76px]">60M</h1>
             <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
             <Box className="text-[16px] leading-[31px]" width={'100%'} padding={'19px'}>
               Total claims analyzed <br /> by Charlee.ai

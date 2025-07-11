@@ -67,6 +67,7 @@ import {Post22421} from "./blogpages/Post22421";
 import {Post22441} from "./blogpages/Post22441";
 import {Post22469} from "./blogpages/Post22469";
 import { Post22470 } from "./blogpages/Post22470";
+import { backendHost, getBlog } from "../../providers/apis/blogApi";
 export const BlogContent = () => {
   const navigate = useNavigate()
   const searchParams = useParams();
@@ -75,23 +76,37 @@ export const BlogContent = () => {
   useEffect(() => {
     loadBlogData(searchParams['*']);
   }, [searchParams])
-  const loadBlogData = (blogId) => {
-    const blogObj = blogItems.find(item => item.postName == blogId);
-    setBlogData(blogObj);
-    const blogObjCategory = blogObj.category[0].nickName;
-    let tempBlogs = blogItems.filter(item => item.category.find(cItem => cItem.nickName == blogObjCategory));
-    tempBlogs = sortArrList(tempBlogs)
-    setRelatedBlogs(tempBlogs.splice(0, 4));
+  const loadBlogData = async (blogId) => {
+    const blogObj = await getBlog(blogId);
+    console.log(blogObj);
+    const tmpBlogData = {
+      postId: blogObj.id,
+      postType: blogObj.Content_Type,
+      title: blogObj.Title,
+      postDate: blogObj.DateWritten,
+      postMedia: blogObj.Graphic1,
+      postName: blogObj.Relevance,
+      creator: blogObj.Author,
+      content: blogObj.Description,
+      body: blogObj.Body,
+    }
+    setBlogData(tmpBlogData);
+    // const blogObj = blogItems.find(item => item.postName == blogId);
+    
+    // const blogObjCategory = blogObj.category[0].nickName;
+    // let tempBlogs = blogItems.filter(item => item.category.find(cItem => cItem.nickName == blogObjCategory));
+    // tempBlogs = sortArrList(tempBlogs)
+    // setRelatedBlogs(tempBlogs.splice(0, 4));
   }
   const renderBlogDate = (blogItem) => {
     const dateStr = new Date(blogItem.postDate);
     return dateStr.toDateString();
   }
   const blogNavigation = (blogPath, postType) => {
-    if(postType == 'post'){
-      navigate(`/blog/${blogPath}`);
-    }else{
+    if(postType == 'events'){
       navigate(`/event/${blogPath}`);
+    }else{
+      navigate(`/blog/${blogPath}`);
     }
     
   }
@@ -119,7 +134,17 @@ export const BlogContent = () => {
                   By Charlee AI
                 </span>
               </Box>
-
+              <Box className="w-full py-10 rounded-xl">
+                <div className="w-full text-left">
+                  <div className="w-full min-h-[400px] md:min-h-[500px] rounded-xl">
+                    <img src={`${backendHost}${blogData?.postMedia}`} alt="blog-img" 
+                      className="w-full min-h-[400px] md:min-h-[500px] rounded-xl object-cover"
+                      crossOrigin="anonymous"
+                    />
+                  </div>
+                  <div className="w-full prose prose-lg max-w-none" dangerouslySetInnerHTML={blogData ? { __html: blogData.body } : undefined}></div>
+                </div>
+              </Box>
               <Box className="w-full py-10 rounded-xl">
                 <Routes>
                   <Route path="/a-paradigm-shift-for-insurance-claims-icd10" element={<Post18214 />} />

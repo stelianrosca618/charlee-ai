@@ -14,6 +14,7 @@ import {
   geocode,
   RequestType,
 } from "react-geocode";
+import { backendHost, getEvent } from "../../providers/apis/blogApi";
 
 export const EventContent = () => {
   const navigate = useNavigate();
@@ -42,17 +43,42 @@ export const EventContent = () => {
         console.log(error);
       })
   }
-  const loadEventData = (eventname) => {
-    const eventObj = eventlist.find(item => item.postName == eventname);
-    setEventData(eventObj);
-    let tempEvents = eventlist.filter(item => item.postName !== eventname);
-    console.log(tempEvents);
-    tempEvents = sortArrList(tempEvents)
-    setRelatedEvents(tempEvents.splice(0, 4));
+  const loadEventData = async (eventname) => {
+    const eventRes = await getEvent(eventname);
+    const eventObj = {
+      postId: eventRes.id,
+      title: eventRes.Title,
+      postMedia: eventRes.Graphic1,
+      postType: eventRes.ContentType,
+      postDate: eventRes.LastUpdated,
+      postName: eventRes.Relevance,
+      eventStartDate: eventRes.StartDate,
+      eventEndDate: eventRes.EndDate,
+      eventUrl: eventRes.EventPath,
+      addressData: {
+        address: eventRes.Address,
+        country: eventRes.Country,
+        city: eventRes.City,
+        state: eventRes.State,
+        zip: eventRes.Zip,
+        phone: eventRes.Phone,
+      },
+    }
     if(eventObj.addressData){
       const addressStr = `${eventObj.addressData.address} ${eventObj.addressData.city} ${eventObj.addressData.state} ${eventObj.addressData.zip} ${eventObj.addressData.country}`;
       loadLocation(addressStr)
     }
+    setEventData(eventObj);
+    // const eventObj = eventlist.find(item => item.postName == eventname);
+    // setEventData(eventObj);
+    // let tempEvents = eventlist.filter(item => item.postName !== eventname);
+    // console.log(tempEvents);
+    // tempEvents = sortArrList(tempEvents)
+    // setRelatedEvents(tempEvents.splice(0, 4));
+    // if(eventObj.addressData){
+    //   const addressStr = `${eventObj.addressData.address} ${eventObj.addressData.city} ${eventObj.addressData.state} ${eventObj.addressData.zip} ${eventObj.addressData.country}`;
+    //   loadLocation(addressStr)
+    // }
     
   }
 
@@ -72,8 +98,11 @@ export const EventContent = () => {
             <Box className='w-full pt-14'>
              <Grid2 container spacing={{xs: 12, sm: 12, md: 12, lg: 12, xl: 12}}>
               <Grid2 size={12}>
-                <div className="w-full relative aspect-[300/200] rounded-2xl" style={{backgroundImage: `url(${eventData.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-                  <img src={eventData.postMedia} alt="blog-img" className="w-full aspect-[300/200] rounded-2xl opacity-0"/>
+                <div className="w-full relative aspect-[300/200] rounded-2xl">
+                  <img src={`${backendHost}${eventData.postMedia}`} alt="blog-img" 
+                    className="w-full aspect-[300/200] rounded-2xl object-cover"
+                    crossOrigin="anonymous"
+                  />
                   <Box sx={{background: 'linear-gradient(0deg, #22c0b1, #22c0b1, #ffffff00)'}} className="absolute bottom-0 w-full py-9 px-4 rounded-b-2xl">
                     <h4 className="cursor-pointer text-[42px] leading-[54.6px] text-white">
                       <span className="font-bold">{eventData?.title}</span>

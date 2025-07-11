@@ -3,12 +3,12 @@ import Mailjet from 'node-mailjet';
 
 const mailApiKey = 'ce50e9702de44f50a6d16d1461c91b86';
 const mailSecretyKey = '43105879661fb99426026c7dce24a2d9';
-const host = '72.167.46.56';
-// const host = 'localhost';
-const backendPath = `http://${host}:4000/email/send`;
-const requestEmailPath = `http://${host}:4000/email/send-request-demo`
-const learnEmailPath = `http://${host}:4000/email/send-learn-mode`
-const contactEmailPath = `http://${host}:4000/email/send-contact-us`
+// const host = '72.167.46.56';
+const host = 'localhost';
+const backendPath = `https://charleenode.duckdns.org/api/email/send`;
+const requestEmailPath = `https://charleenode.duckdns.org/api/email/send-request-demo`
+const learnEmailPath = `https://charleenode.duckdns.org/api/email/send-learn-mode`
+const contactEmailPath = `https://charleenode.duckdns.org/api/email/send-contact-us`
 // const mailjet = Mailjet.apiConnect(
 //     mailApiKey,
 //     mailSecretyKey

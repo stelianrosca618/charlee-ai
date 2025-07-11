@@ -10,7 +10,7 @@ export const DocuNumbers = () => {
           alignItems={{xs:"center", sm: "center", md: "flex-start", lg: "flex-start", xl: "flex-start"}}>
             <Box className="docuNumber-item" maxWidth={'250px'} marginX={3} marginY={3}>
               <h1 className="font-bold text-[#0099B0] text-[84px] leading-[95.76px]">
-                <span className="docuNum-counter">55</span>
+                <span className="docuNum-counter">60</span>
                 M
               </h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>

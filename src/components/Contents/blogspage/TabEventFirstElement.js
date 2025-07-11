@@ -4,14 +4,19 @@ import HouseOutlinedIcon from '@mui/icons-material/HouseOutlined';
 import RoomIcon from '@mui/icons-material/Room';
 import PhoneSharpIcon from '@mui/icons-material/PhoneSharp';
 import { CalendarDownMenu } from "./CalendarDownMenu";
+import { backendHost } from "../../../providers/apis/blogApi";
 export const TabEventFirstElement = ({firstBlog}) => {
+  
   return (
     <Grid2 container spacing={2} >
-      <Grid2 size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 9}} className="text-start text-white rounded-2xl min-h-[400px]"
+      <Grid2 size={{xs: 12, sm: 12, md: 9, lg: 9, xl: 9}} className="relative text-start text-white rounded-2xl min-h-[400px]"
         display={"flex"} flexDirection={"column"} justifyContent={"end"} alignItems={"flex-start"}
-        sx={{background: `url(${firstBlog?.postMedia})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
       >
-        <Box sx={{background: 'linear-gradient(0deg, #22c0b1, #22c0b1, #ffffff00)'}} className="w-full p-6 rounded-b-2xl">
+         <img src={`${backendHost}${firstBlog?.postMedia}`} alt="event-img" 
+            className="w-full aspect-[800/400] rounded-2xl object-cover"
+              crossOrigin="anonymous"
+          />
+        <Box sx={{background: 'linear-gradient(0deg, #22c0b1, #22c0b1, #ffffff00)'}} className="absolute bottom-0 w-full p-6 rounded-b-2xl">
           <h4 className="cursor-pointer text-[42px] leading-[54.6px] font-medium">
             {firstBlog?.title}
           </h4>

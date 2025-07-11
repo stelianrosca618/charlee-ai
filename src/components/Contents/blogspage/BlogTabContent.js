@@ -10,6 +10,7 @@ import { calculateCreatedAgo, eventSort, previousEvents, printEventDates, sortAr
 import eventlist from "../../../providers/datas/events.json";
 import { TabFirstElement } from "./TabFirstElement";
 import { TabEventFirstElement } from "./TabEventFirstElement";
+import { getAllActivities, backendHost, getAllEvents, getAllBlogs, getAllPodcasts } from "../../../providers/apis/blogApi";
 
 // const blogItems = [
 //   {
@@ -74,7 +75,7 @@ import { TabEventFirstElement } from "./TabEventFirstElement";
 export const BlogTabContent = ({title, tabKey}) => {
   const navigate = useNavigate()
  
-  const [firstBlog, setFirstBlog] = useState(blogItems[0]);
+  const [firstBlog, setFirstBlog] = useState();
   const [blogArr, setBlogArr] = useState([]);
   const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
@@ -84,39 +85,136 @@ export const BlogTabContent = ({title, tabKey}) => {
   useEffect(() => {
     loadBlogArr()
   }, [tabKey])
-  const loadBlogArr = () => {
+  const loadBlogArr = async () => {
     let tmpBlogs = [];
     if(tabKey == 'featured'){
-      const tmpAllArr = blogItems.concat(eventlist);
+      const tmpBlogsRes = await getAllActivities();
+      const tmpAllArr = parseActivitiesArr(tmpBlogsRes);
       tmpBlogs = sortArrList(tmpAllArr)
     }else{
       if(tabKey == 'events'){
-        const tmpUpcomingEvs = upcommingEvent(eventlist);
-        const tmpPreviousEvs = previousEvents(eventlist);
-        tmpBlogs = tmpUpcomingEvs.concat(tmpPreviousEvs);
-        // tmpBlogs = previousEvents(eventlist);
+        const tmpEvs = await getAllEvents();
+        tmpBlogs =parseEventsArr(tmpEvs);
       }else if(tabKey == 'blog'){
-        blogItems.map(blogItem => {
-          tmpBlogs.push(blogItem);
-        })
-        tmpBlogs = sortArrList(tmpBlogs)
-        tmpBlogs = sortArrList(tmpBlogs)
+        const blogsRes = await getAllBlogs();
+        tmpBlogs = parseBlogsArr(blogsRes);
       }else{
-        blogItems.map(blogItem => {
-          const categoryItem = blogItem.category.find(cItem => cItem.nickName == tabKey);
-          if(categoryItem){
-            tmpBlogs.push(blogItem) ;
-          }
-        })
-        tmpBlogs = sortArrList(tmpBlogs)
+        const podcastRes = await getAllPodcasts();
+        console.log('getting Podcasts', podcastRes);
+        tmpBlogs = parsePodcastsArr(podcastRes);
       }
-      
+      const firstItem = tmpBlogs[0];
+    
+      setFirstBlog(firstItem);
     }
     
-    const firstItem = tmpBlogs[0];
-    
-    setFirstBlog(firstItem);
     setBlogArr(tmpBlogs);
+  }
+  const parseActivitiesArr = (activities) => {
+    let tmpBlogs = [];
+    activities.blogs.map(bItem => {
+      tmpBlogs.push({
+        postId: bItem.id,
+        postType: bItem.Content_Type,
+        title: bItem.Title,
+        postDate: bItem.DateWritten,
+        postMedia: bItem.Graphic1,
+        postName: bItem.Relevance,
+        creator: bItem.Author,
+        content: bItem.Description
+      });
+    });
+    setFirstBlog(tmpBlogs[0]);
+    let tmpPodcasts = [];
+    activities.podcasts.map(pItem => {
+      tmpPodcasts.push({
+        postId: pItem.Id,
+        postType: pItem.ContentType,
+        title: pItem.Title,
+        postDate: pItem.DatePublished,
+        postMedia: pItem.Graphic1,
+        postName: pItem.Relevance,
+        creator: pItem.Author,
+        content: pItem.Description
+      })
+    });
+
+    let tmpEvents = [];
+    activities.events.map(eItem => {
+      tmpEvents.push({
+        postId: eItem.id,
+        title: eItem.Title,
+        postMedia: eItem.Graphic1,
+        postType: eItem.ContentType,
+        postDate: eItem.LastUpdated,
+        postName: eItem.Relevance,
+        eventStartDate: eItem.StartDate,
+        eventEndDate: eItem.EndDate,
+      })
+    });
+
+    let tmpNews = [];
+    activities.news.map(nItem => {
+      tmpNews.push({
+        postId: nItem.Id,
+        title: nItem.Title,
+        postMedia: nItem.Graphic1,
+        postDate: nItem.DatePublished,
+        postType: nItem.ContentType,
+        postName: nItem.Relevance,
+        link: nItem.Source
+      })
+    })
+    let allBlogs = tmpBlogs.concat(tmpPodcasts).concat(tmpEvents).concat(tmpNews);
+    return allBlogs;
+  }
+  const parsePodcastsArr = (podcasts) => {
+    let tmpPodcasts = [];
+    podcasts.map(pItem => {
+      tmpPodcasts.push({
+        postId: pItem.Id,
+        postType: pItem.ContentType,
+        title: pItem.Title,
+        postDate: pItem.DatePublished,
+        postMedia: pItem.Graphic1,
+        postName: pItem.Relevance,
+        creator: pItem.Author,
+        content: pItem.Description
+      })
+    });
+    return tmpPodcasts;
+  }
+  const parseBlogsArr = (blogs) => {
+    let tmpBlogs = [];
+    blogs.map(bItem => {
+      tmpBlogs.push({
+        postId: bItem.id,
+        postType: bItem.Content_Type,
+        title: bItem.Title,
+        postDate: bItem.DateWritten,
+        postMedia: bItem.Graphic1,
+        postName: bItem.Relevance,
+        creator: bItem.Author,
+        content: bItem.Description
+      });
+    });
+    return tmpBlogs;
+  }
+  const parseEventsArr = (events) => {
+    let tmpEvents = [];
+    events.map(eItem => {
+      tmpEvents.push({
+        postId: eItem.id,
+        title: eItem.Title,
+        postMedia: eItem.Graphic1,
+        postType: eItem.ContentType,
+        postDate: eItem.LastUpdated,
+        postName: eItem.Relevance,
+        eventStartDate: eItem.StartDate,
+        eventEndDate: eItem.EndDate,
+      })
+    });
+    return tmpEvents;
   }
   const rebuildPageItems = () => {
     let tmpArr = [];
@@ -136,33 +234,7 @@ export const BlogTabContent = ({title, tabKey}) => {
   useEffect(() => {
     rebuildPageItems();
   },[currentPage])
-  // const calculateCreatedAgo = (blogItem) => {
-  //   let timeAgoStr = '2 days ago';
-  //   const nowDate = new Date();
-  //   const createDate = new Date(blogItem.postDate);
-    
-  //   const timeDifferenceMS = nowDate - createDate;
-  //   const timeDifferenceHours = Math.floor(timeDifferenceMS / 3600000);
-    
-  //   if(timeDifferenceHours > 23){
-  //     const timeDifferenceDays = Math.floor(timeDifferenceMS / 86400000);
-  //     if(timeDifferenceDays > 30){
-  //       const timeDifferenceMonths = Math.floor(timeDifferenceDays / 30);
-  //       if(timeDifferenceMonths > 12){
-  //         const timeDifferenceYears = Math.floor(timeDifferenceMonths / 12);
-  //         timeAgoStr = `${timeDifferenceYears} years ago`;  
-  //       }else{
-  //         timeAgoStr = `${timeDifferenceMonths} months ago`;    
-  //       }
-  //     }else{
-  //       timeAgoStr = `${timeDifferenceDays} days ago`;  
-  //     }
-  //   }else{
-  //     timeAgoStr = `${timeDifferenceHours} hours ago`;
-  //   }
-    
-  //   return timeAgoStr;
-  // }
+ 
   const pageMove = (event, value) => {
     setCurrentPage(value);
   }
@@ -171,10 +243,10 @@ export const BlogTabContent = ({title, tabKey}) => {
     onChange: pageMove
   });
   const blogNavigation = (blogPath, postType) => {
-    if(postType == 'post'){
-      navigate(`/blog/${blogPath}`);
-    }else{
+    if(postType == 'Events'){
       navigate(`/event/${blogPath}`);
+    }else{
+      navigate(`/blog/${blogPath}`);      
     }
   }
   
@@ -182,7 +254,7 @@ export const BlogTabContent = ({title, tabKey}) => {
     <Box className="w-full text-start">
       <h4 className='text-[42px] leading-[54.6px] font-medium my-4'>{title}</h4>
       <Box className="w-full my-4">
-        {firstBlog?.postType == 'post' ? <TabFirstElement firstBlog={firstBlog}/>:<TabEventFirstElement firstBlog={firstBlog}/>}
+        {firstBlog? firstBlog?.postType == 'Events' ? <TabEventFirstElement firstBlog={firstBlog}/>:<TabFirstElement firstBlog={firstBlog}/> : ''}
       </Box>
       <Box className="w-full py-4">
         <Grid2 container spacing={2}>
@@ -190,18 +262,21 @@ export const BlogTabContent = ({title, tabKey}) => {
             <Grid2 display={"flex"} flexDirection={"column"} justifyContent={"space-between"} onClick={() => {blogNavigation(itemData.postName, itemData?.postType)}} key={key} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}} marginTop={2}>
               <Box className="w-full">
                 <div className="cursor-pointer w-full aspect-[300/200] rounded-2xl blog-card" 
-                  style={{background: `url(${itemData.postMedia})`}}>
-                    <img src={itemData.postMedia} alt="blog-img" className="w-full aspect-[300/200] rounded-2xl opacity-0"/>
+                  >
+                    <img src={`${backendHost}${itemData.postMedia}`} alt="blog-img" 
+                      className="w-full aspect-[300/200] rounded-2xl object-cover"
+                       crossOrigin="anonymous"
+                    />
                 </div>
                 <h6 className="cursor-pointer line-clamp-2 text-[24px] leading-[32px] font-medium my-3">{itemData.title}</h6>
               </Box>
-              {itemData.postType == 'post' && 
+              {itemData.postType != "Events" && 
                 <Box className="cursor-pointer w-full mt-4 text-[#949494] text-[12px] leading-[21px]" display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={4}>
                   <span>{calculateCreatedAgo(itemData)}</span>
                   <span>By Charlee.ai</span>
                 </Box>
               }
-              {itemData.postType != 'post' && 
+              {itemData.postType == "Events" && 
                 <Box className="cursor-pointer w-full mt-4 text-[#949494] text-[12px] leading-[21px]" display={"flex"} justifyContent={"space-between"} alignItems={"center"} gap={4}>
                   <span>{printEventDates(itemData)}</span>
                 </Box>

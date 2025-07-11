@@ -3,21 +3,41 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 import { usePagination } from "@mui/lab";
-import { useNavigate } from "react-router-dom";
+import { useFetcher, useNavigate } from "react-router-dom";
 import blogItems from "../../../providers/datas/blogs.json";
 import { useEffect, useState } from "react";
 import { calculateCreatedAgo, printEventDates, sortArrList } from "../../commonFunc";
 import eventlist from "../../../providers/datas/events.json";
 import newslist from "../../../providers/datas/news.json";
+import { backendHost, getAllNews } from "../../../providers/apis/blogApi";
 
 export const NewsTabContent = () => {
  
-  const [blogArr, setBlogArr] = useState(newslist);
+  const [blogArr, setBlogArr] = useState([]);
   const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
   const [pageBlogs, setPageBlogs] = useState([]);
   const [totalPages, setTotalPages] = useState(10);
  
+  useEffect(() => {
+    loadAllNews()
+  }, [])
+  const loadAllNews = async () => {
+    const newsRes = await getAllNews();
+    let tmpNewsArr = [];
+    newsRes.map(nItem => {
+      tmpNewsArr.push({
+        postId: nItem.Id,
+        title: nItem.Title,
+        postMedia: nItem.Graphic1,
+        postDate: nItem.DatePublished,
+        postType: nItem.ContentType,
+        postName: nItem.Relevance,
+        link: nItem.Source
+      })
+    });
+    setBlogArr(tmpNewsArr);
+  }
   const rebuildPageItems = () => {
     let tmpArr = [];
     blogArr.map((item, key) => {
@@ -72,8 +92,11 @@ export const NewsTabContent = () => {
             <Grid2 display={"flex"} flexDirection={"column"} justifyContent={"space-between"} onClick={() => {newsNavigation(itemData.link)}} key={key} size={{xs: 12, sm: 12, md: 3, lg: 3, xl: 3}} marginTop={2}>
               <Box className="w-full">
                 <div className="cursor-pointer w-full aspect-[300/200] rounded-2xl blog-card" 
-                  style={{background: `url(${itemData.postMedia})`}}>
-                    <img src={itemData.postMedia} alt="blog-img" className="w-full aspect-[300/200] rounded-2xl opacity-0"/>
+                  >
+                    <img src={`${backendHost}${itemData.postMedia}`} alt="blog-img" 
+                    className="w-full aspect-[300/200] rounded-2xl object-cover"
+                     crossOrigin="anonymous"
+                    />
                   </div>
                 <h6 className="cursor-pointer line-clamp-2 text-[24px] leading-[32px] font-medium my-3">{itemData.title}</h6>
               </Box>

@@ -181,7 +181,7 @@ export const HomeHero = () => {
           <Box className="numberCounter" width={'100%'} display={"flex"} flexDirection={{xs: "column", md: "row"}} justifyContent={"center"} alignItems={{xs: "center", md:"flex-start"}}>
             <Box maxWidth={'250px'} marginX={3} marginY={2}>
               <h1 className=" font-bold text-[#42DDD1] text-[84px] leading-[95.76px]">
-                <span className="numbCount">55</span>
+                <span className="numbCount">60</span>
                 M+
               </h1>
               <div className="w-[196px] h-[1px] mx-auto bg-[#021744]"></div>
