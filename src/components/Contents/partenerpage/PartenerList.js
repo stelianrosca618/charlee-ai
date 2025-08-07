@@ -1,5 +1,6 @@
 import { Box, Container, Grid2 } from "@mui/material"
 import { FaArrowRightLong } from "react-icons/fa6";
+import pcms from "../../../assets/imgs/brands/pcms.png";
 import guidewire from "../../../assets/imgs/brands/guidewire.png";
 import majesco from "../../../assets/imgs/brands/majesco.png";
 import sapiens from "../../../assets/imgs/brands/sapiens.png";
@@ -55,8 +56,12 @@ const coreItems = [
     logoImg: duckgreeck,
     detail: "a leading provider of comprehensive P&C insurance software and services for insurers of all sizes worldwide.",
     link: 'https://www.duckcreek.com/'
+  },
+  {
+    logoImg: pcms,
+    detail: "Provides cloud-based software solutions designed for small to mid-size insurance carriers to better streamline their operations and maximize their potential.",
+    link: 'https://www.pcmsgroup.com/'
   }
-  
 ]
 const marketItems = [
   {

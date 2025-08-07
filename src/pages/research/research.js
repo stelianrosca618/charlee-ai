@@ -39,7 +39,7 @@ const ResearchPage = () => {
   useEffect(() => {
     const searchOptions = {
       page: pagination.page,
-      limit: pagination.limit,
+      limit: pagination.limit > 0? pagination.limit : 10,
       order: sortOption,
       searchWord: searchQuery,
       filters: filters
